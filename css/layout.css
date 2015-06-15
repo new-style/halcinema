@@ -1,0 +1,90 @@
+/* レイアウト用CSS */
+@charset "UTF-8";
+
+/* /////////////基本レイアウト//////////////// */
+/* ヘッダー */
+.l-header{
+}
+
+/* ナビ */
+.l-nav{
+  text-align: center;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.l-nav li{
+    float: left;
+    width: 135px;
+    line-height: 40px;
+    border: solid 1px;
+}
+.l-nav::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.l-nav a{
+  display: block;
+  text-decoration: none;
+}
+
+/* フッター */
+.l-footer{
+}
+
+/* フラッパー */
+.l-wrapper{
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* パンくずリスト */
+.l-breadcrumb{
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+.l-breadcrumb li{
+  float: left;
+  width: 131px;
+}
+.l-breadcrumb::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.l-breadcrumb a{
+  display: block;
+}
+
+
+/* メインビジュアル */
+.l-main{
+}
+
+
+/* 2カラム用の外のボックス */
+.l-content{
+}
+.l-content:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 左コンテンツ */
+.l-cLeft{
+    float: left;
+    overflow: hidden;
+    width: 680px;
+    margin-right: 10px;
+    background-color: #693;
+}
+
+/* 右コンテンツ */
+.l-cRight{
+    float: right;
+    overflow: hidden;
+    width: 270px;
+    background-color: #963;
+}

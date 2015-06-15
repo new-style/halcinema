@@ -1,0 +1,72 @@
+/* CSS */
+@charset "UTF-8";
+
+h1,h2,h3,p,ul,li,div{
+	margin: 0;
+	padding: 0;
+}
+
+/* ページタイトル */
+h1{
+	line-height: 200px;
+	border: solid 1px #ccc;
+}
+
+/* 日付選択 */
+.day_Select li{
+	float: left;
+	width: 88px;
+	line-height: 150px;
+}
+
+.day_Select a{
+	text-decoration: none;
+	display: block;
+	text-align: center;
+}
+
+.day_Select > a{
+	width: 30px;
+	line-height: 150px;
+}
+
+/* mm/ddの上映スケジュール */
+h2{
+	line-height: 60px;
+}
+
+/* 作品別上映スケジュール */
+section h3{
+	line-height: 48px;
+}
+section img{
+	height: 140px;
+	width: 90px;
+}
+section ul{
+	width: 510px;
+}
+section li{
+	float: left;
+	width: 98px;
+	border: solid 1px #ccc;
+	font-size: 14px;
+	padding: 5px 0;
+}
+section a{
+	text-decoration: none;
+	display: block;
+}
+
+
+/* 購入可能 */
+.reserve_Ok{
+	line-height: 52px;
+}
+.reserve_Early{
+	line-height: 52px;
+}
+.reserve_No{
+	text-decoration: none;
+	line-height: 52px;
+}

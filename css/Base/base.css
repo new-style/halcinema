@@ -1,0 +1,32 @@
+/* BaseCSS */
+@charset "UTF-8";
+
+html{
+  font-family: sans-serif;
+	line-height: 1.8;/* 行間 */
+}
+
+body{
+    background: ;
+}
+
+li{
+    list-style-type: none;
+}
+
+input[type="text"],
+textarea,
+button,
+input[type="submit"],
+input[type="password"],
+select{
+    -webkit-border-radius: ;
+    -moz-border-radius: ;
+    -ms-border-radius: ;
+    -o-border-radius: ;
+    boreder-radius: ;
+}
+
+input[type="submit"],button{
+    cursor: pointer;
+}

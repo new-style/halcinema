@@ -1,0 +1,111 @@
+/* 汎用CSS */
+@charset "UTF-8";
+
+
+/* フロート */
+.float_L{
+    float: left;
+    overflow: hidden;
+}
+.float_R{
+    float: right;
+    overflow: hidden;
+}
+.float_C::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ボックス */
+.d_B{
+  display: block;
+}
+
+/* フォントカラー */
+.F(カラー名){
+	color: ;
+}
+
+/* 背景カラー */
+.B(カラー名){
+	background-color: ;
+}
+
+/* テキスト */
+/*p,h1タグなどに使用 */
+/* 位置 */
+.text_Center{
+	text-align: center;
+}
+.text_Left{
+	text-align: left;
+}
+.text_Right{
+	text-align: right;
+}
+
+/* フォント */
+/* 太さ */
+.Bold{
+	font-weight: ;
+}
+
+/* 斜体 */
+.Italic{
+	font-style: italic;
+}
+
+/* リンク */
+/* 下線なし */
+.link_None{
+	text-decoration: ;
+}
+
+/* 画像 */
+/* 大きさ */
+.img{
+    width: 100%;
+    height: auto;
+}
+
+.img_Small{
+    width: 50%;
+    height: auto;
+}
+
+.img_Big{
+    width: 120%;
+    height: auto;
+}
+
+/* ボタン */
+.btn{
+    -webkit-border-radius: ;
+    -moz-border-radius: ;
+    -ms-border-radius: ;
+    -o-border-radius: ;
+    boreder-radius: ;
+    text-align: center;
+}
+
+.btn_Small{
+    width: ;
+    height: ;
+}
+
+.btn_Big{
+    width: ;
+    height: ;
+}
+
+/* ロゴ */
+/* 大きさ */
+.logo{
+}
+
+.logo_Small{
+}
+
+.logo_Big{
+}
