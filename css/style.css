@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+
+#wrapper{
+  margin: 0 auto;
+  width: 960px;
+  height: auto;
+}
+
+.box{
+  width: 250px;
+  height: 250px;
+  background-color: #99ff99;
+  float: left;
+  margin: 0 50px 50px 0;
+}
