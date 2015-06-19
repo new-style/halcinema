@@ -59,12 +59,15 @@
 
 
 /* メインビジュアル */
-.l-main{
+.l-mainv{
 }
 
 
-/* 2カラム用の外のボックス */
+/* コンテンツ */
 .l-content{
+  width: auto;
+  height: auto;
+  margin: 100px 0;
 }
 .l-content:after{
     content: "";
@@ -87,4 +90,15 @@
     overflow: hidden;
     width: 270px;
     background-color: #963;
+}
+
+.l-cRight img{
+  width: 270px;
+  height: 150px;
+}
+
+.l-cRight .sns img{
+  width: 135px;
+  height: 90px;
+  float: left;
 }

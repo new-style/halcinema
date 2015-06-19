@@ -1,6 +1,19 @@
 /* 汎用CSS */
 @charset "UTF-8";
 
+/* 記述してあるCSS */
+/*
+*float
+*display
+*color
+*background-color
+*text-align
+*font-weight(bold)
+*font-style
+*text-decoration-type
+*btn
+*.logo
+*/
 
 /* フロート */
 .float_L{
@@ -48,7 +61,7 @@
 /* フォント */
 /* 太さ */
 .Bold{
-	font-weight: ;
+	font-weight: bold;
 }
 
 /* 斜体 */
@@ -81,11 +94,11 @@
 
 /* ボタン */
 .btn{
-    -webkit-border-radius: ;
-    -moz-border-radius: ;
-    -ms-border-radius: ;
-    -o-border-radius: ;
-    boreder-radius: ;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    boreder-radius: 5px;
     text-align: center;
 }
 
@@ -97,6 +110,14 @@
 .btn_Big{
     width: ;
     height: ;
+}
+
+/* ボーダー */
+.border_Solid{
+  border-style: solid;
+}
+.border_Dashed{
+  border-style: dashed;
 }
 
 /* ロゴ */
