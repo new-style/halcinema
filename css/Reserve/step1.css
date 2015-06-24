@@ -107,15 +107,36 @@ fieldset{
 
 }
 
-
-/* 購入可能 */
-.reserve_Ok{
-	line-height: 52px;
+/* Form */
+fieldset{
+	width: 780px;
 }
-.reserve_Early{
-	line-height: 52px;
+dt{
+	width: 220px;
 }
-.reserve_No{
-	text-decoration: none;
-	line-height: 52px;
+dd{
+	margin: 0;
+}
+.l-select{
+	width: 300px;
+	margin-left: 20px;
+}
+.l-price{
+	width: 200px;
+	margin-left: 20px;
+}
+dl{
+	line-height: 30px;
+}
+dt,dd{
+	float: left;
+}
+dl::after{
+	display: block;
+	content: "";
+	clear: left;
+}
+select{
+	width: 220px;
+	height: 35px;
 }

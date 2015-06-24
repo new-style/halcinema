@@ -43,73 +43,92 @@
           <form action="" method="post">
             <!-- ▼購入枚数選択 -->
             <fieldset>
-              <legend>購入枚数選択<span>※最大2枚まで購入可能です。</span></legend>
+              <legend class="text_Center">購入枚数選択<span>※最大2枚まで購入可能です。</span></legend>
               <dl>
                 <dt>一般</dt>
-                <dd>
-                  <select class="" name="">
+                <dd class="l-select">
+                  <select name="">
                     <option>1</option>
                     <option>2</option>
                   </select>
                   枚
                 </dd>
-                <dd>1800円</dd>
+                <dd class="l-price">1800円</dd>
               </dl>
               <dl>
                 <dt>大学生・高校生</dt>
-                <dd>
+                <dd class="l-select">
                   <select class="" name="">
                     <option>1</option>
                     <option>2</option>
                   </select>
                   枚
                 </dd>
-                <dd>1500円</dd>
+                <dd class="l-price">1500円</dd>
               </dl>
               <dl>
                 <dt>中学生・小学生</dt>
-                <dd>
+                <dd class="l-select">
                   <select class="" name="">
                     <option>1</option>
                     <option>2</option>
                   </select>
                   枚
                 </dd>
-                <dd>1000円</dd>
+                <dd class="l-price">1000円</dd>
               </dl>
               <dl>
                 <dt>3歳以下</dt>
-                <dd>
+                <dd class="l-select">
                   <select class="" name="">
                     <option>1</option>
                     <option>2</option>
                   </select>
                   枚
                 </dd>
-                <dd>500円</dd>
+                <dd class="l-price">500円</dd>
               </dl>
               <dl>
                 <dt>合計</dt>
-                <dd>
+                <dd class="l-select">
 
                   枚
                 </dd>
-                <dd>円</dd>
+                <dd class="l-price">円</dd>
               </dl>
             </fieldset>
             <!-- ▲購入枚数選択 -->
+
+
+
+
             <!-- ▼座席選択 -->
             <fieldset>
               <legend>座席選択<span>※緑に店頭しているシートは3歳以下のお子様がいらっしゃいます。</span></legend>
             </fieldset>
             <!-- ▲座席選択 -->
+
+
+
+
+
             <!-- ▼予約に進む -->
             <fieldset>
               <legend>ログインして予約する</legend>
+							<label for="id">ID</label><input type="text" id="id" name="id">
+							<label for="password"></label><input type="password" id="password" name="password">
+							<button type="submit">ログインして支払方法選択へ進む</button>
+
               <legend>新規会員登録をして予約する</legend>
+							<button type="submit">新規会員登録</button>
+
               <legend>支払い方法選択へ進む</legend>
+							<button type="submit">支払方法選択へ進む</button>
+
             </fieldset>
             <!-- ▲予約に進む -->
+
+
           </form>
 				</article>
 				<!-- ▲コンテンツ -->

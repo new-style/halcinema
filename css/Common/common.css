@@ -13,6 +13,7 @@
 *text-decoration-type
 *btn
 *.logo
+* formまわり
 */
 
 /* フロート */
@@ -123,10 +124,23 @@
 /* ロゴ */
 /* 大きさ */
 .logo{
+  width: 250px;
+  height: 80px;
 }
 
 .logo_Small{
 }
 
 .logo_Big{
+}
+
+/* formまわり */
+.select{
+  width: 220px;
+}
+.select_Small{
+  width: 110px;
+}
+.select_Big{
+
 }

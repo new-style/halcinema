@@ -2,21 +2,110 @@
 @charset "UTF-8";
 
 /* /////////////基本レイアウト//////////////// */
-/* ヘッダー */
+
+/* ■■■■■■■■■■■■ ヘッダー ■■■■■■■■■■■■ */
 .l-header{
+  margin-top: 27px;
+  font-size: 12px;
+}
+.l-header::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+/* 広告までの左 */
+.l-Lheader{
+  height: auto;
+  float: left;
+  overflow: hidden;
+}
+/* 広告 */
+.l-header a:nth-child(2) img{
+  width: 370px;
+  height: 80px;
+  margin-left: 20px;
+  background-color: #aaa;
 }
 
-/* ナビ */
+/* ヘッダー右 */
+.l-Rheader{
+  float: right;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* ヘッダー右の上 */
+.l-R-Theader a{
+  float: left;
+  overflow: hidden;
+  border-bottom: solid 1px #666;
+  width: 90px;
+  display: block;
+  color: #666;
+  margin-left: 2.5px;
+}
+.l-R-Theader a:first-child{
+  margin-right: 10px;
+}
+.l-R-Theader::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+/* ヘッダー右の下 */
+.l-R-Bheader{
+  background-color: #f2941d;
+  margin-top: 10px;
+}
+.l-R-Bheader li{
+  float: left;
+  overflow: hidden;
+  line-height: 50px;
+  width: 99px;
+}
+.l-R-Bheader::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.l-R-Bheader li:first-child{
+  border-right: solid 1px #eee;
+}
+.l-R-Bheader a{
+  color: #fff;
+  display: block;
+}
+
+/* lineなし */
+.l-header a{
+  text-decoration: none;
+}
+
+
+
+
+
+/* ■■■■■■■■■■ ナビ ■■■■■■■■■■ */
 .l-nav{
   text-align: center;
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 10px 0 0 0;
 }
 .l-nav li{
     float: left;
-    width: 135px;
+    overflow: hidden;
+    width: 136.2px;
     line-height: 40px;
-    border: solid 1px;
+    border-left: solid #fff 1px;
+    background-color: #ff1A1a;
+}
+.l-nav li:first-child{
+  border: none;
+}
+.l-van {
+  border-right: none;
 }
 .l-nav::after{
   content: "";
@@ -26,19 +115,20 @@
 .l-nav a{
   display: block;
   text-decoration: none;
+  color: #fff;
 }
 
-/* フッター */
+/* ■■■■■■■■■■ フッター ■■■■■■■■■■ */
 .l-footer{
 }
 
-/* フラッパー */
+/* ■■■■■■■■■■ フラッパー ■■■■■■■■■■ */
 .l-wrapper{
     width: 960px;
     margin: 0 auto;
 }
 
-/* パンくずリスト */
+/* ■■■■■■■■■■ パンくずリスト ■■■■■■■■■■ */
 .l-breadcrumb{
   text-align: center;
   line-height: 40px;
@@ -58,12 +148,12 @@
 }
 
 
-/* メインビジュアル */
+/* ■■■■■■■■■■ メインビジュアル ■■■■■■■■■■ */
 .l-mainv{
 }
 
 
-/* コンテンツ */
+/* ■■■■■■■■■■ コンテンツ ■■■■■■■■■■ */
 .l-content{
   width: auto;
   height: auto;
@@ -75,7 +165,7 @@
     clear: both;
 }
 
-/* 左コンテンツ */
+/* ■■■■■■■■■■ 左コンテンツ ■■■■■■■■■■ */
 .l-cLeft{
     float: left;
     overflow: hidden;
@@ -84,7 +174,7 @@
     background-color: #693;
 }
 
-/* 右コンテンツ */
+/* ■■■■■■■■■■ 右コンテンツ ■■■■■■■■■■ */
 .l-cRight{
     float: right;
     overflow: hidden;

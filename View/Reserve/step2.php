@@ -13,12 +13,19 @@
 		<title></title>
 	</head>
 	<body>
-		
+		<div class="l-wrapper">
+			<!-- ヘッダー -->
+<?php
+	require_once "../parts/header.html";
+?>
 		<main>
 			<article>
 			</article>
 		</main>
-
+		<!-- フッター -->
+	<?php
+		require_once "../parts/footer.html";
+	?>
 	</body>
 </html>
 <!-- ▲表示▲ -->
