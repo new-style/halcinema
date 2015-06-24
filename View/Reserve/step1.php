@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
+		<title></title>
 		<!-- 定義 -->
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -19,7 +20,7 @@
 	</head>
 	<body>
 		<div class="l-wrapper">
-			<!-- ヘッダー -->
+			<!-- ▼ヘッダー -->
 <?php
 	require_once "../parts/header.html";
 ?>
@@ -134,7 +135,7 @@
 				<!-- ▲コンテンツ -->
 			</main>
 
- <!-- フッター -->
+ <!-- ▼フッター -->
 <?php
 	require_once "../parts/footer.html";
 ?>
