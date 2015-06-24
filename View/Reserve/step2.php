@@ -32,7 +32,7 @@
 	<ul class="stepBar step4">
 			<li class="step btn">Step1<span>購入枚数と座席<br/>を選択してください。</span></li>
 			<li class="step current btn">Step2<span>お客様情報とお支払情報<br/>を入力してください。</span></li>
-			<li class="step btn">Step3<span>購入内容の確認</span></li>
+			<li class="step btn">Step3<span>購入内容のご確認</span></li>
 			<li class="step btn">Step4<span>予約完了</span></li>
 	</ul>
 	<!-- ▲パンくず -->
