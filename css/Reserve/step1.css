@@ -1,0 +1,60 @@
+/* CSS */
+@charset "UTF-8";
+
+h1,h2,h3,p,ul,li,div{
+	margin: 0;
+	padding: 0;
+}
+
+
+/* ページタイトル */
+.title_Box{
+	border-color: #ccc;
+	border-width: 1px;
+}
+
+
+/* コンテンツ */
+article{
+	border-color: #ccc;
+	border-width: 1px;
+}
+fieldset{
+	width: 780px;
+	margin: 50px auto;
+
+}
+
+/* Form */
+fieldset{
+	width: 780px;
+}
+dt{
+	width: 220px;
+}
+dd{
+	margin: 0;
+}
+.l-select{
+	width: 300px;
+	margin-left: 20px;
+}
+.l-price{
+	width: 200px;
+	margin-left: 20px;
+}
+dl{
+	line-height: 30px;
+}
+dt,dd{
+	float: left;
+}
+dl::after{
+	display: block;
+	content: "";
+	clear: left;
+}
+select{
+	width: 220px;
+	height: 35px;
+}

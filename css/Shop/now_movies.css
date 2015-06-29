@@ -1,22 +1,24 @@
-<!-- ▼表示▼ -->
-<!DOCTYPE html>
-<html lang="ja">
-	<head>
-		<!-- 定義 -->
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<meta http-equiv="content-style-type" content="text/css">
-		<meta http-equiv="Content-Script-Type" content="text/javascript" />
-		<!-- 読み込み -->
-        <link rel="stylesheet" href="../css/.css">
+/* 上映中作品 */
+@charset "UTF-8";
 
-		<title></title>
-	</head>
-	<body>
-		<main>
-			<article>
-			</article>
-		</main>
-	</body>
-</html>
-<!-- ▲表示▲ -->
+
+h1,h2,h3,p,ul,li,div{
+	margin: 0;
+	padding: 0;
+}
+
+section{
+	margin: 10px;
+	border: 1px #aaa;
+}
+h3{
+	line-height: 48px;
+	border: solid 1px #aaa;
+}
+section img{
+	width: 90px;
+	height: 140px;
+}
+p{
+	padding: 5px;
+}
