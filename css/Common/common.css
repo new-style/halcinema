@@ -5,6 +5,7 @@
 /*
 *float
 *display
+*margin
 *color
 *background-color
 *text-align
@@ -15,6 +16,7 @@
 *.logo
 * formまわり
 *Stepバー
+*msg
 */
 
 /* フロート */
@@ -47,6 +49,11 @@
 	background-color: ;
 }
 
+/* margin */
+.margin_Auto{
+  margin: auto;
+}
+
 /* テキスト */
 /*p,h1タグなどに使用 */
 /* 位置 */
@@ -74,7 +81,7 @@
 /* リンク */
 /* 下線なし */
 .link_None{
-	text-decoration: ;
+	text-decoration: none;
 }
 
 /* 画像 */
@@ -227,4 +234,11 @@
 	display: block;
 	font-size: 14px;
 	margin-top: 10px;
+}
+
+
+/* msg */
+.msg{
+  line-height: 250px;
+  width: 620px;
 }
