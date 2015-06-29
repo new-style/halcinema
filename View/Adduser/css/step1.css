@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+.l-stepHead{
+  margin: 0 auto;
+  height: 50px;
+  width: 600px;
+  /*background-color: red;*/
+}
+
 table{
   width: 600px;
   margin-bottom: 30px;
@@ -11,8 +18,8 @@ tr, td{
 }
 
 td{
-  text-align: center;
-  padding: 15px;
+  /*text-align: left;*/
+  padding: 5px;
 }
 
 .l-tdWidth1{
@@ -35,8 +42,12 @@ td{
 }
 
 .userForm .username input[type="text"]{
-  width: 120px;
+  width: 129px;
   height: 20px;
+}
+
+.userForm .username span{
+  margin-left: -2px;
 }
 
 .userForm input[type="password"]{
@@ -62,4 +73,8 @@ td{
   position: relative;
   top: 0;
   left: 225px;
+}
+
+.inputMsg{
+  font-size: 12px;
 }

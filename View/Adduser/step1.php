@@ -46,7 +46,7 @@
 									ユーザID
 								</td>
 								<td>
-									<input type="text" name="id">※半角英数
+									<input type="text" name="id"><span class=inputMsg>※半角英数</span>
 								</td>
 							</tr>
 							<tr>
@@ -76,8 +76,8 @@
 							</tr>
 							<tr>
 								<td class="username">
-									セイ<input type="text" name="familyNameKana">
-									メイ<input type="text" name="firstNameKana">
+									<span>ｾｲ</span><input type="text" name="familyNameKana">
+									<span>ﾒｲ</span><input type="text" name="firstNameKana">
 								</td>
 							</tr>
 							<tr>
