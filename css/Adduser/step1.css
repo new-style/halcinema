@@ -1,0 +1,14 @@
+/* CSS */
+@charset "UTF-8";
+
+h1,h2,h3,p,ul,li,div{
+	margin: 0;
+	padding: 0;
+}
+
+
+/* ページタイトル */
+.title_Box{
+	border-color: #ccc;
+	border-width: 1px;
+}

@@ -1,0 +1,37 @@
+/* CSS */
+@charset "UTF-8";
+
+h1,h2,h3,p,ul,li,div,dl,dt,dd{
+	margin: 0;
+	padding: 0;
+}
+
+.order,.payment,.tickets,.goods,.goukei{
+	padding: 0 20px;
+}
+/* 注文 */
+.order{
+	position: relative;
+	margin-top: 50px;
+}
+.order dl:last-child{
+	position: absolute;
+	right: 20px;
+}
+.order dt,.order dd{
+	float: left;
+}
+.payment dt,.payment dd{
+	float: left;
+}
+
+/* チケット */
+
+.tickets_info dt{
+	float: left;
+}
+
+/* グッズ */
+.goods{
+
+}
