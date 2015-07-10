@@ -89,7 +89,7 @@
 						</select>
 						<label for="year">年</label>
 
-						<select id="month" name="month">
+						<select class="month" name="month">
 							<option value="">--</option>
 <?php
 	for( $sm = 1; $sm <= 12; $sm++ ){
@@ -99,7 +99,7 @@
 						</select>
 						<label for="month">月</label>
 
-						<select id="day" name="day">
+						<select class="day" name="day">
 							<option value="">--</option>
 <?php
 	for( $sd = 1; $sd <= 31; $sd++ ){

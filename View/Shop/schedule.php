@@ -21,7 +21,7 @@
 		<div class="l-wrapper">
 			<!-- ヘッダー -->
 <?php
-	require_once "../parts/header.html";
+	require_once "./../parts/header.html";
 ?>
 
 			<main class="l-content">
@@ -75,13 +75,13 @@
 				</article>
 				<!-- ▲左コンテンツ -->
 <?php
-	require_once "../parts/right_side.html";
+	require_once "./../parts/right_side.html";
 ?>
 			</main>
 
  <!-- フッター -->
 <?php
-	require_once "../parts/footer.html";
+	require_once "./../parts/footer.html";
 ?>
 		</div>
 	</body>

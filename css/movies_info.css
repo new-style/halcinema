@@ -1,7 +1,13 @@
-/* アクセス */
+/* 作品紹介 */
 @charset "UTF-8";
 
 h1,h2,h3,p,ul,li,div{
 	margin: 0;
 	padding: 0;
+}
+
+
+figure img{
+  width: 500px;
+  height: 280px;
 }

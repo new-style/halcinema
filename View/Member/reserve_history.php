@@ -15,7 +15,7 @@
 
 		<link rel="stylesheet" href="./../../css/layout.css">
 		<link rel="stylesheet" href="./../../css/Common/common.css">
-		<link rel="stylesheet" href="./../../css/Member/buy_history.css">
+		<link rel="stylesheet" href="./../../css/Member/reserve_history.css">
 
 	</head>
 	<body>
@@ -66,7 +66,7 @@
 					<section class="tickets">
 							<h2>チケット</h2>
 							<div class="tickets_contents float_C">
-								<h3>作品名</h3>
+								<h3><a href="#">作品名</a></h3>
 								<img class="float_L" src="" alt="作品名" />
 
 								<div class="tickets_info float_L float_C">
@@ -76,11 +76,11 @@
 									</dl>
 									<dl>
 										<dt>スクリーン：</dt>
-										<dd>X</dd>
+										<dd><a href="#">X</a></dd>
 									</dl>
 									<dl>
 										<dt>シート番号</dt>
-										<dd>A-2</dd>
+										<dd><a href="#">A-2</a></dd>
 									</dl>
 									<dl>
 										<dt>購入枚数：</dt>
@@ -121,7 +121,7 @@
 							<h2>購入グッズ</h2>
 							<p>
 								商品受け取り方法：劇場受け取り
-								状況：受け取り済み
+								状況：未受け取り
 							</p>
 							<div class="goods_info float_C">
 								<img class="float_L" src="" alt="商品名" />

@@ -26,19 +26,29 @@
 ?>
 
 			<main class="l-content">
+
 				<!-- ▼パンくず -->
+				<ul class="l-breadclumb">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#"></a></li>
+				</ul>
+				<!-- ▼パンくず -->
+
+				<h1>チケット予約</h1>
+
+				<!-- ▼ステップバー -->
 				<ul class="stepBar step4">
 						<li class="step current btn">Step1<span>購入枚数と座席<br/>を選択してください。</span></li>
             <li class="step btn">Step2<span>お客様情報とお支払情報<br/>を入力してください。</span></li>
             <li class="step btn">Step3<span>購入内容のご確認</span></li>
             <li class="step btn">Step4<span>予約完了</span></li>
 				</ul>
-				<!-- ▲パンくず -->
+				<!-- ▲ステップバー -->
 
 				<!-- ▼コンテンツ -->
 				<article class="border_Solid">
           <div class="title_Box text_Center border_Solid">
-            <h1>Step1</h1>
+            <h2>Step1</h2>
             <p>購入枚数と座席を選択してください。</p>
           </div>
           <form action="" method="post">

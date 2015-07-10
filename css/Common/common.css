@@ -111,14 +111,19 @@
     text-align: center;
 }
 
+.btn_Regular{
+  width: ;
+  height: ;
+}
+
 .btn_Small{
     width: ;
     height: ;
 }
 
 .btn_Big{
-    width: ;
-    height: ;
+    width: 220px;
+    height: 150px;
 }
 
 /* ボーダー */

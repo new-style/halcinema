@@ -2,65 +2,86 @@
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
+		<title></title>
 		<!-- 定義 -->
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<meta http-equiv="content-style-type" content="text/css">
 		<meta http-equiv="Content-Script-Type" content="text/javascript" />
 		<!-- 読み込み -->
-        <link rel="stylesheet" href="../.././css/Bace/normalize.css">
-        <link rel="stylesheet" href="../.././css/Bace/base.css">
-        <link rel="stylesheet" href="../.././css/layout.css">
-        <link rel="stylesheet" href="../.././css/Common/common.css">
-        <link rel="stylesheet" href="./css/mypage.css">
+		<link rel="stylesheet" href="./../../css/Base/normalize.css">
+		<link rel="stylesheet" href="./../../css/Base/base.css">
+		<link rel="stylesheet" href="./../../css/font-awesome.css">
 
-		<title>マイページ</title>
+		<link rel="stylesheet" href="./../../css/layout.css">
+		<link rel="stylesheet" href="./../../css/Common/common.css">
+		<link rel="stylesheet" href="./../../css/Member/mypage.css">
+
 	</head>
 	<body>
+		<div class="l-wrapper">
+			<!-- ▼ヘッダー -->
+<?php
+	require_once "./../parts/header.html";
+?>
 
-		<main>
-			<article class="l-wrapper">
-				<section class="l-myContent clearfix">
-					<div class="box float_L">
-						<p>
-							予約履歴/購入履歴
-						</p>
+			<main class="l-content">
+
+				<!-- ▼パンくず -->
+				<ul class="l-breadclumb">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#"></a></li>
+				</ul>
+				<!-- ▼パンくず -->
+
+				<!-- ▼コンテンツ -->
+				<article>
+
+					<h1 class="text_Center border_Solid">マイページ</h1>
+
+					<h2>予約履歴・購入履歴</h2>
+					<div class="info_Box">
+						<a href="#">予約履歴</a>
+						<a href="#">購入履歴</a>
 					</div>
 
-					<div class="box float_L">
-						<p>
-							お気に入りリスト
-						</p>
+					<h2>ユーザ登録情報</h2>
+					<div class="info_Box">
+						<a href="#">基本情報</a>
+						<a href="#">クレジット情報</a>
 					</div>
 
-					<div class="box float_L">
-						<p>
-							ポイント(決済ポイント、ログインポイント)
-						</p>
+					<h2>お気に入りリスト</h2>
+					<div class="info_Box">
+
 					</div>
 
-					<div class="box2 float_L">
-						<p>
-							キャンペーン情報
-						</p>
+					<h2>ポイント</h2>
+					<div class="info_Box">
+						X ポイント
+						<a href="#">ポイント履歴</a>
 					</div>
 
-					<div class="box float_L">
-						<p>
-							シネマズマガジン
-						</p>
+					<h2>シネマズマガジン</h2>
+					<div class="info_Box">
+
 					</div>
 
-					<div class="box float_L">
-						<p>
-							ユーザー情報登録(クレジット情報など)
-						</p>
+					<h2>キャンペーン情報</h2>
+					<div class="info_Box">
+
 					</div>
 
-				</section>
-			</article>
-		</main>
+				</article>
+				<!-- ▲コンテンツ -->
 
+			</main>
+
+ <!-- ▼フッター -->
+<?php
+	require_once "./../parts/footer.html";
+?>
+		</div>
 	</body>
 </html>
 <!-- ▲表示▲ -->
