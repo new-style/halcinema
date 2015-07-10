@@ -13,18 +13,9 @@
 		<title></title>
 	</head>
 	<body>
-<<<<<<< HEAD
-
-		<main>
-			<article>
-				
-
-
-=======
 		
 		<main>
 			<article>
->>>>>>> parent of 5c32019... 新規会員登録、メンバーページ
 			</article>
 		</main>
 

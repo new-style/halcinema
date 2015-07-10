@@ -8,6 +8,7 @@
 		<meta http-equiv="content-style-type" content="text/css">
 		<meta http-equiv="Content-Script-Type" content="text/javascript" />
 		<!-- 読み込み -->
+<<<<<<< HEAD
 		<link rel="stylesheet" href="../.././css/Bace/normalize.css">
 		<link rel="stylesheet" href="../.././css/Bace/base.css">
 		<link rel="stylesheet" href="../.././css/layout.css">
@@ -255,6 +256,16 @@
 
 					</form>
 				</section>
+=======
+        <link rel="stylesheet" href="../css/.css">
+
+		<title></title>
+	</head>
+	<body>
+		
+		<main>
+			<article>
+>>>>>>> parent of 5c32019... 新規会員登録、メンバーページ
 			</article>
 		</main>
 
