@@ -1,0 +1,22 @@
+/* CSS */
+@charset "UTF-8";
+
+h1,h2,h3,p,ul,li,div,dl,dt,dd{
+	margin: 0;
+	padding: 0;
+}
+
+
+.l-content_Left{
+	float: left;
+	overflow: hidden;
+	width: 270px;
+	margin-right: 10px;
+	background-color: #693;
+}
+.l-content_Right{
+	width: 680px;
+	float: right;
+	overflow: hidden;
+	background-color: #963;
+}

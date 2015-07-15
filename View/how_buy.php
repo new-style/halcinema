@@ -15,7 +15,7 @@
 
 		<link rel="stylesheet" href="./../css/layout.css">
 		<link rel="stylesheet" href="./../css/Common/common.css">
-		<link rel="stylesheet" href="./../css/faq.css">
+		<link rel="stylesheet" href="./../css/how_buy.css">
 
 	</head>
 	<body>
@@ -37,9 +37,47 @@
 				<!-- ▼左コンテンツ -->
 				<article class="l-cLeft">
 
-						<h1>よくある質問</h1>
+						<h1>購入方法</h1>
 
+						<section>
+							<h3>１</h3>
+							<div class="float_C">
 
+								<img class="float_L" src="" alt="11111111111111111" />
+								<div class="float_R">
+									<p>
+										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+									</p>
+									<p>
+										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+									</p>
+									<p>
+										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+									</p>
+								</div>
+							</di>
+						</section>
+
+						<img src="" alt="した" />
+
+						<section>
+							<h3>２</h3>
+							<div class="float_C">
+
+								<img class="float_L" src="" alt="11111111111111111" />
+								<div class="float_R">
+									<p>
+										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+									</p>
+									<p>
+										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+									</p>
+									<p>
+										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+									</p>
+								</div>
+							</di>
+						</section>
 
 				</article>
 				<!-- ▲左コンテンツ -->
