@@ -27,7 +27,7 @@
 			<main class="l-content">
 				<!-- ▼パンくず -->
 				<ul class="l-breadcrumb">
-						<li><a href="">HOME</a></li>
+						<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">HOME</a></li>
 				</ul>
 				<!-- ▲パンくず -->
 
@@ -40,7 +40,7 @@
 ?>
 
 						<section class="float_C border_Solid">
-							<a href="#" class="link_None"><h3>作品タイトル</h3>
+							<a href="../movies_info.php" class="link_None"><h3>作品タイトル</h3>
 							<img src="" alt="作品タイトル" class="float_L"/></a>
 							<div class="info">
 								<p>

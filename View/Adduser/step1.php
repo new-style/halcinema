@@ -51,7 +51,7 @@
 						<p>お客様情報とお支払情報を入力してください。</p>
 					</div>
 
-					<form class="" action="" method="post">
+					<form class="" action="confirm.php" method="post">
 						<!-- ▼お客様情報 -->
 						<fieldset>
 							<legend class="text_Center">お客様情報入力<span>全ての項目に入力してください。</span></legend>

@@ -27,7 +27,7 @@
 			<main class="l-content">
 				<!-- ▼パンくず -->
 				<ul class="l-breadcrumb">
-						<li><a href="">HOME</a></li>
+						<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">HOME</a></li>
 				</ul>
 				<!-- ▲パンくず -->
 
@@ -59,13 +59,13 @@
 
 						<!-- ▼スケジュール -->
 						<section class="float_C">
-							<a href="#"><h3>作品タイトル</h3>
+							<a href="../movies_info.php"><h3>作品タイトル</h3>
 							<img src="" alt="作品タイトル" class="float_L"></a>
 							<!-- ◎→余裕あり △→あと少し ×→なし -->
 							<ul class="float_C text_Center">
-								<li><a href="#"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_Ok">◎予約購入</div></a></li>
-								<li><a href="#"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_Early">△予約購入</div></a></li>
-								<li><a href="#"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_No">×予約購入</div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_Ok">◎予約購入</div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_Early">△予約購入</div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_No">×予約購入</div></a></li>
 							</ul>
 						</section>
 						<!-- ▲スケジュール -->

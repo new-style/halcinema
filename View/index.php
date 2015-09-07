@@ -28,7 +28,7 @@
 
 				<!-- ▼コンテンツ -->
 				<article>
-					<a href="#" class="link_None btn btn_Regular border_Solid">東京</a>
+					<a href="Shop/shop_index.php" class="link_None btn btn_Regular border_Solid">東京</a>
 					<a href="#" class="link_None btn btn_Regular border_Solid">大阪</a>
 					<a href="#" class="link_None btn btn_Regular border_Solid">名古屋</a>
 				</article>

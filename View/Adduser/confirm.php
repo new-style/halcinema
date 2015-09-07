@@ -42,7 +42,7 @@
 			<h1>Step2</h1>
 			<p>お客様情報のご確認</p>
 		</div>
-
+		<form action="../complete.php" method="post">
 			<fieldset>
 				<legend class="text_Center">お客様情報確認<span>全ての項目に入力してください。</span></legend>
 			</fieldset>

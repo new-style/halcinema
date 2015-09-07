@@ -43,7 +43,7 @@
 			<h1>Step2</h1>
 			<p>お客様情報の入力、お支払方法の選択をしてください。</p>
 		</div>
-		<form action="" method="post">
+		<form action="confirm.php" method="post">
 			<!-- ▼お客様情報入力 -->
 			<fieldset>
 				<legend class="text_Center">お客様情報入力<span>全ての項目に入力してください。</span></legend>
@@ -311,7 +311,8 @@
 
 
 			<!-- ボタン -->
-			<button type="submit" class="">確認へ進む</button>
+			<button type="submit">確認へ進む</button>
+			<!-- <button type="submit" class="">確認へ進む</button> -->
 
 
 		</form>

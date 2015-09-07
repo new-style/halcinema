@@ -41,13 +41,13 @@
 
 					<h2>予約履歴・購入履歴</h2>
 					<div class="info_Box">
-						<a href="#">予約履歴</a>
-						<a href="#">購入履歴</a>
+						<a href="reserve_history.php">予約履歴</a>
+						<a href="buy_history.php">購入履歴</a>
 					</div>
 
 					<h2>ユーザ登録情報</h2>
 					<div class="info_Box">
-						<a href="#">基本情報</a>
+						<a href="setting.php">基本情報</a>
 						<a href="#">クレジット情報</a>
 					</div>
 
