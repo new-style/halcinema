@@ -6,28 +6,34 @@ h1,h2,h3,p,ul,li,div{
 	padding: 0;
 }
 
-/* ページタイトル */
-h1{
-	line-height: 200px;
-	border: solid 1px #ccc;
-}
+
+
 
 /* 日付選択 */
 .day_Select li{
 	float: left;
-	width: 88px;
-	line-height: 150px;
+	width: 80px;
+	height: 60px;
+	background-color: #00e06a;
+	line-height: 60px;
 }
+
+.day_Select li+li{
+	background-color: #b3b3b3;
+	margin-left: 10px;
+}
+
 
 .day_Select a{
 	text-decoration: none;
 	display: block;
 	text-align: center;
+	color: #000;
 }
 
 .day_Select > a{
 	width: 30px;
-	line-height: 150px;
+	line-height: 60px;
 }
 
 /* mm/ddの上映スケジュール */
@@ -58,6 +64,10 @@ section a{
 	display: block;
 }
 
+/* リンクのテキストデコレーション */
+section a:link ,section a:visited{
+	color: #ecdbcc;
+}
 
 /* 購入可能 */
 .reserve_Ok{

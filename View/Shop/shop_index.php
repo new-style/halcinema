@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="./../../css/Shop/shop_index.css">
 
 	</head>
-	<body>
+	<body class="B F">
 		<div class="l-wrapper">
 			<!-- ▼ヘッダー -->
 <?php
@@ -38,23 +38,49 @@
 				<article class="l-cLeft">
 					<!-- ▼メインビジュアル -->
 					<div class="l-mainv">
-						<img src="" alt="" />
+						<img src="../../img/top_image.png" height="355" width="685" alt="" />
 						<img src="" alt="" />
 						<img src="" alt="" />
 					</div>
 					<!-- ▲メインビジュアル -->
-
-					<h1>上映スケジュール</h1>
+					<div class="schedule_Icon_List">
+						<ul>
+							<li>
+								<ul>
+									<li>⭕️余裕あり</li>
+									<li>▲残りわずか</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="icon_List_three">
+									<li>❌販売終了</li>
+									<li>-販売前</li>
+									<li>料金一覧</li>
+								</ul>
+							</li>
+							<li>R18 18歳以上がご閲覧になれます</li>
+							<li>R15 15歳以上がご閲覧になれます</li>
+							<li>PG12 小学生には助言・指導が必要です</li>
+							<li>
+								<ul>
+									<li>NEW 上映開始週</li>
+									<li>LAST 上映最終週</li>
+								</ul>
+							</li>
+						</ul>
+						
+					</div>
 
 					<!-- ▼日付選択 -->
 					<div class="day_Select float_C">
 
 						<a href="#" class="float_L"><i class="fa fa-angle-left"></i></a>
-						<ul class="">
+						<ul class="week_Day_BOX">
 <?php
+	$week = Array('月','火','水','木','金','土','日',);
 	for( $i=0;$i<7;$i++ ){
 ?>
-							<li><a href="#">日付</a></li>
+							<li><a href="#">9/<?php echo 7+$i.$week[$i];?></a></li>
 <?php
 	}
 ?>
@@ -74,7 +100,7 @@
 							<img src="" alt="作品タイトル" class="float_L"></a>
 							<!-- ◎→余裕あり △→あと少し ×→なし -->
 							<ul class="float_C text_Center">
-								<li><a href="../Reserve/step1.php"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_Ok">◎予約購入</div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time">hh:mm<br/>～hh:mm</div><div class="reserve_Ok">◎予約購入</div></a></li>
 								<li><a href="#"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_Early">△予約購入</div></a></li>
 								<li><a href="#"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_No">×予約購入</div></a></li>
 							</ul>

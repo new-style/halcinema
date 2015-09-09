@@ -12,3 +12,7 @@ h1,h2,h3,p,ul,li,div{
 	border-color: #ccc;
 	border-width: 1px;
 }
+
+.stepBar > .step > span{
+	padding-left: 10px;
+}

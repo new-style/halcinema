@@ -19,6 +19,14 @@
 *msg
 */
 
+
+body{
+  background-color: #361311;
+}
+
+
+
+
 /* フロート */
 .float_L{
     float: left;
@@ -40,13 +48,13 @@
 }
 
 /* フォントカラー */
-.F(カラー名){
-	color: ;
+.F{
+  color: #ecdbcc;
 }
 
 /* 背景カラー */
-.B(カラー名){
-	background-color: ;
+.B{
+  /*background-color: #361311;*/
 }
 
 /* margin */
