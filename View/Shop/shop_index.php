@@ -92,17 +92,21 @@
 
 					<!-- ▼作品表示 -->
 					<div class="schedule">
-						<h2 class="text_Center">mm/ddの上映スケジュール</h2>
+						<h2 class="text_Center">9/14の上映スケジュール</h2>
 
 						<!-- ▼スケジュール -->
 						<section class="float_C">
-							<a href="../movies_info.php"><h3>作品タイトル</h3>
-							<img src="" alt="作品タイトル" class="float_L"></a>
+						<h3>ラブライブ!TheSchoolIdolMovie</h3>
+						<div class="movieImgBox float_L">
+							<a href="../movies_info.php">
+								<img src="../../img/lovelive.jpg" alt="ラブライブ!TheSchoolIdolMovie">
+							</a>
+						</div>
 							<!-- ◎→余裕あり △→あと少し ×→なし -->
 							<ul class="float_C text_Center">
 								<li><a href="../Reserve/step1.php"><div class="day_Time">hh:mm<br/>～hh:mm</div><div class="reserve_Ok">◎予約購入</div></a></li>
-								<li><a href="#"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_Early">△予約購入</div></a></li>
-								<li><a href="#"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_No">×予約購入</div></a></li>
+								<li><a href="#"><div class="day_Time">hh:mm<br/>～hh:mm</div><div class="reserve_Early">△予約購入</div></a></li>
+								<li><a href="#"><div class="day_Time">hh:mm<br/>～hh:mm</div><div class="reserve_No">×予約購入</div></a></li>
 							</ul>
 						</section>
 						<!-- ▲スケジュール -->

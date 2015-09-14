@@ -42,12 +42,21 @@ h2{
 }
 
 /* 作品別上映スケジュール */
+.movieImgBox{
+	height: 112px;
+	width: 90px;
+	border: 1px solid #ccc;
+}
+.movieImgBox a{
+	margin: 0 auto;
+	width: 90%;
+	height: 100%;
+}
 section h3{
 	line-height: 48px;
 }
 section img{
-	height: 140px;
-	width: 90px;
+	height: 100%;
 }
 section ul{
 	width: 510px;
