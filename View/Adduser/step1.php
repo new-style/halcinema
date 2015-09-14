@@ -29,7 +29,7 @@
 
 				<!-- ▼パンくず -->
 				<ul class="l-breadclumb">
-					<li><a href="#">HOME</a></li>
+					<li><a href="#">HAＬシネマ</a></li>
 					<li><a href="#"></a></li>
 				</ul>
 				<!-- ▼パンくず -->

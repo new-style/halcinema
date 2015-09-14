@@ -27,29 +27,35 @@
 	require_once "../parts/header.html";
 ?>
 
+
+
 <main class="l-content">
-	<!-- ▼パンくず -->
+	<!-- ▼パンくずリスト -->
+	<ul class="l-breadcrumb">
+		<li><a href="#">HALシネマ</a></li>
+		<li><a href="#">会員登録確認</a></li>
+	</ul>
+	<!-- ▲パンくずりす -->
+
+	<!-- ▼ステップバー -->
 	<ul class="stepBar step3">
 			<li class="step btn">Step1<span>購入枚数と座席<br/>を選択してください。</span></li>
 			<li class="step current btn">Step2<span>お客様情報とお支払情報<br/>を入力してください。</span></li>
 			<li class="step btn">Step3<span>購入内容のご確認</span></li>
 	</ul>
-	<!-- ▲パンくず -->
+	<!-- ▲ステップバー -->
 
 	<!-- ▼コンテンツ -->
-	<article class="border_Solid">
-		<div class="title_Box text_Center border_Solid">
-			<h1>Step2</h1>
-			<p>お客様情報のご確認</p>
-		</div>
+	<article>
+			<h1>会員登録確認</h1>
 
 			<fieldset>
-				<legend class="text_Center">お客様情報確認<span>全ての項目に入力してください。</span></legend>
+				<legend class="text_Center">会員情報</span></legend>
 			</fieldset>
 
 
 			<fieldset>
-				<legend class="text_Center">お支払情報確認<span>全ての項目に入力してください。</span></legend>
+				<legend class="text_Center">お支払情報</span></legend>
 			</fieldset>
 
 
