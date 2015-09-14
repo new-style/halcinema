@@ -30,6 +30,9 @@ h1,h2,h3,p,ul,li,div{
 	text-align: center;
 	color: #000;
 }
+.day_Select i{
+	color: #fff;
+}
 
 .day_Select > a{
 	width: 30px;
@@ -38,35 +41,59 @@ h1,h2,h3,p,ul,li,div{
 
 /* mm/ddの上映スケジュール */
 h2{
-	line-height: 60px;
+	margin: 20px 0 20px;
+	background-color: #771612;
+	line-height: 50px;
 }
 
 /* 作品別上映スケジュール */
 .movieImgBox{
-	height: 112px;
+	height: 116px;
 	width: 90px;
-	border: 1px solid #ccc;
+	border: 1px solid #222;
 }
 .movieImgBox a{
 	margin: 0 auto;
-	width: 90%;
+	width: 92%;
 	height: 100%;
+}
+.day_Time_Box{
+	width: 100%;
+	height: 50%;
+	/*background-color: #fff;*/
+	overflow: hidden;
+}
+.situ{
+	width: 30%;
+	height: 100%;
+}
+.movie_Time{
+	width: 70%;
+	height: 100%;
+}
+.time_Font{
+	font-size: 18px;
+	font-weight: 700;
 }
 section h3{
 	line-height: 48px;
+	border: 1px solid #222;
+	background-color: #771612;
 }
 section img{
 	height: 100%;
 }
 section ul{
-	width: 510px;
+	margin-bottom: 20px;
+	width: 680px;
+	background-color: #771612;
 }
 section li{
 	float: left;
-	width: 98px;
-	border: solid 1px #ccc;
+	width: 115.5px;
+	border: solid 1px #222;
 	font-size: 14px;
-	padding: 5px 0;
+	/*padding: 5px 0;*/
 }
 section a{
 	text-decoration: none;
