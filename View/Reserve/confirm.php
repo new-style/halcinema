@@ -43,7 +43,7 @@
 			<h1>Step3</h1>
 			<p>購入内容のご確認</p>
 		</div>
-		<form action="" method="post">
+		<form action="../complete.php" method="post">
 			<fieldset>
 				<legend class="text_Center">購入枚数確認<span>※最大2枚まで購入可能です。</span></legend>
 			</fieldset>
@@ -54,7 +54,7 @@
 			</fieldset>
 			<!-- ボタン -->
 			<div class="">
-				<button type="submit">枚数・シートを変更する</button>
+				<a href="step1.php">枚数・シートを変更する</a>
 			</div>
 
 			<fieldset>
@@ -67,7 +67,8 @@
 			</fieldset>
 			<!-- ボタン -->
 			<div class="">
-				<button type="submit">お客様情報・支払情報を変更する</button>
+				<a href="step2.php">お客様情報・支払情報を変更する</a>
+				<!-- <button type="submit">お客様情報・支払情報を変更する</button> -->
 			</div>
 
 

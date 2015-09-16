@@ -51,7 +51,7 @@
             <h2>Step1</h2>
             <p>購入枚数と座席を選択してください。</p>
           </div>
-          <form action="" method="post">
+          <form action="step2.php" method="post">
             <!-- ▼購入枚数選択 -->
             <fieldset>
               <legend class="text_Center">購入枚数選択<span>※最大2枚まで購入可能です。</span></legend>
@@ -131,7 +131,7 @@
 							<button type="submit">ログインして支払方法選択へ進む</button>
 
               <legend>新規会員登録をして予約する</legend>
-							<button type="submit">新規会員登録</button>
+							<a href="../Adduser/step1.php">新規会員登録</a>
 
               <legend>支払い方法選択へ進む</legend>
 							<button type="submit">支払方法選択へ進む</button>

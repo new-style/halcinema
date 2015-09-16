@@ -109,9 +109,15 @@ body{
     float: left;
     overflow: hidden;
     width: 136.2px;
+<<<<<<< HEAD
     line-height: 30px;
     margin-top: 5px;
     border-left: solid 1px rgba(244, 244, 244, 0.3);
+=======
+    line-height: 40px;
+    border-left: solid #fff 1px;
+    background-color: #6b2222;
+>>>>>>> f8ecf6143c947b9f2a1a9dc5581ac8cdb507273f
 }
 .l-nav li:first-child{
   border: none;
@@ -132,6 +138,11 @@ body{
 
 /* ■■■■■■■■■■ フッター ■■■■■■■■■■ */
 .l-footer{
+
+}
+
+.l-footer a:link , .l-footer a:visited{
+  color: #ecdbcc;
 }
 
 /* ■■■■■■■■■■ フラッパー ■■■■■■■■■■ */
@@ -164,9 +175,31 @@ body{
 /* ■■■■■■■■■■ メインビジュアル ■■■■■■■■■■ */
 .l-mainv{
   width: 680px;
-  height: 350px;
+  height: 355px;
+  /*background-color: white;*/
 }
 
+/* ■■■■■■■■■■ スケジュールアイコンリスト ■■■■■■■■■■ */
+.schedule_Icon_List{
+  width: 100%;
+  height: 150px;
+  background-color: #791611;
+  margin: 20px 0 20px 0;
+  /*border: solid 1px #ccc;*/
+}
+
+.schedule_Icon_List li{
+  width: 50%;
+  height: 50px;
+  /*background-color: #9af;*/
+  float: left;margin-bottom: 2px;
+  line-height: 50px;
+}
+
+.icon_List_three li{
+  width: 33%;
+  height: 50px;
+}
 
 /* ■■■■■■■■■■ コンテンツ ■■■■■■■■■■ */
 .l-content{
@@ -185,7 +218,7 @@ body{
     overflow: hidden;
     width: 680px;
     margin-right: 10px;
-    background-color: #693;
+    /*background-color: #791611;*/
 }
 
 /* ■■■■■■■■■■ 右コンテンツ ■■■■■■■■■■ */

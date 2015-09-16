@@ -28,7 +28,7 @@
 
 				<!-- ▼コンテンツ -->
 				<article>
-					<form action="" method="post">
+					<form action="Member/mypage.php" method="post">
 						<input type="text" name="user_id" value="">
 						<input type="password" name="password" value="">
 

@@ -46,9 +46,18 @@
 	<!-- ▲ステップバー -->
 
 	<!-- ▼コンテンツ -->
+<<<<<<< HEAD
 	<article>
 			<h1>会員登録確認</h1>
 
+=======
+	<article class="border_Solid">
+		<div class="title_Box text_Center border_Solid">
+			<h1>Step2</h1>
+			<p>お客様情報のご確認</p>
+		</div>
+		<form action="../complete.php" method="post">
+>>>>>>> f8ecf6143c947b9f2a1a9dc5581ac8cdb507273f
 			<fieldset>
 				<legend class="text_Center">会員情報</span></legend>
 			</fieldset>
