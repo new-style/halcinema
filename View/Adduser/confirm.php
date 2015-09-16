@@ -32,32 +32,107 @@
 <main class="l-content">
 	<!-- ▼パンくずリスト -->
 	<ul class="l-breadcrumb">
-		<li><a href="#">HALシネマ</a></li>
-		<li><a href="#">会員登録確認</a></li>
+		<li><a href="http://127.0.0.1/halcinema/View/Shop/shop_index.php">HALシネマ</a></li>
+		<li><a href="#">会員情報入力</a></li>
+		<li><a href="#">登録情報確認</a></li>
 	</ul>
-	<!-- ▲パンくずりす -->
-
-	<!-- ▼ステップバー -->
-	<ul class="stepBar step3">
-			<li class="step btn">Step1<span>購入枚数と座席<br/>を選択してください。</span></li>
-			<li class="step current btn">Step2<span>お客様情報とお支払情報<br/>を入力してください。</span></li>
-			<li class="step btn">Step3<span>購入内容のご確認</span></li>
-	</ul>
-	<!-- ▲ステップバー -->
-
-	<!-- ▼コンテンツ -->
+	<!-- ▲パンくずリスト -->
 
 	<article>
-			<h1>会員登録確認</h1>
+		<!-- ▼ステップバー -->
+		<ul class="stepBar step3">
+				<li class="step btn">Step1<span>購入枚数と座席<br/>を選択してください。</span></li>
+				<li class="step current btn">Step2<span>お客様情報とお支払情報<br/>を入力してください。</span></li>
+				<li class="step btn">Step3<span>購入内容のご確認</span></li>
+		</ul>
+		<!-- ▲ステップバー -->
 
-	<article class="border_Solid">
-		<div class="title_Box text_Center border_Solid">
-			<h1>Step2</h1>
-			<p>お客様情報のご確認</p>
-		</div>
+		<!-- ▼コンテンツ -->
+		<h1>会員情報確認</h1>
+
 		<form action="../complete.php" method="post">
 			<fieldset>
 				<legend class="text_Center">会員情報</span></legend>
+
+				<table>
+					<tbody>
+						<tr>
+							<th>
+								ユーザネーム
+							</th>
+							<td>
+								よしあき
+							</td>
+						</tr>
+						<tr>
+							<th>
+								ユーザID
+							</th>
+							<td>
+								yoshi245
+							</td>
+						</tr>
+						<tr>
+							<th>
+								メールアドレス
+							</th>
+							<td>
+								yoshida389@yahoo.co.jp
+							</td>
+						</tr>
+						<tr>
+							<th>
+								パスワード
+							</th>
+							<td>
+								*******
+							</td>
+						</tr>
+						<tr>
+							<th>
+								お名前
+							</th>
+							<td>
+								吉田智明
+							</td>
+							<td>
+								ヨシダトモアキ
+							</td>
+						</tr>
+						<tr>
+							<th>
+								電話番号
+							</th>
+							<td>
+								080-3521-7898
+							</td>
+						</tr>
+						<tr>
+							<th>
+								性別
+							</th>
+							<td>
+								男
+							</td>
+						</tr>
+						<tr>
+							<th>
+								生年月日
+							</th>
+							<td>
+								1999年8月11日
+							</td>
+						</tr>
+						<tr>
+							<th>
+								都道府県
+							</th>
+							<td>
+								山口県
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</fieldset>
 
 
