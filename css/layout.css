@@ -100,10 +100,17 @@ body{
   height: 40px;
   padding: 0;
   margin: 10px 0 0 0;
+<<<<<<< HEAD
   background-color: #ffffff;
   background-image: -moz-linear-gradient(top, #7f4040, #6b2222);
   background-image: -webkit-linear-gradient(top, #7f4040, #6b2222);
   background-image: linear-gradient(top, #7f4040, #6b2222);
+=======
+  background-image: -moz-linear-gradient(top, #7f4040, #6b2222);
+  background-image: -webkit-linear-gradient(top, #7f4040, #6b2222);
+  background-image: linear-gradient(top, #7f4040, #6b2222);
+
+>>>>>>> fujiwara
 }
 .l-nav li{
     float: left;
