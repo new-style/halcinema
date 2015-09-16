@@ -33,17 +33,45 @@
 
 				<!-- ▼左コンテンツ -->
 				<article class="l-cLeft">
-					<h1>上映スケジュール</h1>
+
+					<div class="schedule_Icon_List">
+						<ul>
+							<li>
+								<ul>
+									<li>⭕️余裕あり</li>
+									<li>▲残りわずか</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="icon_List_three">
+									<li>❌販売終了</li>
+									<li>-販売前</li>
+									<li>料金一覧</li>
+								</ul>
+							</li>
+							<li>R18 18歳以上がご閲覧になれます</li>
+							<li>R15 15歳以上がご閲覧になれます</li>
+							<li>PG12 小学生には助言・指導が必要です</li>
+							<li>
+								<ul>
+									<li>NEW 上映開始週</li>
+									<li>LAST 上映最終週</li>
+								</ul>
+							</li>
+						</ul>
+						
+					</div>
 
 					<!-- ▼日付選択 -->
 					<div class="day_Select float_C">
 
 						<a href="#" class="float_L"><i class="fa fa-angle-left"></i></a>
-						<ul class="">
+						<ul class="week_Day_BOX">
 <?php
+	$week = Array('月','火','水','木','金','土','日',);
 	for( $i=0;$i<7;$i++ ){
 ?>
-							<li><a href="#">日付</a></li>
+							<li><a href="#">9/<?php echo 7+$i.$week[$i];?></a></li>
 <?php
 	}
 ?>
@@ -55,23 +83,117 @@
 
 					<!-- ▼作品表示 -->
 					<div class="schedule">
-						<h2 class="text_Center">mm/ddの上映スケジュール</h2>
+						<h2 class="text_Center">9/14の上映スケジュール</h2>
 
 						<!-- ▼スケジュール -->
 						<section class="float_C">
-							<a href="../movies_info.php"><h3>作品タイトル</h3>
-							<img src="" alt="作品タイトル" class="float_L"></a>
+							<h3>ラブライブ!TheSchoolIdolMovie</h3>
+							<div class="movieImgBox float_L">
+								<a href="../movies_info.php">
+									<img src="../../img/lovelive.jpg" alt="ラブライブ!TheSchoolIdolMovie">
+								</a>
+							</div>
 							<!-- ◎→余裕あり △→あと少し ×→なし -->
 							<ul class="float_C text_Center">
-								<li><a href="../Reserve/step1.php"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_Ok">◎予約購入</div></a></li>
-								<li><a href="../Reserve/step1.php"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_Early">△予約購入</div></a></li>
-								<li><a href="../Reserve/step1.php"><div class="day_Time">hh:mm<br/>～<br/>hh:mm</div><div class="reserve_No">×予約購入</div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
 							</ul>
 						</section>
+
+						<section class="float_C">
+							<h3>ラブライブ!TheSchoolIdolMovie</h3>
+							<div class="movieImgBox float_L">
+								<a href="../movies_info.php">
+									<img src="../../img/lovelive.jpg" alt="ラブライブ!TheSchoolIdolMovie">
+								</a>
+							</div>
+							<!-- ◎→余裕あり △→あと少し ×→なし -->
+							<ul class="float_C text_Center">
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">12:45</span><br/>～15:45</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+							</ul>
+						</section>
+
+						<section class="float_C">
+							<h3>ラブライブ!TheSchoolIdolMovie</h3>
+							<div class="movieImgBox float_L">
+								<a href="../movies_info.php">
+									<img src="../../img/lovelive.jpg" alt="ラブライブ!TheSchoolIdolMovie">
+								</a>
+							</div>
+							<!-- ◎→余裕あり △→あと少し ×→なし -->
+							<ul class="float_C text_Center">
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">12:45</span><br/>～15:45</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+							</ul>
+						</section>
+						
+						<section class="float_C">
+							<h3>ラブライブ!TheSchoolIdolMovie</h3>
+							<div class="movieImgBox float_L">
+								<a href="../movies_info.php">
+									<img src="../../img/lovelive.jpg" alt="ラブライブ!TheSchoolIdolMovie">
+								</a>
+							</div>
+							<!-- ◎→余裕あり △→あと少し ×→なし -->
+							<ul class="float_C text_Center">
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">12:45</span><br/>～15:45</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+							</ul>
+						</section>
+
+						<!-- <section class="float_C">
+							<h3>ラブライブ!TheSchoolIdolMovie</h3>
+							<div class="movieImgBox float_L">
+								<a href="../movies_info.php">
+									<img src="../../img/lovelive.jpg" alt="ラブライブ!TheSchoolIdolMovie">
+								</a>
+							</div>
+							◎→余裕あり △→あと少し ×→なし
+							<ul class="float_C text_Center">
+								<li><a href="../Reserve/step1.php"><div class="day_Time">hh:mm<br/>～hh:mm</div><div class="reserve_Ok">◎予約購入</div></a></li>
+								<li><a href="#"><div class="day_Time">hh:mm<br/>～hh:mm</div><div class="reserve_Early">△予約購入</div></a></li>
+								<li><a href="#"><div class="day_Time">hh:mm<br/>～hh:mm</div><div class="reserve_No">×予約購入</div></a></li>
+							</ul>
+						</section> -->
 						<!-- ▲スケジュール -->
 
 					</div>
 					<!-- ▲作品表示 -->
+
+
 				</article>
 				<!-- ▲左コンテンツ -->
 <?php
