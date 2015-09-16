@@ -100,17 +100,10 @@ body{
   height: 40px;
   padding: 0;
   margin: 10px 0 0 0;
-<<<<<<< HEAD
-  background-color: #ffffff;
   background-image: -moz-linear-gradient(top, #7f4040, #6b2222);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#7f4040), to(#6b2222));
   background-image: -webkit-linear-gradient(top, #7f4040, #6b2222);
   background-image: linear-gradient(top, #7f4040, #6b2222);
-=======
-  background-image: -moz-linear-gradient(top, #7f4040, #6b2222);
-  background-image: -webkit-linear-gradient(top, #7f4040, #6b2222);
-  background-image: linear-gradient(top, #7f4040, #6b2222);
-
->>>>>>> fujiwara
 }
 .l-nav li{
     float: left;
@@ -119,9 +112,6 @@ body{
     line-height: 30px;
     margin-top: 5px;
     border-left: solid 1px rgba(244, 244, 244, 0.3);
-    line-height: 40px;
-    border-left: solid #fff 1px;
-    background-color: #6b2222;
 }
 .l-nav li:first-child{
   border: none;
