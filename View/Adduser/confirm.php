@@ -51,6 +51,7 @@
 		<h1>会員情報確認</h1>
 
 		<form action="../complete.php" method="post">
+			<!-- ▼会員情報▼ -->
 			<fieldset>
 				<legend class="text_Center">会員情報</span></legend>
 
@@ -134,11 +135,66 @@
 					</tbody>
 				</table>
 			</fieldset>
+			<!-- ▲会員情報▲ -->
 
 
+			<!-- ▼お支払情報▼ -->
 			<fieldset>
-				<legend class="text_Center">お支払情報</span></legend>
+				<legend class="text_Center">お支払情報</legend>
+
+				<table>
+					<caption>コンビニ決済(前払い)</caption>
+					<tbody>
+						<tr>
+							<th>
+								店舗
+							</th>
+							<td>
+								ファミリーマート
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table>
+					<caption>クレジットカード</caption>
+					<tbody>
+						<tr>
+							<th>
+								種類
+							</th>
+							<td>
+								JCB
+							</td>
+						</tr>
+						<tr>
+							<th>
+								番号
+							</th>
+							<td>
+								0120-1234-5678-9123
+							</td>
+						</tr>
+						<tr>
+							<th>
+								有効期限
+							</th>
+							<td>
+								12 月 30 年
+							</td>
+						</tr>
+						<tr>
+							<th>
+								セキュリティーコード
+							</th>
+							<td>
+								****
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</fieldset>
+			<!-- ▲お支払情報▲ -->
 
 
 			<!-- ボタン -->
