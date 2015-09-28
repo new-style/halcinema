@@ -33,8 +33,8 @@
 	<!-- ▼パンくずリスト -->
 	<ul class="l-breadcrumb">
 		<li><a href="http://127.0.0.1/halcinema/View/Shop/shop_index.php">HALシネマ</a></li>
-		<li><a href="#">会員情報入力</a></li>
-		<li><a href="#">登録情報確認</a></li>
+		<li><a href="http://127.0.0.1/halcinema/View/Adduser/step1.php">会員情報入力</a></li>
+		<li><a href="http://127.0.0.1/halcinema/View/Adduser/confirm.php">登録情報確認</a></li>
 	</ul>
 	<!-- ▲パンくずリスト -->
 

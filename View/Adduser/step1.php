@@ -28,14 +28,13 @@
 			<main class="l-content">
 
 				<!-- ▼パンくず -->
-				<ul class="l-breadclumb">
-					<li><a href="#">HAＬシネマ</a></li>
-					<li><a href="#"></a></li>
+				<ul class="l-breadcrumb">
+					<li><a href="http://127.0.0.1/halcinema/View/Shop/shop_index.php">HAＬシネマ</a></li>
+					<li><a href="http://127.0.0.1/halcinema/View/Adduser/confirm.php">会員情報入力</a></li>
 				</ul>
 				<!-- ▲パンくず -->
 
 				<article>
-					<h1>新規会員登録</h1>
 
 					<!-- ▼ステップバー -->
 					<ul class="stepBar step3">
@@ -46,10 +45,7 @@
 					<!-- ▲ステップバー -->
 
 					<!-- ▼コンテンツ -->
-						<div class="title_Box text_Center border_Solid">
-							<h2>Step1</h2>
-							<p>お客様情報とお支払情報を入力してください。</p>
-						</div>
+					<h1>新規会員登録</h1>
 
 						<form class="" action="confirm.php" method="post">
 							<!-- ▼お客様情報 -->
