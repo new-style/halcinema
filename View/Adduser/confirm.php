@@ -204,8 +204,8 @@
 				<p>
 					入力内容に間違いがなければ、「登録する」ボタンを押してください。
 				</p>
-				<button type="submit" class="btn btn_Regular F_000">戻る</button>
-				<button type="submit" class="btn btn_Regular F_000">登録する</button>
+					<button type="submit" class="btn btn_Regular F_000">戻る</button>
+					<button type="submit" class="btn btn_Regular F_000">登録する</button>
 			</div>
 
 		</form>
