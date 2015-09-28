@@ -1,0 +1,464 @@
+/* レイアウト用CSS */
+@charset "UTF-8";
+
+/* ///////////////////////基本レイアウト////////////////////////// */
+
+html,body{
+  width: 100%;
+  height: 100%;
+  /*overflow: hidden;*/
+}
+
+/* ■■■■■■■■■■■■ 背景 ■■■■■■■■■■■■ */
+body{
+  /*background-color: #361311;*/
+  font-family: "HGS明朝B","ＭＳ　Ｐ明朝","MS Serif",serif;
+  color: #ecdbcc;
+  background-image: url(../img/footerBack.png),url(../img/indexTop.png);
+  background-repeat: no-repeat,no-repeat;
+  background-position: 0  100%, center top;
+  background-size: 100% 140px, cover;
+}
+
+/* ■■■■■■■■■■■■ ヘッダー ■■■■■■■■■■■■ */
+.l-header{
+  /*margin-top: 27px;*/
+  font-size: 12px;
+}
+.l-header::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+/* 広告までの左 */
+.l-Lheader{
+  height: auto;
+  float: left;
+  overflow: hidden;
+}
+/* 広告 */
+.l-header a:nth-child(2) img{
+  width: 370px;
+  height: 80px;
+  margin-left: 20px;
+  background-color: #aaa;
+}
+
+/* ヘッダー右 */
+.l-Rheader{
+  float: right;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* ヘッダー右の上 */
+.l-R-Theader a{
+  float: left;
+  overflow: hidden;
+  border-bottom: solid 1px #666461;
+  width: 90px;
+  display: block;
+  color: #ecdbcc;
+  margin-left: 2.5px;
+}
+.l-R-Theader a:first-child{
+  margin-right: 10px;
+}
+.l-R-Theader::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+/* ヘッダー右の下 */
+.l-R-Bheader{
+  background-color: #a62729;
+  margin-top: 10px;
+  height: 50px;
+  margin-left: 99px;
+}
+.l-R-Bheader li{
+  float: left;
+  overflow: hidden;
+  margin-top: 5px;
+  line-height: 40px;
+  width: 99px;
+}
+.l-R-Bheader::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.l-R-Bheader li:first-child{
+  border-right: solid 1px rgba(244,244,244, 0.7);
+}
+.l-R-Bheader a{
+  color: #fff;
+  display: block;
+}
+
+/* lineなし */
+.l-header a{
+  text-decoration: none;
+}
+
+
+
+/* ■■■■■■■■■■ フッター ■■■■■■■■■■ */
+.l-footer{
+
+}
+
+.l-footer a:link , .l-footer a:visited{
+  color: #ecdbcc;
+}
+
+/* ■■■■■■■■■■ フラッパー ■■■■■■■■■■ */
+.l-wrapper{
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    /*background-color: red;*/
+}
+
+/* ■■■■■■■■■■ コンテンツ ■■■■■■■■■■ */
+.l-content{
+  width: 100%;
+  /*height: 100%;*/
+  /*margin: 30px 0 50px 0;*/
+}
+.l-content:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.shop_Select{
+  width: 700px;
+  height: 150px;
+  position: absolute;
+  top: 0;bottom: 0;left: 0;right: 0;
+  margin: auto auto;
+}
+
+.shop_Select a{
+  font-size: 80px;
+}
+.shop_Select a + a{
+  margin-left: 50px;
+}
+
+/* ■■■■■■■■■■ フッターコンテンツ ■■■■■■■■■■ */
+
+.l-footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /*margin-top: 10px;*/
+  /*padding-top: 10px;*/
+  /*position: absolute;*/
+  /*bottom: 0;left: 0;*/
+  /*margin: 0auto;*/
+  background-color: #652323;
+}
+
+.footer_Logo{
+  width: 300px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.l-footer_Sitemap_Bottom{
+  width: 650px;
+  height: 80px;
+  /*border-top: 1px solid;*/
+  margin-top: 20px;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.sitemap_B_Ul{
+  width: 650px;
+  height: 80px;
+  /*background-color: #9af;*/
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.sitemap_B_Ul li{
+  width: 120px;
+  line-height: 40px;
+  /*background-color: #af9;*/
+}
+.sitemap_B_Ul li:nth-of-type(3){
+  width: 180px;
+  line-height: 40px;
+  /*background-color: #fa9;*/
+}
+.sitemap_B_Ul li:nth-of-type(4){
+  width: 210px;
+  line-height: 40px;
+  /*background-color: #fa9;*/
+}
+.sitemap_B_Ul li:nth-of-type(7){
+  width: 210px;
+  line-height: 40px;
+  /*background-color: #fa9;*/
+}
+
+.copyRight{
+  width: 960px;
+  height: 20px;
+  text-align: right;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:link, a:visited{
+  color: #ecdbcc;
+}
+
+
+/* ///////////////////////基本レイアウト////////////////////////// */
+
+
+
+
+/************** common **********/
+
+
+/* フロート */
+.float_L{
+    float: left;
+    overflow: hidden;
+}
+.float_R{
+    float: right;
+    overflow: hidden;
+}
+.float_C::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ボックス */
+.d_B{
+  display: block;
+}
+
+/* フォントカラー */
+.F{
+  color: #ecdbcc;
+}
+
+/* 背景カラー */
+.B{
+  /*background-color: #361311;*/
+}
+
+/* margin */
+.margin_Auto{
+  margin: auto;
+}
+
+/* テキスト */
+/*p,h1タグなどに使用 */
+/* 位置 */
+.text_Center{
+  text-align: center;
+}
+.text_Left{
+  text-align: left;
+}
+.text_Right{
+  text-align: right;
+}
+
+/* フォント */
+/* 太さ */
+.Bold{
+  font-weight: bold;
+}
+
+/* 斜体 */
+.Italic{
+  font-style: italic;
+}
+
+/* リンク */
+/* 下線なし */
+.link_None{
+  text-decoration: none;
+}
+
+/* 画像 */
+/* 大きさ */
+.img{
+    width: 100%;
+    height: auto;
+}
+
+.img_Small{
+    width: 50%;
+    height: auto;
+}
+
+.img_Big{
+    width: 120%;
+    height: auto;
+}
+
+/* ボタン */
+.btn{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    boreder-radius: 5px;
+    text-align: center;
+}
+
+.btn_Regular{
+  width: ;
+  height: ;
+}
+
+.btn_Small{
+    width: ;
+    height: ;
+}
+
+.btn_Big{
+    width: 220px;
+    height: 150px;
+}
+
+/* ボーダー */
+.border_Solid{
+  border-style: solid;
+}
+.border_Dashed{
+  border-style: dashed;
+}
+
+/* ロゴ */
+/* 大きさ */
+.logo{
+  width: 250px;
+  height: 80px;
+}
+
+.logo_Small{
+}
+
+.logo_Big{
+}
+
+/* formまわり */
+.select{
+  width: 220px;
+}
+.select_Small{
+  width: 110px;
+}
+.select_Big{
+
+}
+
+
+/* ステップバー */
+.stepBar {
+  position: relative;
+  color: #fff;
+  list-style: none;
+  margin: 50px 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  *zoom: 1;
+}
+.stepBar .step {
+  position: relative;
+  float: left;
+  display: inline-block;
+  height: 120px;
+  padding: 10px 40px 10px 25px;
+  background-color: #eee;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.stepBar .step:before, .stepBar .step:after {
+  position: absolute;
+  left: -20px;
+  display: block;
+  content: '';
+  background-color: #eee;
+  border-left: 4px solid #FFF;
+  width: 35px;
+  height: 60px;
+}
+.stepBar .step:after {
+  top: 0;
+  -moz-transform: skew(30deg);
+  -ms-transform: skew(30deg);
+  -webkit-transform: skew(30deg);
+  transform: skew(30deg);
+}
+.stepBar .step:before {
+  bottom: 0;
+  -moz-transform: skew(-30deg);
+  -ms-transform: skew(-30deg);
+  -webkit-transform: skew(-30deg);
+  transform: skew(-30deg);
+}
+.stepBar .step:first-child {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.stepBar .step:first-child:before, .stepBar .step:first-child:after {
+  content: none;
+}
+.stepBar .step:last-child {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.stepBar .step.current {
+  color: #FFF;
+  background-color: #26bfa1;
+}
+.stepBar .step.current:before, .stepBar .step.current:after {
+  background-color: #26bfa1;
+}
+.stepBar.step4 .step {
+  width: 25%;
+}
+
+.stepBar span{
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+/* msg */
+.msg{
+  line-height: 250px;
+  width: 620px;
+}
