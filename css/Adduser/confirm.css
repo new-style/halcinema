@@ -1,0 +1,54 @@
+/* CSS */
+@charset "UTF-8";
+
+h1,h2,h3,p,ul,li,div{
+	margin: 0;
+	padding: 0;
+}
+
+/* タイトル */
+h1{
+	background-color: #791611;
+	padding: 0 20px;
+}
+
+/* stepBar */
+.stepBar > .step > span{
+	padding-left: 10px;
+}
+
+/* 表 */
+.confirm{
+	background-color: #4F0C0C;
+	width: 800px;
+	margin: 50px auto;
+	padding-bottom: 20px;
+}
+h2{
+	background-color: #791611;
+	margin-bottom: 20px;
+}
+.confirm table{
+	width: 710px;
+	margin: 0 auto;
+	text-align: left;
+	letter-spacing: 1.5px;
+}
+.confirm caption{
+	text-align: left;
+	padding-left: 20px;
+}
+.confirm th,td{
+	border: solid 1px #ECDBCC;
+	padding-left: 20px;
+	line-height: 40px;
+}
+.confirm th{
+	width: 180px;
+}
+
+/* ボタン */
+.confirm.button{
+	padding-top: 20px;
+	text-align: center;
+}

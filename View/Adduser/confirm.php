@@ -16,7 +16,7 @@
 
 		<link rel="stylesheet" href="../../css/layout.css">
 		<link rel="stylesheet" href="../../css/Common/common.css">
-    <link rel="stylesheet" href="../../css/Adduser/step1.css">
+    <link rel="stylesheet" href="../../css/Adduser/confirm.css">
 		<!-- JS読み込み -->
 
 	</head>
@@ -52,8 +52,8 @@
 
 		<form action="../complete.php" method="post">
 			<!-- ▼会員情報▼ -->
-			<fieldset>
-				<legend class="text_Center">会員情報</span></legend>
+			<div class="confirm">
+				<h2 class="text_Center">会員情報</h2>
 
 				<table>
 					<tbody>
@@ -90,12 +90,14 @@
 							</td>
 						</tr>
 						<tr>
-							<th>
+							<th rowspan="2">
 								お名前
 							</th>
 							<td>
 								吉田智明
 							</td>
+						</tr>
+						<tr>
 							<td>
 								ヨシダトモアキ
 							</td>
@@ -134,13 +136,13 @@
 						</tr>
 					</tbody>
 				</table>
-			</fieldset>
+			</div>
 			<!-- ▲会員情報▲ -->
 
 
 			<!-- ▼お支払情報▼ -->
-			<fieldset>
-				<legend class="text_Center">お支払情報</legend>
+			<div class="confirm">
+				<h2 class="text_Center">お支払情報</h2>
 
 				<table>
 					<caption>コンビニ決済(前払い)</caption>
@@ -193,12 +195,15 @@
 						</tr>
 					</tbody>
 				</table>
-			</fieldset>
+			</div>
 			<!-- ▲お支払情報▲ -->
 
 
 			<!-- ボタン -->
-			<div class="">
+			<div class="confirm button">
+				<p>
+					入力内容に間違いがなければ、「登録する」ボタンを押してください。
+				</p>
 				<button type="submit">戻る</button>
 				<button type="submit">登録する</button>
 			</div>
