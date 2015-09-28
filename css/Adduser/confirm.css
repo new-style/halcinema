@@ -52,3 +52,9 @@ h2{
 	padding-top: 20px;
 	text-align: center;
 }
+.confirm.button p{
+	margin-bottom: 20px;
+}
+.confirm.button button{
+	margin: 0 50px;
+}

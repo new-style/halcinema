@@ -48,8 +48,11 @@ body{
 }
 
 /* フォントカラー */
-.F{
-  color: #ecdbcc;
+.F_000{
+  color: #000;
+}
+.F_fff{
+
 }
 
 /* 背景カラー */
@@ -120,18 +123,18 @@ body{
 }
 
 .btn_Regular{
-  width: ;
-  height: ;
+  width: 200px;
+  height: 60px;
 }
 
 .btn_Small{
-    width: ;
-    height: ;
+    width: 150px;
+    height: 30;
 }
 
 .btn_Big{
     width: 220px;
-    height: 150px;
+    height: 90px;
 }
 
 /* ボーダー */
