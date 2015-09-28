@@ -27,13 +27,14 @@
 			<main class="l-content">
 				<!-- ▼パンくず -->
 				<ul class="l-breadcrumb">
-						<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">HOME</a></li>
+					<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">HALシネマ</a></li>
+					<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">上映中作品一覧</a></li>
 				</ul>
 				<!-- ▲パンくず -->
 
 				<!-- ▼左コンテンツ -->
 				<article class="l-cLeft">
-					<h1 class="text_Center">公開中の作品一覧</h1>
+					<h1>上映中作品一覧</h1>
 
 <?php
 	for( $loop = 0; $loop < 9; $loop++ ){

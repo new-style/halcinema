@@ -7,17 +7,30 @@ h1,h2,h3,p,ul,li,div{
 	padding: 0;
 }
 
+h1{
+	background-color: #791611;
+	padding: 0 20px;
+	line-height: 60px;
+}
+
 section{
-	margin: 10px;
-	border: 1px #aaa;
+	margin: 20px 0;
+	border: solid 1px #000;
+}
+section a{
+	color: #ECDBCC;
 }
 h3{
-	line-height: 48px;
-	border: solid 1px #aaa;
+	line-height: 50px;
+	padding: 0 20px;
+	background-color: #9B1F1F;
 }
 section img{
 	width: 90px;
 	height: 140px;
+}
+section .info{
+	padding: 20px 0;
 }
 p{
 	padding: 5px;

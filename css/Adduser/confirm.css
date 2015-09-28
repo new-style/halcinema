@@ -10,6 +10,7 @@ h1,h2,h3,p,ul,li,div{
 h1{
 	background-color: #791611;
 	padding: 0 20px;
+	line-height: 60px;
 }
 
 /* stepBar */
