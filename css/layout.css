@@ -167,7 +167,12 @@ body{
   color: #fff;
   text-decoration: none;
 }
-
+.l-breadcrumb a:hover{
+  text-decoration: underline;
+}
+.l-breadcrumb li:last-child a:hover{
+  text-decoration: none; 
+}
 
 /* ■■■■■■■■■■ メインビジュアル ■■■■■■■■■■ */
 .l-mainv{
