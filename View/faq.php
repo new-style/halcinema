@@ -28,9 +28,9 @@
 			<main class="l-content">
 
 				<!-- ▼パンくず -->
-				<ul class="breadclumb">
-					<li><a href="#">HOME</a></li>
-					<li><a href="#"></a></li>
+				<ul class="l-breadcrumb">
+					<li><a href="http://127.0.0.1/halcinema/View/Shop/shop_index.php">HALシネマ</a></li>
+					<li><a href="http://127.0.0.1/halcinema/View/faq.php">よくある質問</a></li>
 				</ul>
 				<!-- ▼パンくず -->
 

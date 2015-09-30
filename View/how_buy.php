@@ -15,7 +15,7 @@
 
 		<link rel="stylesheet" href="./../css/layout.css">
 		<link rel="stylesheet" href="./../css/Common/common.css">
-		<link rel="stylesheet" href="./../css/how_buy.css">
+		<!-- <link rel="stylesheet" href="./../css/how_buy.css"> -->
 
 	</head>
 	<body>
@@ -28,9 +28,9 @@
 			<main class="l-content">
 
 				<!-- ▼パンくず -->
-				<ul class="breadclumb">
-					<li><a href="#">HOME</a></li>
-					<li><a href="#"></a></li>
+				<ul class="l-breadcrumb">
+					<li><a href="http://127.0.0.1/halcinema/View/Shop/shop_index.php">HALシネマ</a></li>
+					<li><a href="http://127.0.0.1/halcinema/View/how_buy.php">購入方法</a></li>
 				</ul>
 				<!-- ▼パンくず -->
 
@@ -42,8 +42,9 @@
 						<section>
 							<h3>１</h3>
 							<div class="float_C">
-
-								<img class="float_L" src="" alt="11111111111111111" />
+								<div class="float_L">
+									<img src="" alt="11111111111111111" />
+								</div>
 								<div class="float_R">
 									<p>
 										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
@@ -54,7 +55,7 @@
 									<p>
 										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
 									</p>
-								</div>
+								</div><!-- /.float_R -->
 							</di>
 						</section>
 
@@ -63,8 +64,9 @@
 						<section>
 							<h3>２</h3>
 							<div class="float_C">
-
-								<img class="float_L" src="" alt="11111111111111111" />
+								<div class="float_L">
+									<img src="" alt="2" />
+								</div>
 								<div class="float_R">
 									<p>
 										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
