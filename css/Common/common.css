@@ -148,11 +148,11 @@ body{
 /* ロゴ */
 /* 大きさ */
 .logo{
-  width: 250px;
   height: 80px;
 }
 
 .logo_Small{
+  height: 60px;
 }
 
 .logo_Big{
