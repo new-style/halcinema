@@ -28,24 +28,32 @@
 				<!-- ▼パンくず -->
 				<ul class="l-breadcrumb">
 					<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">HALシネマ</a></li>
-					<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">上映中作品一覧</a></li>
+					<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">公開中作品一覧</a></li>
 				</ul>
 				<!-- ▲パンくず -->
 
 				<!-- ▼左コンテンツ -->
 				<article class="l-cLeft">
-					<h1>上映中作品一覧</h1>
+					<h1>公開中作品一覧</h1>
 
 <?php
 	for( $loop = 0; $loop < 9; $loop++ ){
 ?>
 
-						<section class="float_C border_Solid">
-							<a href="../movies_info.php" class="link_None"><h3>作品タイトル</h3>
-							<img src="" alt="作品タイトル" class="float_L"/></a>
-							<div class="info">
-								<p>
-									aaaaaaaaaaaaaaaaaaaaaaaa
+						<section class="border_Solid">
+							<a href="../movies_info.php" class="link_None"><h3>ラブライブ！</h3>
+							<div class="float_C info">
+								<div class="float_L">
+									<img src="../../img/lovelive.jpg" alt="作品タイトル" /></a>
+								</div>
+								<p class="float_L">
+									あらすじ<br/>
+									世界的な恐竜のテーマパーク、ジュラシック・ワールド。
+恐竜の飼育員オーウェン（クリス・プラット）が警告したにもかかわらず、
+パークの責任者であるクレア（ブライス・ダラス・ハワード）は遺伝子操作によって新種・・・<br/>
+									スタッフ<br/>
+									監督： コリン・トレヴォロウ、製作総指揮： スティーヴン・スピルバーグ、
+原案： マイケル・クライトン、音楽： マイケル・ジアッキノ<br/>
 								</p>
 							</div>
 						</section>

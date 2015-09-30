@@ -29,9 +29,13 @@ section img{
 	width: 90px;
 	height: 140px;
 }
-section .info{
-	padding: 20px 0;
+section .info div{
+	border: 1px #000 solid;
+	padding: 10px;
+	width: 90px;
 }
-p{
-	padding: 5px;
+section .info p{
+	padding: 10px;
+	font-size: 12px;
+	width: 540px;
 }
