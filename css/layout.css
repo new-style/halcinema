@@ -223,7 +223,6 @@ body{
     overflow: hidden;
     width: 680px;
     margin-right: 10px;
-    /*background-color: #791611;*/
 }
 
 /* ■■■■■■■■■■ 右コンテンツ ■■■■■■■■■■ */
@@ -231,18 +230,19 @@ body{
     float: right;
     overflow: hidden;
     width: 270px;
-    background-color: #963;
 }
-
+.l-cRight h4{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 .l-cRight img{
   width: 270px;
   height: 150px;
 }
 
 .l-cRight .sns img{
-  width: 135px;
-  height: 90px;
-  float: left;
+  height: 50px;
 }
 
 /* ■■■■■■■■■■ フッターコンテンツ ■■■■■■■■■■ */

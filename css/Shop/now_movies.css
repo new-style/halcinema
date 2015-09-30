@@ -2,7 +2,7 @@
 @charset "UTF-8";
 
 
-h1,h2,h3,p,ul,li,div{
+h1,h2,h3,h4,p,ul,li,div{
 	margin: 0;
 	padding: 0;
 }
@@ -13,11 +13,11 @@ h1{
 	line-height: 60px;
 }
 
-section{
+.l-cLeft section{
 	margin: 20px 0;
 	border: solid 1px #000;
 }
-section a{
+.l-cLeft section a{
 	color: #ECDBCC;
 }
 h3{
@@ -25,16 +25,16 @@ h3{
 	padding: 0 20px;
 	background-color: #9B1F1F;
 }
-section img{
+.l-cLeft section img{
 	width: 90px;
 	height: 140px;
 }
-section .info div{
+.l-cLeft section .info div{
 	border: 1px #000 solid;
 	padding: 10px;
 	width: 90px;
 }
-section .info p{
+.l-cLeft section .info p{
 	padding: 10px;
 	font-size: 12px;
 	width: 540px;
