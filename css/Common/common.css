@@ -173,7 +173,7 @@ body{
 /* ステップバー */
 .stepBar {
   position: relative;
-  color: #fff;
+  color: #000;
   list-style: none;
   margin: 50px 0;
   padding: 0;
@@ -186,22 +186,22 @@ body{
   position: relative;
   float: left;
   display: inline-block;
-  height: 120px;
+  height: 140px;
   padding: 10px 40px 10px 25px;
-  background-color: #eee;
+  background-color: #B3B3B3;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .stepBar .step:before, .stepBar .step:after {
   position: absolute;
-  left: -20px;
+  left: -19px;
   display: block;
   content: '';
-  background-color: #eee;
-  border-left: 4px solid #FFF;
-  width: 35px;
-  height: 60px;
+  background-color: #B3B3B3;
+  border-left: 4px solid #361311;
+  width: 45px;
+  height: 70px;
 }
 .stepBar .step:after {
   top: 0;
@@ -237,20 +237,23 @@ body{
   border-bottom-right-radius: 4px;
 }
 .stepBar .step.current {
-  color: #FFF;
-  background-color: #26bfa1;
+  color: #000;
+  background-color: #00E06A;
 }
 .stepBar .step.current:before, .stepBar .step.current:after {
-  background-color: #26bfa1;
+  background-color: #00E06A;
 }
-.stepBar.step4 .step {
+.stepBar.step3 .step{
+  width: 33%;
+}
+.stepBar.step4 .step{
   width: 25%;
 }
 
 .stepBar span{
 	display: block;
-	font-size: 14px;
-	margin-top: 10px;
+	font-size: 16px;
+	margin-top: 15px;
 }
 
 

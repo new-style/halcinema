@@ -40,7 +40,7 @@
 					<ul class="stepBar step3">
 							<li class="step current btn">Step1<span>お客様情報とお支払方法<br/>を入力してください。</span></li>
 							<li class="step btn">Step2<span>お客様情報とお支払情報<br/>を確認してください。</span></li>
-							<li class="step btn">Step2<span>登録完了</span></li>
+							<li class="step btn">Step3<span>登録完了</span></li>
 					</ul>
 					<!-- ▲ステップバー -->
 

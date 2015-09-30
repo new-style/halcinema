@@ -132,15 +132,6 @@ body{
   color: #fff;
 }
 
-/* ■■■■■■■■■■ フッター ■■■■■■■■■■ */
-.l-footer{
-
-}
-
-.l-footer a:link , .l-footer a:visited{
-  color: #ecdbcc;
-}
-
 /* ■■■■■■■■■■ フラッパー ■■■■■■■■■■ */
 .l-wrapper{
     width: 960px;
@@ -255,6 +246,9 @@ body{
   /*bottom: 0;left: 0;*/
   /*margin: 0auto;*/
   background-color: #652323;
+}
+.l-footer a:link , .l-footer a:visited{
+  color: #ecdbcc;
 }
 
 .footer_Logo{
