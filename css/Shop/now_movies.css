@@ -20,6 +20,9 @@ h1{
 .l-cLeft section a{
 	color: #ECDBCC;
 }
+.l-cLeft section a:hover{
+	text-decoration: underline;
+}
 h3{
 	line-height: 50px;
 	padding: 0 20px;
