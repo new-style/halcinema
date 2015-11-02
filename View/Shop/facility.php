@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="./../../css/Base/normalize.css">
 		<link rel="stylesheet" href="./../../css/Base/base.css">
 		<link rel="stylesheet" href="./../../css/font-awesome.css">
+		<link rel="stylesheet" href="../../css/plugin/lightbox.css">
 
 		<link rel="stylesheet" href="./../../css/layout.css">
 		<link rel="stylesheet" href="./../../css/Common/common.css">
@@ -95,18 +96,18 @@
 
 						<div class="screen_6F float_C">
 							<p>6F</p>
-							<a href="#"><img src="../../img/screen05.png" alt=""></a>
-							<a href="#"><img src="../../img/screen06.png" alt=""></a>
+							<a href="../../img/sampleScreen.png" data-lightbox="image-5" data-title="スクリーン5"><img src="../../img/screen05.png" alt=""></a>
+							<a href="../../img/sampleScreen.png" data-lightbox="image-6" data-title="スクリーン6"><img src="../../img/screen06.png" alt=""></a>
 						</div>
 						<div class="screen_5F float_C">
 							<p>5F</p>
-							<a href="#"><img src="../../img/screen03.png" alt=""></a>
-							<a href="#"><img src="../../img/screen04.png" alt=""></a>
+							<a href="../../img/sampleScreen.png" data-lightbox="image-3" data-title="スクリーン3"><img src="../../img/screen03.png" alt=""></a>
+							<a href="../../img/sampleScreen.png" data-lightbox="image-4" data-title="スクリーン4"><img src="../../img/screen04.png" alt=""></a>
 						</div>
 						<div class="screen_4F float_C">
 							<p>4F</p>
-							<a href="#"><img src="../../img/screen01.png" alt=""></a>
-							<a href="#"><img src="../../img/screen02.png" alt=""></a>
+							<a href="../../img/sampleScreen.png" data-lightbox="image-1" data-title="スクリーン1"><img src="../../img/screen01.png" alt=""></a>
+							<a href="../../img/sampleScreen.png" data-lightbox="image-2" data-title="スクリーン2"><img src="../../img/screen02.png" alt=""></a>
 						</div>
 						<div class="screen_3F float_C">
 							<p>3F</p>
@@ -181,6 +182,8 @@
 	require_once "./../parts/footer.html";
 ?>
 		</div>
+		<script src="../../js/jquery-1.11.0.min.js"></script>
+		<script src="../../js/lightbox.js"></script>
 	</body>
 </html>
 <!-- ▲表示▲ -->
