@@ -1,0 +1,44 @@
+/* 上映中作品 */
+@charset "UTF-8";
+
+
+h1,h2,h3,h4,p,ul,li,div{
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	background-color: #791611;
+	padding: 0 20px;
+	line-height: 60px;
+}
+
+.l-cLeft section{
+	margin: 20px 0;
+	border: solid 1px #000;
+}
+.l-cLeft section a{
+	color: #ECDBCC;
+}
+.l-cLeft section a:hover{
+	text-decoration: underline;
+}
+h3{
+	line-height: 50px;
+	padding: 0 20px;
+	background-color: #9B1F1F;
+}
+.l-cLeft section img{
+	width: 90px;
+	height: 140px;
+}
+.l-cLeft section .info div{
+	border: 1px #000 solid;
+	padding: 10px;
+	width: 90px;
+}
+.l-cLeft section .info p{
+	padding: 10px;
+	font-size: 12px;
+	width: 540px;
+}
