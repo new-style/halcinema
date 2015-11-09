@@ -28,7 +28,7 @@
 			<main class="l-content">
 
 				<!-- ▼パンくず -->
-				<ul class="breadclumb">
+				<ul class="l-breadclumb">
 					<li><a href="#">HOME</a></li>
 					<li><a href="#"></a></li>
 				</ul>
