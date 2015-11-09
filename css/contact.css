@@ -1,0 +1,91 @@
+/* 作品紹介 */
+@charset "UTF-8";
+
+h1,h2,h3,p,ul,li,div{
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	background-color: #791611;
+	padding: 0 20px;
+	line-height: 60px;
+}
+
+article section{
+	margin-top: 1%;
+	padding: 1%;
+	background-color: #791611;
+}
+/* ▼お問い合わせの前に▼ */
+.faq_each_link{
+	padding-left: 5%;
+}
+.wait a{
+	text-decoration: none;
+	color: #ECDBCC;
+}
+.wait a:hover{
+	text-decoration: underline;
+}
+.wait i{
+	margin-right: 1%;
+}
+.wait li:last-child{
+	margin-top: 10px;
+	font-size: 105%;
+}
+/* ▲お問い合わせの前に▲ */
+
+/* ▼電話で問い合わせ▼ */
+.tel_contact p{
+	font-size: 250%;
+}
+.tel_contact i{
+	margin-right: 1%;
+}
+/* ▲電話で問い合わせ▲ */
+
+
+/* ▼問い合わせ▼ */
+.contact table{
+	margin: 2% auto;
+
+	width: 95%;
+}
+.contact th,td{
+	border: solid 1px #ECDBCC;
+}
+.contact th{
+	width: 30%;
+}
+.contact td{
+	padding: 2% 3%;
+	width: 70%;
+}
+.contact input[type="text"],.contact select,.contact textarea{
+	width: 94%;
+	color: #4d4d4d;
+}
+.contact textarea{
+	height: 150px;
+}
+.contact input[type="radio"]{
+	margin-right: 1%;
+	height: 24px;
+	width: 24px;
+	vertical-align: middle;
+}
+.contact label{
+	margin-right: 10px;
+}
+.button{
+	text-align: center;
+}
+.button p{
+	margin:  2% 0;
+}
+.button button{
+	color: #4d4d4d;
+}
+/* ▲問い合わせ▲ */
