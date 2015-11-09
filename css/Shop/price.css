@@ -5,10 +5,23 @@ h1,h2,h3,p,ul,li,div,dl,dt,dd{
 	margin: 0;
 	padding: 0;
 }
+h1{
+	background-color: #791611;
+	padding: 0 20px;
+	line-height: 60px;
+}
+
+article section{
+	margin-top: 15px;
+	padding: 10px;
+	background-color: #791611;
+}
 
 h2{
-	width: 600px;
 	margin: 0 auto;
+	padding-left: 20px;
+	width: 600px;
+	border-left: solid 10px #ECDBCC;
 }
 dl{
 	width: 540px;
@@ -20,8 +33,17 @@ dl::after{
 	clear: both;
 }
 dt,dd{
-	width: 268px;
-	height: 40px;
+	margin-bottom: 20px;
 	float: left;
-	border: solid 1px #999;
+}
+dt{
+	width: 60%;
+}
+dd{
+	padding-left: 10%;
+	width: 30%;
+}
+.service_info{
+	font-size: 80%;
+	color: #C1DCE5;
 }

@@ -28,38 +28,92 @@
 			<main class="l-content">
 
 				<!-- ▼パンくず -->
-				<ul class="l-breadclumb">
-					<li><a href="#">HOME</a></li>
-					<li><a href="#"></a></li>
+				<ul class="l-breadcrumb">
+					<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">HALシネマ</a></li>
+					<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/price.php">料金案内</a></li>
 				</ul>
 				<!-- ▼パンくず -->
 
 				<!-- ▼左コンテンツ -->
 				<article class="l-cLeft">
 
-					<h1 class="text_Center border_Solid">料金案内</h1>
+					<h1 class="text_Center">料金案内</h1>
 
 					<section>
 
 						<h2>基本料金</h2>
 						<dl>
 							<dt>一般</dt>
-							<dd>1,800円</dd>
+							<dd>¥1,800</dd>
 						</dl>
 						<dl>
-							<dt>大学生</dt>
-							<dd>1,500円</dd>
+							<dt>大学生・高校生</dt>
+							<dd>¥1,500</dd>
 						</dl>
+						<dl>
+							<dt>中学生・小学生</dt>
+							<dd>¥1,200</dd>
+						</dl>
+						<dl>
+							<dt>小学生未満</dt>
+							<dd>¥1,000</dd>
+						</dl>
+						<dl>
+							<dt>3歳以下</dt>
+							<dd>¥1,500</dd>
+						</dl>
+
 
 					</section>
 
 					<section>
 
-						<h2>スペシャル料金</h2>
+						<h2>割引サービス</h2>
 						<dl>
-							<dt>レディースデー</dt>
+							<dt>
+								シニア割引<br/>
+								<span class="service_info">※60歳以上の方</span>
+							</dt>
 							<dd>1,000円</dd>
 						</dl>
+						<dl>
+							<dt>
+								夫婦50割引<br/>
+								<span class="service_info">
+									※どちらかが50歳以上のご夫婦お2人で、同一日時・同作品をご鑑賞の場合
+								</span>
+							</dt>
+							<dd>2,200円</dd>
+						</dl>
+						<dl>
+							<dt>
+								カップル割引<br/>
+								<span class="service_info">
+									※高校生以上のお客様で、同一日時・同作品をご鑑賞の場合
+								</span>
+							</dt>
+							<dd>2,200円</dd>
+						</dl>
+						<dl>
+							<dt>
+								レディース割引<br/>
+								<span class="service_info">
+									※毎週水曜日、女性の方のみご鑑賞いただけます。　
+								</span>
+							</dt>
+							<dd>1,000円</dd>
+						</dl>
+						<dl>
+							<dt>
+								障がい者割引<br/>
+								<span class="service_info">
+									※付き添い1名様まで同料金。障がい者手帳をご提示ください。
+								</span>
+							</dt>
+							<dd>1,100円</dd>
+						</dl>
+
+
 
 					</section>
 
