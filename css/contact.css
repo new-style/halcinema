@@ -1,17 +1,14 @@
 /* 作品紹介 */
 @charset "UTF-8";
-
 h1,h2,h3,p,ul,li,div{
 	margin: 0;
 	padding: 0;
 }
-
 h1{
 	background-color: #791611;
 	padding: 0 20px;
 	line-height: 60px;
 }
-
 article section{
 	margin-top: 1%;
 	padding: 1%;
@@ -45,7 +42,6 @@ article section{
 	margin-right: 1%;
 }
 /* ▲電話で問い合わせ▲ */
-
 
 /* ▼問い合わせ▼ */
 .contact table{

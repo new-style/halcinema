@@ -1,18 +1,15 @@
 /* 上映中作品 */
 @charset "UTF-8";
 
-
 h1,h2,h3,h4,p,ul,li,div{
 	margin: 0;
 	padding: 0;
 }
-
 h1{
 	background-color: #791611;
 	padding: 0 20px;
 	line-height: 60px;
 }
-
 .l-cLeft section{
 	margin: 20px 0;
 	border: solid 1px #000;
