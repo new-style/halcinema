@@ -28,9 +28,9 @@
 			<main class="l-content">
 
 				<!-- ▼パンくず -->
-				<ul class="l-breadclumb">
-					<li><a href="#">HOME</a></li>
-					<li><a href="#"></a></li>
+				<ul class="l-breadcrumb">
+					<li><a href="#http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">HALシネマ</a></li>
+					<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Menber/mypage.php">マイページ</a></li>
 				</ul>
 				<!-- ▼パンくず -->
 
@@ -39,38 +39,118 @@
 
 					<h1 class="text_Center border_Solid">マイページ</h1>
 
-					<h2>予約履歴・購入履歴</h2>
-					<div class="info_Box">
-						<a href="reserve_history.php">予約履歴</a>
-						<a href="buy_history.php">購入履歴</a>
-					</div>
+					<!-- ▼予約履歴▼ -->
+					<section id="reserve_history">
+						<h2>予約履歴</h2>
+						<div class="my_content">
+							<dl>
+								<dd>2015/12/10</dd>
+								<dd>ジュラシックワールド</dd>
+							</dl>
+							<dl>
+								<dd>2015/12/09</dd>
+								<dd>ジュラシックワールド</dd>
+							</dl>
+							<dl>
+								<dd>2015/12/08</dd>
+								<dd>ジュラシックワールド</dd>
+							</dl>
+						</div>
+						<div class="more">
+							+more
+						</div>
+					</section>
+					<!-- ▲予約履歴▲ -->
 
-					<h2>ユーザ登録情報</h2>
-					<div class="info_Box">
-						<a href="setting.php">基本情報</a>
-						<a href="#">クレジット情報</a>
-					</div>
 
-					<h2>お気に入りリスト</h2>
-					<div class="info_Box">
+					<!-- ▼購入履歴▼ -->
+					<section id="purchase_history">
+						<h2>購入履歴</h2>
+						<div class="my_content">
+							<dl>
+								<dd>2015/12/25</dd>
+								<dd>ジュラシックワールド</dd>
+							</dl>
+							<dl>
+								<dd>2015/12/15</dd>
+								<dd>S-最後の警官-</dd>
+							</dl>
+							<dl>
+								<dd>2015/12/05</dd>
+								<dd>カリフォルニアダダダダ</dd>
+							</dl>
+						</div>
+						<div class="more">
+							+more
+						</div>
+					</section>
+					<!-- ▲購入履歴▲ -->
 
-					</div>
 
-					<h2>ポイント</h2>
-					<div class="info_Box">
-						X ポイント
-						<a href="#">ポイント履歴</a>
-					</div>
+					<!-- ▼ポイント▼ -->
+					<section id="point">
+						<h2>ポイント</h2>
+						<div class="my_content">
+							1234<span>pt</span>
+						</div>
+					</section>
+					<!-- ▲ポイント▲ -->
 
-					<h2>シネマズマガジン</h2>
-					<div class="info_Box">
 
-					</div>
+					<!-- ▼お気に入りリスト▼ -->
+					<section id="fav">
+						<h2>お気に入りリスト</h2>
+						<div class="my_content">
+							<dl>
+								<dd><img src="./../../img/lovelive.jpg" alt="" /></dd>
+								<dd>カリフォルニアダダダダ</dd>
+							</dl>
+							<dl>
+								<dd><img src="./../../img/lovelive.jpg" alt="" /></dd>
+								<dd>カリフォルニアダダダダ</dd>
+							</dl>
+							<dl>
+								<dd><img src="./../../img/lovelive.jpg" alt="" /></dd>
+								<dd>カリフォルニアダダダダ</dd>
+							</dl>
+						</div>
+						<div class="more">
+							+more
+						</div>
+					</section>
+					<!-- ▲お気に入りリスト▲ -->
 
-					<h2>キャンペーン情報</h2>
-					<div class="info_Box">
 
-					</div>
+					<!-- ▼シネマズマガジン▼ -->
+					<section id="magezine">
+						<h2>シネマズマガジン</h2>
+						<div class="my_content">
+							<dl>
+								<dd><span class="m_date">2015/09/12</span><span class="m_title">上映作品を更新しました。</span></dd>
+							</dl>
+							<dl>
+								<dd><span class="m_date">2015/09/12</span><span class="m_title">上映作品を更新しました。</span></dd>
+							</dl>
+						</div>
+						<div class="more">
+							+more
+						</div>
+					</section>
+					<!-- ▲シネマズマガジン▲ -->
+
+
+					<!-- ▼ユーザ登録情報▼ -->
+					<section id="user_info">
+						<h2>ユーザ登録情報</h2>
+						<div class="my_content">
+							<ul>
+								<li><a href="#">ユーザ情報変更</a></li>
+								<li><a href="#">支払方法変更</a></li>
+							</ul>
+						</div>
+					</section>
+					<!-- ▲ユーザ登録情報▲ -->
+
 
 				</article>
 				<!-- ▲コンテンツ -->
