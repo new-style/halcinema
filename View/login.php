@@ -28,16 +28,20 @@
 
 				<!-- ▼コンテンツ -->
 				<article>
-					<form action="Member/mypage.php" method="post">
-						<input type="text" name="user_id" value="">
-						<input type="password" name="password" value="">
+					<section>
+						<h2>ログイン</h2>
+						<form action="Member/mypage.php" method="post">
+							<input type="text" name="user_id" value="">
+							<input type="password" name="password" value="">
+							<input type="checkbox" name="name" value="">
 
-						<button type="submit">ログイン</button>
+							<button type="submit">ログイン</button>
 
-						<p>
-							<a href="#">※IDまたはパスワードをお忘れの方はこちら※</a>
-						</p>
-					</form>
+							<p>
+								<a href="#">※IDまたはパスワードをお忘れの方はこちら※</a>
+							</p>
+						</form>
+					</section>
 				</article>
 				<!-- ▲コンテンツ -->
 			</main>
