@@ -31,41 +31,23 @@
 
 				<!-- ▼コンテンツ -->
 				<article>
-          <aside class="col-md-2 bg-ns">
+          <aside class="col-md-2">
 <?php
   require_once "./../parts/side_var.php";
 ?>
           </aside>
 
-					<section class="col-md-10 top">
+					<section class="col-md-10 customer_search">
 						<div class="top_content">
-							<h2>売上管理</h2>
+							<h2>顧客管理</h2>
 
               <form role="form" class="" action="./search.html" method="post">
                 <fieldset>
                   <legend>検索</legend>
                   <div class="form-group">
-                    <!-- 年 -->
-                    <select class="form-control" name="" id="year">
-                      <option>2014</option>
-                      <option>2015</option>
-                    </select>
-                    <label for="year">年</label>
-                  </div>
-                  <!-- 月 -->
-                  <div class="form-group">
-                    <select class="form-control" name="" id="month">
-<?php
-  for( $i=1; $i <= 12; $i++){
-?>
-                      <option>
-                        <?php echo $i; ?>
-                      </option>
-<?php
-  }
-?>
-                    </select>
-                    <label for="month">月</label>
+                    <!-- ワード検索 -->
+										<label for="year">ワード検索</label>
+										<input type="text" class="form-control" id="year" name="name" value="" placeholder="ID等">
                   </div>
                   <!-- 検索ボタン -->
                   <button type="submit" name="button" class="btn btn-default"><i class="fa fa-search"></i>検索</button>
@@ -73,16 +55,17 @@
               </form>
 
 
-              <table class="table">
-                <caption>2015 年 １ 月</caption>
+							<!-- 検索結果 -->
+              <table class="table table-striped table-bordered">
+                <caption>検索結果</caption>
                 <thead>
                     <tr>
-                      <th></th><th></th><th></th><th></th>
+                      <th>No.</th><th>会員ID</th><th>氏名</th>
                     </tr>
                   </thead>
                 <tbody>
                   <tr>
-                    <td></td><td></td><td></td><td></td>
+                    <td>1</td><td>aaaaaaaa12345</td><td>山田花子</td>
                   </tr>
                 </tbody>
               </table>

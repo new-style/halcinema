@@ -31,15 +31,15 @@
 
 				<!-- ▼コンテンツ -->
 				<article>
-          <aside class="col-md-2 bg-ns">
+          <aside class="col-md-2">
 <?php
   require_once "./../parts/side_var.php";
 ?>
           </aside>
 
-					<section class="col-md-10 top">
+					<section class="col-md-10 visitor">
 						<div class="top_content">
-							<h2>売上管理</h2>
+							<h2>来客管理</h2>
 
               <form role="form" class="" action="./search.html" method="post">
                 <fieldset>
@@ -72,20 +72,30 @@
                 </fieldset>
               </form>
 
-
-              <table class="table">
+							<!-- 検索結果 -->
+							<div class="pdf col-md-2">
+								<a href="#" class="btn btn-warning btn-sm ">PDF出力</a>
+							</div>
+              <table class="table table-striped table-bordered">
                 <caption>2015 年 １ 月</caption>
                 <thead>
                     <tr>
-                      <th></th><th></th><th></th><th></th>
+                      <th>No</th><th>日付</th><th>曜日</th><th>男性</th><th>女性</th><th>総合計</th>
                     </tr>
                   </thead>
                 <tbody>
+<?php
+	for( $i = 1; $i < 31; $i++ ){
+?>
                   <tr>
-                    <td></td><td></td><td></td><td></td>
+                    <td><?php echo $i; ?></td></td><td><?php echo $i; ?>日</td><td>火</td><td>10,000</td><td>10,000</td><td>20,000</td>
                   </tr>
+<?php
+	}
+?>
                 </tbody>
               </table>
+
 						</div><!-- /.top_content -->
 					</section>
 				</article>
