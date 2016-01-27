@@ -18,24 +18,13 @@
 <body>
 
     <div class="container">
-        <header class="row bg-ns">
-            <h1><a href="#"><img src="./../../../img/logo.png" alt="HALシネマ"></a></h1>
-        </header>
-
+<?php
+require_once("./../parts/header.php");
+?>
         <article class="row">
-            <aside class="col-md-2">
-                <ul class="nav nav-pills nav-stacked">
-                    <li class="active">○○　さん</li>
-                    <li><a href="#">売上管理</a></li>
-                    <li><a href="#">来客管理</a></li>
-                    <li><a href="#">アクセス管理</a></li>
-                    <li><a href="#">会員管理</a></li>
-                    <li><a href="#">映画管理一覧</a></li>
-                    <li><a href="#">メルマガ管理</a></li>
-                    <li><a href="#">管理者管理</a></li>
-                </ul>
-            </aside>
-
+<?php
+require_once("./../parts/side.php");
+?>
             <section class="col-md-10">
                 <h1>来客管理</h1>
                 <form action="./search.php" method="post" class="form-inline" role="form">
@@ -103,10 +92,9 @@
                 </div>
             </section>
         </article>
-
-        <footer class="row bg-ns text-center">
-            <p><small>Copyright &copy; 2015 NewStyle All Rights Reserved.</small></p>
-        </footer>
+<?php
+require_once("./../parts/footer.php");
+?>
 
     </div>
 

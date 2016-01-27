@@ -1,1 +1,3 @@
-<h1><a href="#"><img src="./../../../img/logo.png" alt="HALシネマ"></a></h1>
+<header class="row bg-ns">
+    <img src="./../../img/logo.png" alt="HALシネマ">
+</header>

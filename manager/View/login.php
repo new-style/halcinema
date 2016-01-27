@@ -18,13 +18,13 @@
 <body>
 
     <div class="container">
-        <header class="row bg-ns">
-            <img src="./../../img/logo.png" alt="HALシネマ">
-        </header>
+<?php
+require_once("./parts/header.php");
+?>
 
         <article class="row">
             <section class="col-md-4 col-md-offset-4 login">
-                <form action="index.php">
+                <form action="index.php" method="post">
                     <filedset>
                         <legend class="text-center">LOGIN</legend>
                         <div class="form-group">
@@ -41,9 +41,9 @@
             </section>
         </article>
 
-        <footer class="row bg-ns text-center">
-            <p><small>Copyright &copy; 2015 NewStyle All Rights Reserved.</small></p>
-        </footer>
+<?php
+require_once("./parts/footer.php");
+?>
     </div>
 
 </body>
