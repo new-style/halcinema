@@ -21,10 +21,113 @@ article{
 }
 fieldset{
 	width: 780px;
+	text-align: center;
 	margin: 50px auto;
-
+}
+.sheetWrap{
+	width: 100%;
+}
+.screen{
+	margin: 0 auto;
+	margin-bottom: 30px;
+	width: 650px;
+	height: 25px;
+	background-color: #999;
+}
+.sheetA{
+	margin: 0 auto;
+	width: 650px;
+	height: 70px;
+}
+.sheetA:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.sheet{
+	width: 30px;
+	height: 40px;
+	background: #fff;
+	float: left;
+	margin: 0 0 0 30px;
+	border-radius: 3px;
+}
+.sheetName{
+	width: 30px;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	margin: 0 0 0 25px;
+}
+.diamond1 {
+width: 40px;
+height: 30px;
+background: #fff;
+margin: 15px 0 0 30px;
+border-radius: 3px;
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+-webkit-transform-origin: 0 100%;
+-moz-transform-origin: 0 100%;
+-ms-transform-origin: 0 100%;
+-o-transform-origin: 0 100%;
+transform-origin: 0 100%;
+}
+.diamond2 {
+width: 40px;
+height: 30px;
+background: #fff;
+margin: 5px 0 0 30px;
+border-radius: 3px;
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
+/*-webkit-transform-origin: 0 100%;
+-moz-transform-origin: 0 100%;
+-ms-transform-origin: 0 100%;
+-o-transform-origin: 0 100%;
+transform-origin: 0 100%;*/
 }
 
+.buySelectWrap{
+	width: 800px;
+	margin: 0 auto;
+}
+.loginBuy{
+	width: 350px;
+	height: 400px;
+	margin: 0;
+	margin-bottom: 30px;
+	padding: 0;
+	float: left;
+}
+.signUpByWrap{
+	width: 350px;
+	margin: 0;
+	margin: 0;
+	float: right;
+}
+.signUpBtn{
+	margin: 0 auto;
+	width: 200px;
+	height: 40px;
+	line-height: 42px;
+	border-radius: 8px;	
+	border: 1px solid #000;	
+}
+.signUpBuy{
+	width: 350px;
+	margin: 0;
+	padding: 0;
+}
+.back{
+	background-color: #791611;
+}
 /* Form */
 fieldset{
 	width: 780px;

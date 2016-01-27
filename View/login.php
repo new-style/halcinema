@@ -15,6 +15,7 @@
 
 		<link rel="stylesheet" href="./../css/layout.css">
 		<link rel="stylesheet" href="./../css/Common/common.css">
+		<link rel="stylesheet" href="../css/login.css">
 
 	</head>
 	<body>
@@ -28,19 +29,17 @@
 
 				<!-- ▼コンテンツ -->
 				<article>
-					<section>
-						<h2>ログイン</h2>
-						<form action="Member/mypage.php" method="post">
-							<input type="text" name="user_id" value="">
-							<input type="password" name="password" value="">
-							<input type="checkbox" name="name" value="">
-
+					<section class="loginWrap">
+						<img src="../img/logo02.png">
+						<form action="Member/mypage.php" method="post" class="float_C">
+							<label for="user_id">ユーザーID</label><input type="text" name="user_id" value="" id="user_id">
+							<label for="passwd">パスワード</label><input type="password" name="password" value="" id="passwd">
+							<input type="checkbox" name="name" value="" id="cookie"><label for="cookie" id="cook">ログイン情報を保持する</label>	
 							<button type="submit">ログイン</button>
-
-							<p>
+						</form>
+							<p class="passFogot">
 								<a href="#">※IDまたはパスワードをお忘れの方はこちら※</a>
 							</p>
-						</form>
 					</section>
 				</article>
 				<!-- ▲コンテンツ -->

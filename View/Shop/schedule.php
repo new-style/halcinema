@@ -26,7 +26,7 @@
 
 			<main class="l-content">
 				<!-- ▼パンくず -->
-				<ul class="l-breadcrumb">
+				<ul class="breadcrumb">
 						<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">HOME</a></li>
 				</ul>
 				<!-- ▲パンくず -->

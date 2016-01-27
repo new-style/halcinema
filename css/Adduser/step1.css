@@ -12,7 +12,92 @@ h1,h2,h3,p,ul,li,div{
 	border-color: #ccc;
 	border-width: 1px;
 }
+fieldset{
+	margin-bottom: 70px;
+}
+.payWrap{
+	padding: 30px;
+	box-sizing: border-box;
+}
 
 .stepBar > .step > span{
 	padding-left: 10px;
 }
+.userAddList dl{
+	width: 100%;
+	min-height: 70px;
+}
+.userAddList dl::after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.userAddList>small{
+	display: block;
+}
+.userAddList dt,.userAddList dd{
+	float: left;	
+}
+.userAddList dt{
+	width: 300px;
+	padding-left: 150px;
+	box-sizing: border-box;
+}
+.userAddList dt>span{
+	color: #f00;
+}
+.userAddList dd{
+	padding-left: 30px;
+	box-sizing: border-box;
+	width: 590px;
+}
+.userAddList dd input{
+	width: 400px;
+	display: block;
+}
+#nameAdd input{
+	width: 150px;
+	margin-left: 4px;
+	margin-bottom: 40px;
+	display: inline-block;
+}
+#nameAdd>span{
+	width: 40px;
+	text-align: center;
+	display: inline-block;
+}
+#seibetu input{
+	display: inline-block;
+	width: 25px;
+}
+#seibetu input:nth-child(3){
+	margin-left: 30px;
+}
+.mailMagazine{
+	padding: 30px 0;
+}
+.mailMagazine p{
+	width: 400px;
+	margin-left: 100px;
+	box-sizing: border-box;
+	float: left;
+}
+.mailMagazine form{
+	float: left;
+}
+.mailMagazine input:nth-child(5){
+	margin-left: 30px;
+}
+.kiyaku{
+	height: 200px;
+	overflow: scroll;
+}
+
+
+
+
+
+
+
+
+
