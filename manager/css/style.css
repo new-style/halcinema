@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.bg-ns{
+  background-color: #6b2222;
+  color: #fff;
+}
+
+/* サイドナビゲーション */
+.nav li.active{
+    line-height: 36px;
+}
+
+
+/* login.php */
+.login{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* index.php */
+.top_nav ul{
+    list-style: none;
+}
+.top_nav li{
+    line-height: 45px;
+}
+.top_nav li a{
+    display: block;
+    padding-left: 20px;
+}
+.top_nav li a:hover{
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+/* login,index以外の検索 */
+.search_form fieldset{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.search_form label{
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+/* login,index以外のテーブル */
+.search_list a{
+  display: block;
+}
+
+/* PDF出力ボタン */
+.pdf_put{
+  margin-top: 20px;
+}
