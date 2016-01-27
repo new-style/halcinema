@@ -28,13 +28,13 @@
 			<main class="l-content">
 
 				<!-- ▼パンくず -->
-				<ul class="l-breadclumb">
+<!-- 				<ul class="l-breadclumb">
 					<li><a href="#">HOME</a></li>
 					<li><a href="#"></a></li>
-				</ul>
+				</ul> -->
 				<!-- ▼パンくず -->
 
-				<h1>チケット予約</h1>
+				<!-- <h1>チケット予約</h1> -->
 
 				<!-- ▼ステップバー -->
 				<ul class="stepBar step4">
@@ -46,14 +46,14 @@
 				<!-- ▲ステップバー -->
 
 				<!-- ▼コンテンツ -->
-				<article class="border_Solid">
+				<article class="border_Solid back">
           <div class="title_Box text_Center border_Solid">
             <h2>Step1</h2>
             <p>購入枚数と座席を選択してください。</p>
           </div>
           <form action="step2.php" method="post">
             <!-- ▼購入枚数選択 -->
-            <fieldset>
+            <fieldset class="back">
               <legend class="text_Center">購入枚数選択<span>※最大2枚まで購入可能です。</span></legend>
               <dl>
                 <dt>一般</dt>
@@ -102,7 +102,6 @@
               <dl>
                 <dt>合計</dt>
                 <dd class="l-select">
-
                   枚
                 </dd>
                 <dd class="l-price">円</dd>
@@ -114,30 +113,74 @@
 
 
             <!-- ▼座席選択 -->
-            <fieldset>
+            <fieldset class="back">
               <legend>座席選択<span>※緑に店頭しているシートは3歳以下のお子様がいらっしゃいます。</span></legend>
+              <div class="sheetWrap">
+                <div class="screen"><span>スクリーン</span></div>
+              <?php 
+                $sheetName = Array("A","B","C","D","E","F","G");
+                for($i = 0; $i<7;$i++){
+              ?>
+                <div class="sheetA">
+                  <div class="sheet diamond1"></div>
+                  <div class="sheet diamond1"></div>
+                  <div class="sheetName"><p><?php echo $sheetName[$i] ?></p></div>
+                  <div class="sheet"></div>
+                  <div class="sheet"></div>
+                  <div class="sheet"></div>
+                  <div class="sheet"></div>
+                  <div class="sheetName"><p><?php echo $sheetName[$i] ?></p></div>
+                  <div class="sheet diamond2"></div>
+                  <div class="sheet diamond2"></div>
+                </div>
+              <?php 
+                }
+              ?>
+              </div>
             </fieldset>
             <!-- ▲座席選択 -->
 
+            <div class="buySelectWrap float_C">
+              <!-- ▼予約に進む -->
+              <fieldset class="loginBuy back">
+                <legend>ログインして予約する</legend>
+                <label for="id">ID</label><input type="text" id="id" name="id">
+                <label for="password"></label><input type="password" id="password" name="password">
+                <button type="submit">ログインして支払方法選択へ進む</button>
+
+                <legend>新規会員登録をして予約する</legend>
+                <a href="../Adduser/step1.php">新規会員登録</a>
+
+                <legend>支払い方法選択へ進む</legend>
+                <button type="submit">支払方法選択へ進む</button>
+              </fieldset>
+              <!-- ▲予約に進む -->
 
 
+              <div class="signUpByWrap">
+                <!-- ▼予約に進む -->
+                  <fieldset class="signUpBuy back">
+                      <legend>ログインして予約する</legend>
+                      <div class="signUpBtn"><span>新規会員登録</span></div>
+                  </fieldset>
+                  <!-- ▲予約に進む -->
 
+                  <fieldset class="signUpBuy back">
+                    <legend>ログインして予約する</legend>
+                    <label for="id">ID</label><input type="text" id="id" name="id">
+                    <label for="password"></label><input type="password" id="password" name="password">
+                    <button type="submit">ログインして支払方法選択へ進む</button>
 
-            <!-- ▼予約に進む -->
-            <fieldset>
-              <legend>ログインして予約する</legend>
-							<label for="id">ID</label><input type="text" id="id" name="id">
-							<label for="password"></label><input type="password" id="password" name="password">
-							<button type="submit">ログインして支払方法選択へ進む</button>
+                    <legend>新規会員登録をして予約する</legend>
+                    <a href="../Adduser/step1.php">新規会員登録</a>
 
-              <legend>新規会員登録をして予約する</legend>
-							<a href="../Adduser/step1.php">新規会員登録</a>
+                    <legend>支払い方法選択へ進む</legend>
+                    <button type="submit">支払方法選択へ進む</button>
+                  </fieldset>
+                <!-- ▲予約に進む -->
+              </div>
 
-              <legend>支払い方法選択へ進む</legend>
-							<button type="submit">支払方法選択へ進む</button>
-
-            </fieldset>
-            <!-- ▲予約に進む -->
+            </div>
 
 
           </form>
