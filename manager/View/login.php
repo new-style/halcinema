@@ -26,7 +26,7 @@
             <section class="col-md-4 col-md-offset-4 login">
                 <form action="index.php">
                     <filedset>
-                        <legend>LOGIN</legend>
+                        <legend class="text-center">LOGIN</legend>
                         <div class="form-group">
                             <label for="id">LOGIN ID</label>
                             <input type="text" id="id" class="form-control" placeholder="LOGIN ID">
@@ -35,6 +35,7 @@
                             <label for="id">PASSWORD</label>
                             <input type="password" id="password" class="form-control" placeholder="PASSWORD">
                         </div>
+                        <button type="button" class="btn btn-primary">login</button>
                     </filedset>
                 </form>
             </section>
