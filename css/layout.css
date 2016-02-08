@@ -237,6 +237,69 @@ body{
   height: 50px;
 }
 
+.news,.information{
+  width: 270px;
+  background-color: #fff;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.news h4,.information h4{
+  color: #fff;
+  height: 35px;
+  line-height: 35px;
+  font-weight: 100;
+}
+.news h4{
+  background-color: #D51F73;
+}
+.information h4{
+  background-color: #7E443C;
+  position: relative;
+}
+.content{
+  /*background-color: blue;*/
+  margin: 0 auto;
+  width: 250px;
+}
+.information .content{
+  height: 150px;
+  overflow: auto;
+}
+.listIcon{
+  display: inline-block;
+  line-height: 16px;
+  padding: 0px 10px;
+  font-size: 10px;
+  color: #D51F73;
+  position: absolute;
+  border: 1px solid rgba(255,150,100,0.5);
+  top: 8px;
+  right: 8px;
+  background-color: #fff;
+}
+.content ul{
+  width: 250px;
+  margin: 0;
+  padding: 0;
+}
+.content li{
+  font-size: 12px;
+  width: 250px;
+  height: 38px;
+  line-height: 38px;
+  color: #111;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+.content li:last-child{
+  border-bottom: 0;
+}
+.content li span{
+  display: inline-block;
+  margin-right: 1em;
+  color: #D51F73;
+}
+
 /* ■■■■■■■■■■ フッターコンテンツ ■■■■■■■■■■ */
 
 .l-footer{

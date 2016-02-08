@@ -25,7 +25,7 @@
 	require_once "./../parts/header.html";
 ?>
 
-			<main class="l-content">
+			<main class="l-content float_C">
 
 				<!-- ▼パンくず -->
 				<ul class="breadclumb">
@@ -35,7 +35,7 @@
 				<!-- ▼パンくず -->
 
 				<!-- ▼左コンテンツ -->
-				<article class="l-cLeft">
+				<article class="l-cLeft float_C">
 					<!-- ▼メインビジュアル -->
 					<div class="l-mainv">
 						<img src="../../img/top_image.png" height="355" width="685" alt="" />

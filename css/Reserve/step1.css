@@ -100,7 +100,7 @@ transform-origin: 0 100%;*/
 }
 .loginBuy{
 	width: 350px;
-	height: 400px;
+	height: 345px;
 	margin: 0;
 	margin-bottom: 30px;
 	padding: 0;
@@ -113,7 +113,7 @@ transform-origin: 0 100%;*/
 	float: right;
 }
 .signUpBtn{
-	margin: 0 auto;
+	margin: 38px auto 48px;
 	width: 200px;
 	height: 40px;
 	line-height: 42px;
@@ -124,6 +124,9 @@ transform-origin: 0 100%;*/
 	width: 350px;
 	margin: 0;
 	padding: 0;
+}
+.signUpBuy:last-child{
+	margin-top: 30px;
 }
 .back{
 	background-color: #791611;
@@ -160,4 +163,22 @@ dl::after{
 select{
 	width: 220px;
 	height: 35px;
+}
+#id,#password{
+	width: 200px;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 20px;
+}
+.loginBuy label{
+	padding-top: 20px;
+	width: 200px;
+	margin: 0 auto;
+	display: block;
+	text-align: left;
+}
+.loginBuy button{
+	margin-top: 30px;
+	color: #000;
+	height: 50px;
 }

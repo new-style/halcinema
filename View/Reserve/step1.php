@@ -39,7 +39,7 @@
 				<!-- ▼ステップバー -->
 				<ul class="stepBar step4">
 						<li class="step current btn">Step1<span>購入枚数と座席<br/>を選択してください。</span></li>
-            <li class="step btn">Step2<span>お客様情報とお支払情報<br/>を入力してください。</span></li>
+            <li class="step btn">Step2<span style="margin-left: 15px;">お客様情報と<br/>お支払情報を入力してください。</span></li>
             <li class="step btn">Step3<span>購入内容のご確認</span></li>
             <li class="step btn">Step4<span>予約完了</span></li>
 				</ul>
@@ -145,14 +145,8 @@
               <fieldset class="loginBuy back">
                 <legend>ログインして予約する</legend>
                 <label for="id">ID</label><input type="text" id="id" name="id">
-                <label for="password"></label><input type="password" id="password" name="password">
+                <label for="password">PASSWORD</label><input type="password" id="password" name="password">
                 <button type="submit">ログインして支払方法選択へ進む</button>
-
-                <legend>新規会員登録をして予約する</legend>
-                <a href="../Adduser/step1.php">新規会員登録</a>
-
-                <legend>支払い方法選択へ進む</legend>
-                <button type="submit">支払方法選択へ進む</button>
               </fieldset>
               <!-- ▲予約に進む -->
 
@@ -160,22 +154,14 @@
               <div class="signUpByWrap">
                 <!-- ▼予約に進む -->
                   <fieldset class="signUpBuy back">
-                      <legend>ログインして予約する</legend>
+                      <legend>新規会員登録をして予約する</legend>
                       <div class="signUpBtn"><span>新規会員登録</span></div>
                   </fieldset>
                   <!-- ▲予約に進む -->
 
                   <fieldset class="signUpBuy back">
-                    <legend>ログインして予約する</legend>
-                    <label for="id">ID</label><input type="text" id="id" name="id">
-                    <label for="password"></label><input type="password" id="password" name="password">
-                    <button type="submit">ログインして支払方法選択へ進む</button>
-
-                    <legend>新規会員登録をして予約する</legend>
-                    <a href="../Adduser/step1.php">新規会員登録</a>
-
-                    <legend>支払い方法選択へ進む</legend>
-                    <button type="submit">支払方法選択へ進む</button>
+                    <legend>会員登録をしないで予約する</legend>
+                      <div class="signUpBtn"><span>支払い選択へ進む</span></div>
                   </fieldset>
                 <!-- ▲予約に進む -->
               </div>
