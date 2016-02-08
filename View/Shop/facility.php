@@ -29,9 +29,9 @@
 			<main class="l-content">
 
 				<!-- ▼パンくず -->
-				<ul class="l-breadclumb">
+				<ul class="l-breadcrumb">
 					<li><a href="#">HOME</a></li>
-					<li><a href="#"></a></li>
+					<li><a href="#">施設案内</a></li>
 				</ul>
 				<!-- ▼パンくず -->
 

@@ -29,7 +29,7 @@
 			<main class="l-content">
 
 				<!-- ▼パンくず -->
-				<ul class="l-breadclumb">
+				<ul class="l-breadcrumb">
 					<li><a href="#">HOME</a></li>
 					<li><a href="#"></a></li>
 				</ul>

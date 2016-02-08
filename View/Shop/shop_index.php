@@ -28,9 +28,8 @@
 			<main class="l-content float_C">
 
 				<!-- ▼パンくず -->
-				<ul class="breadclumb">
+				<ul class="l-breadcrumb">
 					<li><a href="#">HOME</a></li>
-					<li><a href="#"></a></li>
 				</ul>
 				<!-- ▼パンくず -->
 

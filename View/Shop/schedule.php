@@ -26,14 +26,14 @@
 
 			<main class="l-content">
 				<!-- ▼パンくず -->
-				<ul class="breadcrumb">
+				<ul class="l-breadcrumb">
 						<li><a href="http://127.0.0.1/NEWSTYLE/halcinema/View/Shop/shop_index.php">HOME</a></li>
+						<li><a href="#">上映スケジュール</a></li>
 				</ul>
 				<!-- ▲パンくず -->
 
 				<!-- ▼左コンテンツ -->
 				<article class="l-cLeft">
-
 					<div class="schedule_Icon_List">
 						<ul>
 							<li>
