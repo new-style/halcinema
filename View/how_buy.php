@@ -15,7 +15,8 @@
 
 		<link rel="stylesheet" href="./../css/layout.css">
 		<link rel="stylesheet" href="./../css/Common/common.css">
-		<!-- <link rel="stylesheet" href="./../css/how_buy.css"> -->
+		<link rel="stylesheet" href="./../css/how_buy.css">
+
 
 	</head>
 	<body>
@@ -37,47 +38,108 @@
 				<!-- ▼左コンテンツ -->
 				<article class="l-cLeft">
 
-						<h1>購入方法</h1>
+						<h1 class="how_buy_title">購入方法</h1>
 
-						<section>
-							<h3>１</h3>
-							<div class="float_C">
-								<div class="float_L">
-									<img src="" alt="11111111111111111" />
+						<section class="how_buy_step">
+							<h3>上映時間を選ぶ</h3>
+							<div class="float_C how_buy_bg">
+								<div class="float_L" style="width: 100%;">
+									<img src="../img/how_buy01.jpg" alt="画像" />
 								</div>
-								<div class="float_R">
+								<div class="float_L">
 									<p>
-										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+										見たい時間帯を選ぶ
 									</p>
 									<p>
 										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
 									</p>
 									<p>
-										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+										説明説明明説明説明説明説
 									</p>
 								</div><!-- /.float_R -->
 							</di>
 						</section>
 
-						<img src="" alt="した" />
 
-						<section>
-							<h3>２</h3>
+						<section class="how_buy_step">
+							<h3>ステップ１</h3>
 							<div class="float_C">
 								<div class="float_L">
-									<img src="" alt="2" />
+									<img src="../img/how_buy02.jpg" alt="画像" />
 								</div>
 								<div class="float_R">
 									<p>
-										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+										購入座席を選択してください。
+									</p>
+									<p>
+
+
+									</p>
+									<p>
+										説明説明明説明説明説明説
+									</p>
+								</div><!-- /.float_R -->
+							</di>
+						</section>
+
+						<section class="how_buy_step">
+							<h3>ステップ２</h3>
+							<div class="float_C">
+								<div class="float_L">
+									<img src="" alt="画像" />
+								</div>
+								<div class="float_R">
+									<p>
+										見たい時間帯を選ぶ
 									</p>
 									<p>
 										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
 									</p>
 									<p>
-										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+										説明説明明説明説明説明説
+									</p>
+								</div><!-- /.float_R -->
+							</di>
+						</section>
+
+						<section class="how_buy_step">
+							<h3>ステップ３</h3>
+							<div class="float_C">
+								<div class="float_L">
+									<img src="" alt="ああああ" />
+								</div>
+								<div class="float_R">
+									<p>
+										購入内容のご確認
+									</p>
+									<p>
+										確認へ進む
+									</p>
+									<p>
+										新規登録して予約？
+										会員登録しないで買う？
 									</p>
 								</div>
+							</di>
+						</section>
+
+						<section class="how_buy_step">
+							<h3>ステップ４</h3>
+							<div class="float_C">
+								<div class="float_L">
+									<img src="" alt="画像" />
+								</div>
+								<div class="float_R">
+									<p>
+										見たい時間帯を選ぶ
+									</p>
+									<p>
+										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+									</p>
+									<p>
+										説明説明明説明説明説明説
+									</p>
+								</div><!-- /.float_R -->
 							</di>
 						</section>
 
