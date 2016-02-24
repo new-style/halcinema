@@ -17,6 +17,9 @@
 		<link rel="stylesheet" href="../../css/Common/common.css">
     <link rel="stylesheet" href="../../css/Reserve/step1.css">
 
+    <script src="../../js/jquery-1.11.0.min.js"></script>
+    <script src="../../js/step1_script.js"></script>
+
 	</head>
 	<body>
 		<div class="l-wrapper">
@@ -58,7 +61,8 @@
               <dl>
                 <dt>一般</dt>
                 <dd class="l-select">
-                  <select name="">
+                  <select name="human">
+                    <option>0</option>
                     <option>1</option>
                     <option>2</option>
                   </select>
@@ -69,7 +73,8 @@
               <dl>
                 <dt>大学生・高校生</dt>
                 <dd class="l-select">
-                  <select class="" name="">
+                  <select class="" name="human">
+                    <option>0</option>
                     <option>1</option>
                     <option>2</option>
                   </select>
@@ -80,7 +85,8 @@
               <dl>
                 <dt>中学生・小学生</dt>
                 <dd class="l-select">
-                  <select class="" name="">
+                  <select class="" name="human">
+                    <option>0</option>
                     <option>1</option>
                     <option>2</option>
                   </select>
@@ -91,7 +97,8 @@
               <dl>
                 <dt>3歳以下</dt>
                 <dd class="l-select">
-                  <select class="" name="">
+                  <select class="" name="human">
+                    <option>0</option>
                     <option>1</option>
                     <option>2</option>
                   </select>
@@ -102,9 +109,9 @@
               <dl>
                 <dt>合計</dt>
                 <dd class="l-select">
-                  枚
+                  0枚
                 </dd>
-                <dd class="l-price">円</dd>
+                <dd class="l-price">0円</dd>
               </dl>
             </fieldset>
             <!-- ▲購入枚数選択 -->
@@ -122,16 +129,16 @@
                 for($i = 0; $i<7;$i++){
               ?>
                 <div class="sheetA">
-                  <div class="sheet diamond1"></div>
-                  <div class="sheet diamond1"></div>
-                  <div class="sheetName"><p><?php echo $sheetName[$i] ?></p></div>
-                  <div class="sheet"></div>
-                  <div class="sheet"></div>
-                  <div class="sheet"></div>
-                  <div class="sheet"></div>
-                  <div class="sheetName"><p><?php echo $sheetName[$i] ?></p></div>
-                  <div class="sheet diamond2"></div>
-                  <div class="sheet diamond2"></div>
+                  <div class="sheet diamond1"><input type="hidden" value="0"></div>
+                  <div class="sheet diamond1"><input type="hidden" value="1"></div>
+                  <div class="sheetName"><p><?php echo $sheetName[$i] ?></p><input type="hidden" value="<?php echo $sheetName[$i] ?>"></div>
+                  <div class="sheet"><input type="hidden" value="2"></div>
+                  <div class="sheet"><input type="hidden" value="3"></div>
+                  <div class="sheet"><input type="hidden" value="4"></div>
+                  <div class="sheet"><input type="hidden" value="5"></div>
+                  <div class="sheetName"><p><?php echo $sheetName[$i] ?></p><input type="hidden" value="<?php echo $sheetName[$i] ?>"></div>
+                  <div class="sheet diamond2"><input type="hidden" value="6"></div>
+                  <div class="sheet diamond2"><input type="hidden" value="7"></div>
                 </div>
               <?php 
                 }

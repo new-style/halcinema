@@ -40,10 +40,10 @@
 						<h1>購入方法</h1>
 
 						<section>
-							<h3>１</h3>
+							<h3>3つの購入方法</h3>
 							<div class="float_C">
 								<div class="float_L">
-									<img src="" alt="11111111111111111" />
+									<img src="#" alt="" width="160px" height="160px" />
 								</div>
 								<div class="float_R">
 									<p>
@@ -56,7 +56,26 @@
 										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
 									</p>
 								</div><!-- /.float_R -->
-							</di>
+							</div>
+						</section>
+
+						<section>
+							<div class="float_C">
+								<div class="float_L">
+									<img src="" alt="11111111111111111" />
+								</div>
+								<div class="float_R">
+									<p>
+										祝祝祝祝祝祝祝祝祝祝祝祝祝祝祝祝祝祝呪祝祝祝祝祝祝祝祝祝祝祝祝
+									</p>
+									<p>
+										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+									</p>
+									<p>
+										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+									</p>
+								</div><!-- /.float_R -->
+							</div>
 						</section>
 
 						<img src="" alt="した" />
@@ -78,7 +97,7 @@
 										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
 									</p>
 								</div>
-							</di>
+							</div>
 						</section>
 
 				</article>
