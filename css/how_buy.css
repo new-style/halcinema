@@ -33,15 +33,20 @@ h3{
   background-color: #791611;
 }
 
-.how_buy_step img{
-  margin: 0 auto;
-  width: 300px;
+.how_buy_image{
+  width: 660px;
   margin: 10px;
-  display: block;
-
+  margin-top: 16px;
 }
 
-.how_buy_bg{
-  background: #ddd;
-  margin: 10px;
+.how_buy_image img{
+  margin: 0 auto;
+  width: 660px;
+  display: block;
+}
+
+.how_boy_content{
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
 }

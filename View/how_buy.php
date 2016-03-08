@@ -41,106 +41,121 @@
 						<h1 class="how_buy_title">購入方法</h1>
 
 						<section class="how_buy_step">
-							<h3>上映時間を選ぶ</h3>
-							<div class="float_C how_buy_bg">
-								<div class="float_L" style="width: 100%;">
+							<h3>上映日時を選ぶ</h3>
+							<div class="float_C">
+								<div class="float_L how_buy_image">
 									<img src="../img/how_buy01.jpg" alt="画像" />
 								</div>
-								<div class="float_L">
+								<div class="float_L how_boy_content">
 									<p>
-										見たい時間帯を選ぶ
+										上映日付を確認し
 									</p>
 									<p>
-										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+										見たい上映時間をクリック
 									</p>
-									<p>
-										説明説明明説明説明説明説
-									</p>
-								</div><!-- /.float_R -->
-							</di>
+								</div><!-- /.float_L -->
+							</div>
 						</section>
 
 
 						<section class="how_buy_step">
 							<h3>ステップ１</h3>
 							<div class="float_C">
-								<div class="float_L">
+								<div class="float_L how_buy_image">
 									<img src="../img/how_buy02.jpg" alt="画像" />
 								</div>
-								<div class="float_R">
+								<div class="float_L how_boy_content">
 									<p>
-										購入座席を選択してください。
+										購入する枚数を選択してください。
 									</p>
-									<p>
-
-
-									</p>
-									<p>
-										説明説明明説明説明説明説
-									</p>
-								</div><!-- /.float_R -->
-							</di>
+								</div><!-- /.float_L -->
+							</div>
 						</section>
 
 						<section class="how_buy_step">
 							<h3>ステップ２</h3>
 							<div class="float_C">
-								<div class="float_L">
-									<img src="" alt="画像" />
+								<div class="float_L how_buy_image">
+									<img src="../img/how_buy03.jpg" alt="画像" />
 								</div>
-								<div class="float_R">
+								<div class="float_L how_boy_content">
 									<p>
-										見たい時間帯を選ぶ
+										座席を選択してください。
 									</p>
-									<p>
-										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
-									</p>
-									<p>
-										説明説明明説明説明説明説
-									</p>
-								</div><!-- /.float_R -->
-							</di>
+								</div><!-- /.float_L -->
+							</div>
 						</section>
 
 						<section class="how_buy_step">
 							<h3>ステップ３</h3>
 							<div class="float_C">
-								<div class="float_L">
-									<img src="" alt="ああああ" />
+								<div class="float_L how_buy_image">
+									<img src="../img/how_buy04.jpg" alt="画像" />
 								</div>
-								<div class="float_R">
+								<div class="float_L how_boy_content">
 									<p>
-										購入内容のご確認
+										支払い方法を選択してください。
 									</p>
-									<p>
-										確認へ進む
-									</p>
-									<p>
-										新規登録して予約？
-										会員登録しないで買う？
-									</p>
-								</div>
-							</di>
+								</div><!-- /.float_L -->
+							</div>
 						</section>
 
 						<section class="how_buy_step">
 							<h3>ステップ４</h3>
 							<div class="float_C">
-								<div class="float_L">
-									<img src="" alt="画像" />
+								<div class="float_L how_buy_image">
+									<img src="../img/how_buy05.jpg" alt="画像" />
 								</div>
-								<div class="float_R">
+								<div class="float_L how_boy_content">
 									<p>
-										見たい時間帯を選ぶ
+										お客様の情報を入力してください。
 									</p>
+								</div><!-- /.float_L -->
+							</div>
+						</section>
+
+
+						<section class="how_buy_step">
+							<h3>ステップ５</h3>
+							<div class="float_C">
+								<div class="float_L how_buy_image">
+									<img src="../img/how_buy06.jpg" alt="画像" />
+								</div>
+								<div class="float_L how_boy_content">
 									<p>
-										説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説
+										お支払い方法を入力してください。
 									</p>
+								</div><!-- /.float_L -->
+							</div>
+						</section>
+
+
+						<section class="how_buy_step">
+							<h3>ステップ６</h3>
+							<div class="float_C">
+								<div class="float_L how_buy_image">
+									<img src="../img/how_buy07.jpg" alt="画像" />
+								</div>
+								<div class="float_L how_boy_content">
 									<p>
-										説明説明明説明説明説明説
+										入力内容のご確認。
 									</p>
-								</div><!-- /.float_R -->
-							</di>
+								</div><!-- /.float_L -->
+							</div>
+						</section>
+
+						<section class="how_buy_step">
+							<h3>ステップ７</h3>
+							<div class="float_C">
+								<div class="float_L how_buy_image">
+									<img src="../img/how_buy08.jpg" alt="画像" />
+								</div>
+								<div class="float_L how_boy_content">
+									<p>
+										完了画面
+									</p>
+								</div><!-- /.float_L -->
+							</div>
 						</section>
 
 				</article>
