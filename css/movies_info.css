@@ -65,7 +65,15 @@ h3:last-child{
 	padding:20px;
 	letter-spacing: 1px;
 }
-
+.arasuji{
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.arasuji li{
+	width: 500px;
+	height: 250px;
+}
 
 .hide{
 	display:none;
