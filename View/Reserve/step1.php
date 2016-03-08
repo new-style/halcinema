@@ -54,14 +54,14 @@
             <h2>Step1</h2>
             <p>購入枚数と座席を選択してください。</p>
           </div>
-          <form action="step2.php" method="post">
+          <form action="../../system/reserve.php" method="post">
             <!-- ▼購入枚数選択 -->
             <fieldset class="back">
               <legend class="text_Center">購入枚数選択<span>※最大2枚まで購入可能です。</span></legend>
               <dl>
                 <dt>一般</dt>
                 <dd class="l-select">
-                  <select name="human">
+                  <select name="human_General">
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
@@ -73,7 +73,7 @@
               <dl>
                 <dt>大学生・高校生</dt>
                 <dd class="l-select">
-                  <select class="" name="human">
+                  <select class="" name="human_Large">
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
@@ -85,7 +85,7 @@
               <dl>
                 <dt>中学生・小学生</dt>
                 <dd class="l-select">
-                  <select class="" name="human">
+                  <select class="" name="human_Little">
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
@@ -97,7 +97,7 @@
               <dl>
                 <dt>3歳以下</dt>
                 <dd class="l-select">
-                  <select class="" name="human">
+                  <select class="" name="human_min">
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
