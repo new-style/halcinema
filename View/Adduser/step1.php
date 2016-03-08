@@ -29,7 +29,7 @@
 
 				<!-- ▼パンくず -->
 				<ul class="l-breadcrumb">
-					<li><a href="http://127.0.0.1/halcinema/View/Shop/shop_index.php">HAＬシネマ</a></li>
+					<li><a href="http://127.0.0.1/halcinema/View/Shop/shop_index.php">HALシネマ</a></li>
 					<li><a href="http://127.0.0.1/halcinema/View/Adduser/confirm.php">会員情報入力</a></li>
 				</ul>
 				<!-- ▲パンくず -->
@@ -248,14 +248,14 @@
 									<dl>
 										<dt>種類</dt>
 										<dd>
-											<input type="radio" name="credit_company" value="visa">
-											<label for="credit_company">VISA</label>
-											<input type="radio" name="credit_company" value="mastercard">
-											<label for="credit_company">MasterCard</label>
-											<input type="radio" name="credit_company" value="jcb">
-											<label for="credit_company">JCB</label>
-											<input type="radio" name="credit_company" value="americanexpress">
-											<label for="credit_company">AMERICANEXPRESS</label>
+											<input type="radio" name="credit_company" value="visa" id="credit_visa">
+											<label for="credit_visa">VISA</label>
+											<input type="radio" name="credit_company" value="mastercard" id="credit_mastercard">
+											<label for="credit_mastercard">MasterCard</label>
+											<input type="radio" name="credit_company" value="jcb" id="credit_jcb">
+											<label for="credit_jcb">JCB</label>
+											<input type="radio" name="credit_company" value="americanexpress" id="credit_americanexpress">
+											<label for="credit_americanexpress">AMERICANEXPRESS</label>
 										</dd>
 									</dl>
 
