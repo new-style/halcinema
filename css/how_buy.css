@@ -1,0 +1,47 @@
+/* 購入用CSS */
+@charset "UTF-8";
+
+/* /////////////基本レイアウト//////////////// */
+
+/* ■■■■■■■■■■■■ 背景 ■■■■■■■■■■■■ */
+
+
+article{
+  width: 100%;
+}
+
+
+.how_buy_title{
+  padding-left: 20px;
+  font-size: 28px;
+  line-height: 60px;
+  height: 60px;
+  background-color: #791611;
+}
+
+h3{
+  margin: 0 auto;
+  padding-left: 20px;
+  width: 600px;
+  border-left: solid 10px #ECDBCC;
+}
+
+.how_buy_step{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  background-color: #791611;
+}
+
+.how_buy_step img{
+  margin: 0 auto;
+  width: 300px;
+  margin: 10px;
+  display: block;
+
+}
+
+.how_buy_bg{
+  background: #ddd;
+  margin: 10px;
+}
