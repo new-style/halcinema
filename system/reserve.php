@@ -15,14 +15,22 @@
 	//設定②SQLインジェクション対策
 	$pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
 
+	$price = Array(1800,1500,1000,500);
 
 	//postデータ受け取り
 	$ippan = $_POST['human_General'];
+	$daigaku = $_POST['human_Large'];
+	$syougaku = $_POST['human_Little'];
 	$child = $_POST['human_min'];
+	// 配列で受け取れる
+	$a = $_POST['sheetNo'];
 
-echo $ippan;
-echo $child;
-exit();
+	print_r ($a);
+	echo $child * $price[3];
+	// exit();
+
+
+
 	//プレースホルダーを用いたセキュアなSQL
 	//名前付きプレースホルダー
 	$sql = "insert into reserve values(:id,:name)";

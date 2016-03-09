@@ -1,3 +1,79 @@
+<?php 
+session_start();
+	if(!isset($_POST['sheetNo'])){
+		header('Location: step1.php?id=1');
+	}
+	if($_POST['id'] == null){
+		// echo "a";
+		header('Location: step1.php');
+		exit();
+	}
+
+	$id = $_POST['id'];
+	$passwd = $_POST['password'];
+
+	$price = Array(1800,1500,1000,500);
+	$ippan = $_POST['human_General'];
+	$daigaku = $_POST['human_Large'];
+	$syougaku = $_POST['human_Little'];
+	$child = $_POST['human_min'];
+	// 配列で受け取れる
+	$sheetNo = $_POST['sheetNo'];
+
+	// print_r ($a);
+	// echo $ippan * $price[0] + $daigaku * $price[1] + $syougaku * $price[2] + $child * $price[3];
+
+
+// 次はセッションに値を入れて持ちならが確認ページに行く
+
+
+	$dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
+	$dbUser = "root";
+	// windowsの人はrootではなく空("")にしてください。
+	$dbPass = "root";
+
+
+	//PDOによるDB接続
+	$pdo = new PDO ($dsn, $dbUser, $dbPass);
+
+	//PDOの動作設定
+	//設定①エラーメッセージは黙殺しないで例外を吐かせる！
+	//エラーモードをエクセプションモードにしなさい！
+	$pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+	//設定②SQLインジェクション対策
+	$pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+	$flg = false;
+try{
+	$sql = "select * from hal_tanaka";
+	$stmh = $pdo -> prepare($sql);
+	$stmh -> execute();
+
+	while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
+		if($row['mail_address'] == $id && $row['password'] == $passwd){
+			$flg = true;
+			break;
+		}
+	}
+	if(!$flg){
+		header('Location: step1.php?aa="111"');
+	}
+
+
+}
+catch(PDOException $e){
+	echo "エラーだぉ";
+	echo "<br>【エラーメッセージ】<br>";
+	echo $e -> getMessage();
+	echo "<br	>【エラーコード】<br>";
+	echo $e -> getCode();
+
+}
+
+	// if()
+	// $sql = "insert into reserve values(:id,:name)";
+
+
+?>
 <!-- ▼表示▼ -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -18,6 +94,7 @@
 		<link rel="stylesheet" href="../../css/Common/common.css">
     <link rel="stylesheet" href="../../css/Reserve/step1.css">
 		<!-- JS読み込み -->
+		<script src="../../js/jquery-1.11.0.min.js"></script>
 
 	</head>
 	<body>
@@ -193,7 +270,7 @@
 
 
 			<!-- ▼お支払方法選択 -->
-			<fieldset>
+			<fieldset id="lastForm">
 				<legend>お支払方法選択<span>※支払い方法を選択し、全ての項目に入力してください。</span></legend>
 
 				<!-- ▼携帯キャリア決済 -->
@@ -326,6 +403,16 @@
 	require_once "../parts/footer.html";
 ?>
 		</div>
+		<?php 
+			for($i = 0;$i<count($sheetNo);$i++){
+		?>
+			<script>
+				$('#lastForm').append('<input type="hidden" name="sheetNo[]" value="<?php echo $sheetNo[$i]; ?>">');
+			</script>
+		<?php
+			}
+		 ?>
+
 	</body>
 </html>
 <!-- ▲表示▲ -->

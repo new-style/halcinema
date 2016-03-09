@@ -1,33 +1,32 @@
 <!-- ▼表示▼ -->
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<title></title>
-		<!-- 定義 -->
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<meta http-equiv="content-style-type" content="text/css">
-		<meta http-equiv="Content-Script-Type" content="text/javascript" />
-		<!-- 読み込み -->
-		<link rel="stylesheet" href="../../css/Base/normalize.css">
-		<link rel="stylesheet" href="../../css/Base/base.css">
-		<link rel="stylesheet" href="../../css/font-awesome.css">
+  <head>
+    <title></title>
+    <!-- 定義 -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <!-- 読み込み -->
+    <link rel="stylesheet" href="../../css/Base/normalize.css">
+    <link rel="stylesheet" href="../../css/Base/base.css">
+    <link rel="stylesheet" href="../../css/font-awesome.css">
 
-		<link rel="stylesheet" href="../../css/layout.css">
-		<link rel="stylesheet" href="../../css/Common/common.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/Common/common.css">
     <link rel="stylesheet" href="../../css/Reserve/step1.css">
 
     <script src="../../js/jquery-1.11.0.min.js"></script>
     <script src="../../js/step1_script.js"></script>
 
-	</head>
-	<body>
-		<div class="l-wrapper">
-			<!-- ▼ヘッダー -->
+  </head>
+  <body>
+    <div class="l-wrapper">
+      <!-- ▼ヘッダー -->
 <?php
-	require_once "../parts/header.html";
+  require_once "../parts/header.html";
 ?>
-
 			<main class="l-content">
 
 				<!-- ▼パンくず -->
@@ -54,7 +53,8 @@
             <h2>Step1</h2>
             <p>購入枚数と座席を選択してください。</p>
           </div>
-          <form action="../../system/reserve.php" method="post">
+          <form action="step2.php" method="post">
+          <!-- <form action="../../system/reserve.php" method="post"> -->
             <!-- ▼購入枚数選択 -->
             <fieldset class="back">
               <legend class="text_Center">購入枚数選択<span>※最大2枚まで購入可能です。</span></legend>
@@ -174,8 +174,6 @@
               </div>
 
             </div>
-
-
           </form>
 				</article>
 				<!-- ▲コンテンツ -->
@@ -185,7 +183,17 @@
 <?php
 	require_once "../parts/footer.html";
 ?>
+
 		</div>
+  <?php 
+    if(isset($_GET['id'])){
+  ?>
+    <script>
+      alert('シートを選択してください。');
+    </script>
+  <?php
+    }
+  ?>
 	</body>
 </html>
 <!-- ▲表示▲ -->
