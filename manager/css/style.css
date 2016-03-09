@@ -46,6 +46,9 @@
 .search_list a{
   display: block;
 }
+.search_list img{
+  width: 230px;
+}
 
 /* PDF出力ボタン */
 .pdf_put{

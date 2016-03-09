@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HALシネマ管理者 | 顧客管理 | 顧客設定</title>
+    <title>HALシネマ管理者 | 映画管理一覧</title>
     <!-- 定義 -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -27,24 +27,27 @@ require_once("./../parts/header.php");
 require_once("./../parts/side.php");
 ?>
             <section class="col-md-10">
-                <h1>顧客管理</h1>
+                <h1>映画管理</h1>
 
                 <div class="search_list">
                     <table class="table table-striped table-bordered">
+
                         <thead>
                             <tr>
                                 <th>No</th>
                                 <th>ID</th>
-                                <th>名前</th>
-                                <th>アカウント変更</th>
+                                <th>タイトル</th>
+                                <th>画像</th>
+                                <th>情報変更</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr><a href="#">
-                                <td>1</td>
-                                <td>abcde</td>
-                                <td>あいうえお</td>
-                                <td><a href="#" class="btn btn-warning btn-sm">変更</a></td>
+                                <td width="50px">1</td>
+                                <td width="70px">00001</td>
+                                <td>オデッセイ</td>
+                                <td width="250px"><img src="http://127.0.0.1/halcinema/img/mi05.jpg"></td>
+                                <td width="200px"><a href="http://127.0.0.1/halcinema/manager/View/Movies/change.php" class="btn btn-warning btn-sm">変更</a></td>
                             </a></tr>
                         </tbody>
                     </table>
