@@ -233,9 +233,29 @@ $first_name_kana = $_POST['first_name_kana'];
 				<p>
 					入力内容に間違いがなければ、「登録する」ボタンを押してください。
 				</p>
+
+				<input type="hidden" value="<?php echo $user_name; ?>" name="user_name">
+				<input type="hidden" value="<?php echo $user_id; ?>" name="user_id">
+				<input type="hidden" value="<?php echo $mail_address; ?>" name="mail_address">
+				<input type="hidden" value="<?php echo $password; ?>" name="password">
+				<input type="hidden" value="<?php echo $password_conf; ?>" name="password_conf">
+				<input type="hidden" value="<?php echo $tel; ?>" name="tel">
+				<input type="hidden" value="<?php echo $sex; ?>" name="sex">
+				<input type="hidden" value="<?php echo $year; ?>" name="year">
+				<input type="hidden" value="<?php echo $month; ?>" name="month">
+				<input type="hidden" value="<?php echo $day; ?>" name="day">
+				<input type="hidden" value="<?php echo $pref_id; ?>" name="pref_id">
+				<input type="hidden" value="<?php echo $last_name; ?>" name="last_name">
+				<input type="hidden" value="<?php echo $first_name; ?>" name="first_name">
+				<input type="hidden" value="<?php echo $last_name_kana; ?>" name="last_name_kana">
+				<input type="hidden" value="<?php echo $first_name_kana; ?>" name="first_name_kana">
+
+
+
 					<button type="submit" class="btn btn_Regular F_000">戻る</button>
 					<button type="submit" class="btn btn_Regular F_000">登録する</button>
 			</div>
+
 
 		</form>
 	</article>

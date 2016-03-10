@@ -34,7 +34,7 @@
 						<form action="Member/mypage.php" method="post" class="float_C">
 							<label for="user_id">ユーザーID</label><input type="text" name="user_id" value="" id="user_id">
 							<label for="passwd">パスワード</label><input type="password" name="password" value="" id="passwd">
-							<input type="checkbox" name="name" value="" id="cookie"><label for="cookie" id="cook">ログイン情報を保持する</label>	
+							<input type="checkbox" name="name" value="" id="cookie"><label for="cookie" id="cook">ログイン情報を保持する</label>
 							<button type="submit">ログイン</button>
 						</form>
 							<p class="passFogot">

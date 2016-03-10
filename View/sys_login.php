@@ -1,5 +1,30 @@
 <?php
 
+
+$user_name = $_POST['user_name'];
+$user_id = $_POST['user_id'];
+$mail_address = $_POST['mail_address'];
+$password = $_POST['password'];
+$password_conf = $_POST['password_conf'];
+$tel = $_POST['tel'];
+$sex = $_POST['sex'];
+$year = $_POST['year'];
+$month = $_POST['month'];
+$day = $_POST['day'];
+$pref_id = $_POST['pref_id'];
+
+$last_name = $_POST['last_name'];
+$first_name = $_POST['first_name'];
+$last_name_kana = $_POST['last_name_kana'];
+$first_name_kana = $_POST['first_name_kana'];
+
+$name = $last_name.$first_name;
+$name_kana = $last_name_kana.$first_name_kana;
+
+$birth = $year.$month.$day;
+
+
+
 //DB接続文字列
 $dsn = "mysql:host=localhost;dbname=halcinema;charset=utf8";
 $dbUser = "root";
@@ -15,18 +40,15 @@ $pdo->setAttribute(
 );
 
 //2.SQLインジェクション対策
-$pdo->setAttribute(
-  PDO::ATTR_EMULATE_PREPARES,false
-);
+$pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
 
 //プレースホルダを用いたセキュアなSQL
-$sql = "INSERT INTO hal_tanaka (user_name, user_id, password, name, kana_name, sex, birth, prefectures, street_address, tel, mail_address, magazin)
-		VALUES($user_name,$user_id,$mail_address,password,$last_name.$first_name,$tel,$sex,$year.$month.$day , $pref_id)";
+$sql = "INSERT INTO hal_tanaka VALUES('$user_id', '$user_name', '$password', '$name', '$name_kana', '$sex', '$birth', '$pref_id','null', '$tel', '$mail_address', 'null', 'null', 'null')";
 
 //ステートメントハンドラの取得
-$stmt = $pdo->prepare($sql);
+$stmt = $pdo -> prepare($sql);
 
 // SQL実行
-$stmt->execute();
+$stmt -> execute();
 
 ?>
