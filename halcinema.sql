@@ -16,6 +16,38 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `hal_movie`
+--
+
+DROP TABLE IF EXISTS `hal_movie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `hal_movie` (
+  `movie_id` int(100) NOT NULL,
+  `movie_title` varchar(255) NOT NULL,
+  `cast` varchar(255) NOT NULL,
+  `kantoku` varchar(255) NOT NULL,
+  `scenario` varchar(255) NOT NULL,
+  `staff` varchar(255) NOT NULL,
+  `restricted` int(100) NOT NULL,
+  `start_date` date NOT NULL,
+  `finish_date` date NOT NULL,
+  `movie_img` varchar(255) NOT NULL,
+  `total_evaluate` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `hal_movie`
+--
+
+LOCK TABLES `hal_movie` WRITE;
+/*!40000 ALTER TABLE `hal_movie` DISABLE KEYS */;
+INSERT INTO `hal_movie` VALUES (1,'田中の野望','田中','田中','田中','田中',15,'2016-03-01','2016-03-31','sample.png',3);
+/*!40000 ALTER TABLE `hal_movie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `hal_order`
 --
 
@@ -40,6 +72,7 @@ CREATE TABLE `hal_order` (
 
 LOCK TABLES `hal_order` WRITE;
 /*!40000 ALTER TABLE `hal_order` DISABLE KEYS */;
+INSERT INTO `hal_order` VALUES (1,1,1,1,'2016-03-01',1,1800);
 /*!40000 ALTER TABLE `hal_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -77,38 +110,6 @@ LOCK TABLES `hal_tanaka` WRITE;
 /*!40000 ALTER TABLE `hal_tanaka` DISABLE KEYS */;
 INSERT INTO `hal_tanaka` VALUES (0,'tanaka123','tanaka999','tanakatoshihito','ﾀｶﾅﾄｼﾋﾄ',0,20160308,'東京都','国分寺シティ',0,'aaa@gmail.com',0,0,1),(0,'yamada','123456789','山田太郎','ヤマダタロウ',0,19940101,'東京都','新宿区',2147483647,'yamada@gmail.com',0,0,2);
 /*!40000 ALTER TABLE `hal_tanaka` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `hal_ticket`
---
-
-DROP TABLE IF EXISTS `hal_ticket`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `hal_ticket` (
-  `movie_id` int(100) NOT NULL,
-  `movie_title` varchar(255) NOT NULL,
-  `cast` varchar(255) NOT NULL,
-  `kantoku` varchar(255) NOT NULL,
-  `scenario` varchar(255) NOT NULL,
-  `staff` varchar(255) NOT NULL,
-  `restricted` int(100) NOT NULL,
-  `start_date` date NOT NULL,
-  `finish_date` date NOT NULL,
-  `movie_img` varchar(255) NOT NULL,
-  `total_evaluate` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `hal_ticket`
---
-
-LOCK TABLES `hal_ticket` WRITE;
-/*!40000 ALTER TABLE `hal_ticket` DISABLE KEYS */;
-INSERT INTO `hal_ticket` VALUES (1,'田中の野望','田中','田中','田中','田中',15,'2016-03-01','2016-03-31','sample.png',3);
-/*!40000 ALTER TABLE `hal_ticket` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -500,4 +501,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-03-10 18:36:53
+-- Dump completed on 2016-03-10 19:41:17
