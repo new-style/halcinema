@@ -25,6 +25,15 @@ session_start();
 
 
 // 次はセッションに値を入れて持ちならが確認ページに行く
+	$_SESSION['id'] = $id;
+	$_SESSION['passwd'] = $passwd;
+	$_SESSION['ippan'] = $ippan;
+	$_SESSION['daigaku'] = $daigaku;
+	$_SESSION['syougaku'] = $syougaku;
+	$_SESSION['child'] = $child;
+	$_SESSION['sheetNo'] = $sheetNo;
+
+	// echo $_SESSION['id'];
 
 
 	$dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
@@ -122,22 +131,22 @@ catch(PDOException $e){
 		</div>
 		<form action="confirm.php" method="post">
 			<!-- ▼お客様情報入力 -->
-			<fieldset>
+			<!-- <fieldset>
 				<legend class="text_Center">お客様情報入力<span>全ての項目に入力してください。</span></legend>
 
 				<dl>
 					<dt>氏名</dt>
 					<dd>
-						<label for="familyname">姓</label><input type="text" name="name" value="" id="familyname">
-						<label for="firstname">名</label><input type="text" name="name" value="" id="firstname">
+						<label for="familyname">姓</label><input type="text" name="nameFamily" value="" id="familyname">
+						<label for="firstname">名</label><input type="text" name="nameFirst" value="" id="firstname">
 					</dd>
 				</dl>
 
 				<dl>
 					<dt>フリガナ</dt>
 					<dd>
-						<label for="f_familyname">セイ</label><input type="text" name="furi" value="" id="f_familyname">
-						<label for="f_firstname">メイ</label><input type="text" name="furi" value="" id="f_familyname">
+						<label for="f_familyname">セイ</label><input type="text" name="furiFamily" value="" id="f_familyname">
+						<label for="f_firstname">メイ</label><input type="text" name="furiFirst" value="" id="f_firstname">
 					</dd>
 				</dl>
 
@@ -263,7 +272,7 @@ catch(PDOException $e){
 					</dd>
 				</dl>
 
-			</fieldset>
+			</fieldset> -->
 			<!-- ▲お客様情報入力 -->
 
 
@@ -298,13 +307,13 @@ catch(PDOException $e){
 				<div class="pay">
 					<dl>
 						<dd>
-							<input type="radio" name="name" value="seven" id="seven">
+							<input type="radio" name="conveni" value="seven" id="seven">
 							<label for="seven">セブンイレブン</label>
-							<input type="radio" name="name" value="famima" id="famima">
+							<input type="radio" name="conveni" value="famima" id="famima">
 							<label for="famima">ファミリーマート</label>
-							<input type="radio" name="name" value="lawson" id="lawson">
+							<input type="radio" name="conveni" value="lawson" id="lawson">
 							<label for="lawson">ローソン</label>
-							<input type="radio" name="name" value="sankus" id="sankus">
+							<input type="radio" name="conveni" value="sankus" id="sankus">
 							<label for="sankus">サークルK・サンクス</label>
 						</dd>
 					</dl>
@@ -349,7 +358,7 @@ catch(PDOException $e){
 					<dl>
 						<dt>有効期限</dt>
 						<dd>
-							<select id="credit_month" name="">
+							<select id="credit_month" name="credit_month">
 								<option value="">--</option>
 <?php
 	for( $csm = 1; $csm < 12; $csm++ ){
@@ -359,7 +368,7 @@ catch(PDOException $e){
 							</select>
 							<label for="credit_month">月</label>
 
-							<select id="credit_year" name="">
+							<select id="credit_year" name="credit_year">
 								<option value="">--</option>
 <?php
 	for( $csy = 15; $csy <= 25; $csy++ ){

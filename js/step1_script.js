@@ -14,7 +14,6 @@ $(function(){
 		$('.l-select').eq(4).html(count+'枚');
 	});
 
-
 	$('.sheet').on('click',function(){
 		var aaa = $(this).children('input').val();
 		var bbb = $(this).parent().find('.sheetName').children('input').val();

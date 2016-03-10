@@ -95,7 +95,7 @@
 							</div>
 							<!-- ◎→余裕あり △→あと少し ×→なし -->
 							<ul class="float_C text_Center">
-								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
+								<li><a href="../Reserve/step1.php?ticket=1"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
 								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
 								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>
 								<li><a href="../Reserve/step1.php"><div class="day_Time_Box"><span class="situ float_L">◎</span><span class="movie_Time float_L"><span class="time_Font">10:00</span><br/>～12:30</span></div></a></li>

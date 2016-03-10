@@ -1,3 +1,51 @@
+<?php 
+  session_start();
+  $dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
+  $dbUser = "root";
+  // windowsの人はrootではなく空("")にしてください。
+  $dbPass = "root";
+
+  $pdo = new PDO ($dsn, $dbUser, $dbPass);
+  $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+  //設定②SQLインジェクション対策
+  $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+  $flg = false;
+  $ticketId = $_GET['ticket'];
+  try{
+    $sql = "select * from hal_ticket";
+    $stmh = $pdo -> prepare($sql);
+    $stmh -> execute();
+
+    while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
+      if($row['movie_id'] == $ticketId){
+        $flg = true;
+        $_SESSION['movie_title'] = $row['movie_title'];
+        $_SESSION['cast'] = $row['cast'];
+        $_SESSION['kantoku'] = $row['kantoku'];
+        $_SESSION['scenario'] = $row['scenario'];
+        $_SESSION['staff'] = $row['staff'];
+        $_SESSION['movie_img'] = $row['movie_img'];
+        break;
+      }
+    }
+
+    $sql = "select * from hal_tanaka where  name='山田太郎'";
+    $stmh = $pdo -> prepare($sql);
+    $stmh -> execute();
+    $row = $stmh -> fetch(PDO::FETCH_ASSOC);
+    $_SESSION['userId'] = $row['id'];
+    $_SESSION['userName'] = $row['name'];
+    $_SESSION['userMail'] = $row['mail_address'];
+    print_r($row);
+  }
+  catch(PDOException $e){
+    echo "エラーだぉ";
+    echo "<br>【エラーメッセージ】<br>";
+    echo $e -> getMessage();
+    echo "<br >【エラーコード】<br>";
+    echo $e -> getCode();
+  }
+?>
 <!-- ▼表示▼ -->
 <!DOCTYPE html>
 <html lang="ja">

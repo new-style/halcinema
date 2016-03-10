@@ -1,3 +1,56 @@
+<?php
+	session_start();
+	$phoneCarrier = $_POST['carrier'];
+	$conveni = $_POST['conveni'];
+	$creditCompany = $_POST['credit_company'];
+	$creditNo = $_POST['credit_no'];
+	$creditName = $_POST['credit_name'];
+	$creditMonth = $_POST['credit_month'];
+	$creditYear = $_POST['credit_year'];
+	$creditScode = $_POST['credit_scode'];
+	echo $phoneCarrier;
+	echo '<br>';
+	echo $conveni;
+	echo '<br>';
+	echo $creditCompany;
+	echo '<br>';
+	echo $creditNo;
+	echo '<br>';
+	echo $creditName;
+	echo '<br>';
+	echo $creditMonth;
+	echo '<br>';
+	echo $creditYear;
+	echo '<br>';
+	echo $creditScode;
+	echo '<br>';
+	echo $_SESSION['id'];
+	echo '<br>';
+	echo $_SESSION['passwd'];
+	echo '<br>';
+	echo $_SESSION['ippan'];
+	echo '<br>';
+	echo $_SESSION['daigaku'];
+	echo '<br>';
+	echo $_SESSION['syougaku'];
+	echo '<br>';
+	echo $_SESSION['child'];
+	echo '<br>';
+	print_r($_SESSION['sheetNo']);
+	echo '<br>';
+  echo $_SESSION['movie_title'];
+	echo '<br>';
+  echo $_SESSION['cast'];
+	echo '<br>';
+  echo $_SESSION['kantoku'];
+	echo '<br>';
+  echo $_SESSION['scenario'];
+	echo '<br>';
+  echo $_SESSION['staff'];
+	echo '<br>';
+  echo $_SESSION['movie_img'];
+?>
+
 <!-- ▼表示▼ -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -45,25 +98,50 @@
 		</div>
 		<form action="../complete.php" method="post">
 			<fieldset>
-				<legend class="text_Center">購入枚数確認<span>※最大2枚まで購入可能です。</span></legend>
-			</fieldset>
+				<legend class="text_Center">購入確認</legend>
+				<div>
+					<?php 
+						echo $_SESSION['movie_title'];
+					?>
+				</div>
 
+			</fieldset>
+<!-- 
 
 			<fieldset>
 				<legend class="text_Center">シート確認<span>緑に店頭しているシートは3歳以下のお子様がいらっしゃいます。</span></legend>
-			</fieldset>
+			</fieldset> -->
 			<!-- ボタン -->
 			<div class="">
 				<a href="step1.php">枚数・シートを変更する</a>
 			</div>
 
 			<fieldset>
-				<legend class="text_Center">お客様情報確認<span>全ての項目に入力してください。</span></legend>
+				<legend class="text_Center">お客様情報確認</legend>
+				<div>
+					<?php
+						echo $_SESSION['userName'];
+					?>
+				</div>
 			</fieldset>
 
-
 			<fieldset>
-				<legend class="text_Center">お支払情報確認<span>全ての項目に入力してください。</span></legend>
+				<legend class="text_Center">お支払情報確認</legend>
+				<?php 
+					echo $phoneCarrier;
+					echo '<br>';
+					echo $conveni;
+					echo '<br>';
+					echo $creditCompany;
+					echo '<br>';
+					echo $creditNo;
+					echo '<br>';
+					echo $creditName;
+					echo '<br>';
+					echo $creditMonth;
+					echo '<br>';
+					echo $creditYear;
+				?>
 			</fieldset>
 			<!-- ボタン -->
 			<div class="">
