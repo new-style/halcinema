@@ -11,8 +11,9 @@
   $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
   $flg = false;
   $ticketId = $_GET['ticket'];
+  $_SESSION['ticket'] = $ticketId;
   try{
-    $sql = "select * from hal_ticket";
+    $sql = "select * from hal_movie";
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
 
