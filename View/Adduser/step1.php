@@ -16,6 +16,37 @@
 		<link rel="stylesheet" href="./../../css/layout.css">
 		<link rel="stylesheet" href="./../../css/Common/common.css">
 		<link rel="stylesheet" href="./../../css/Adduser/step1.css">
+		<script src="../../js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				$('.pass').change(function(){
+					var pass = $('.pass').val();
+					var passConf = $('.passConf').val();
+					console.log(pass);
+					console.log(passConf);
+					if( pass != passConf ){
+						$('.passError span').html('<small class="errorText">パスワードが一致しません。</small>');
+					}
+					else{
+						$('.errorText').remove();
+					}
+				});
+
+				$('.passConf').change(function(){
+					var pass = $('.pass').val();
+					var passConf = $('.passConf').val();
+					console.log(pass);
+					console.log(passConf);
+					if( pass != passConf ){
+						$('.passError span').html('<small class="errorText">パスワードが一致しません。</small>');
+					}
+					else{
+						$('.errorText').remove();
+					}
+				});
+			});
+		</script>
 
 	</head>
 	<body>
@@ -55,7 +86,7 @@
 								<dl>
 									<dt><span>*</span>ユーザネーム</dt>
 									<dd>
-										<input type="text" name="user_name">
+										<input type="text" name="user_name" pattern="^[0-9A-Za-z]+$">
 										<small>*半角英数</small>
 									</dd>
 								</dl>
@@ -63,7 +94,7 @@
 								<dl>
 									<dt><span>*</span>ユーザID</dt>
 									<dd>
-										<input type="text" name="user_id">
+										<input type="text" name="user_id" pattern="^[0-9A-Za-z]+$">
 										<small>*半角入力6字~12字</small>
 									</dd>
 								</dl>
@@ -79,26 +110,27 @@
 								<dl>
 									<dt><span>*</span>パスワード</dt>
 									<dd>
-										<input type="password" name="password">
+										<input class="pass" type="password" name="password" value="">
 										<small>*半角英数6字~20字</small>
 									</dd>
 								</dl>
 
 								<dl>
 									<dt><span>*</span>パスワード確認</dt>
-									<dd>
-										<input type="password" name="password_conf">
+									<dd class="passError">
+										<input class="passConf" type="password" name="password_conf" value="">
 										<small>*半角英数6字~20字</small>
+										<span></span>
 									</dd>
 								</dl>
 
 								<dl>
 									<dt><span>*</span>お名前</dt>
 									<dd id="nameAdd" class="float_C">
-										<span>性</span><input type="text" name="name">
-										<span>名</span><input type="text" name="name"><br>
-										<span>セイ</span><input type="text" name="name">
-										<span>メイ</span><input type="text" name="name">
+										<span>性</span><input type="text" name="last_name">
+										<span>名</span><input type="text" name="first_name" ><br>
+										<span>セイ</span><input type="text" name="last_name_kana">
+										<span>メイ</span><input type="text" name="first_name_kana">
 									</dd>
 
 								</dl>
@@ -114,8 +146,8 @@
 								<dl>
 									<dt><span>*</span>性別</dt>
 									<dd id="seibetu">
-										<input type="radio" name="sex" value="male" id="male"><label for="male">男</label>
-										<input type="radio" name="sex" value="female" id="female"><label for="female">女</label>
+										<input type="radio" name="sex" value="男性" id="male"><label for="male">男</label>
+										<input type="radio" name="sex" value="女性" id="female"><label for="female">女</label>
 									</dd>
 								</dl>
 
@@ -136,17 +168,16 @@
 											<option value="">--</option>
 				<?php
 					for( $sm = 1; $sm <= 12; $sm++ ){
-						echo "<option value='" . $sm . "'>" . $sy . "</option>";
+						echo "<option value='" . $sm . "'>" . $sm . "</option>";
 					}
 				?>
 										</select>
 										<label for="month">月</label>
-
 										<select class="day" name="day">
 											<option value="">--</option>
 				<?php
 					for( $sd = 1; $sd <= 31; $sd++ ){
-						echo "<option value='" . $ds . "'>" . $sd . "</option>";
+						echo "<option value='" . $sd . "'>" . $sd . "</option>";
 					}
 				?>
 										</select>
@@ -158,7 +189,7 @@
 									<dt><span>*</span>都道府県</dt>
 									<dd>
 										<select name="pref_id" class="pref_id">
-											<option value="1">北海道</option>
+											<option value="北海道">北海道</option>
 											<option value="2">青森県</option>
 											<option value="3">岩手県</option>
 											<option value="4">宮城県</option>
@@ -319,10 +350,9 @@
 								<legend class="text_Center">メルマガ登録</legend>
 
 								<p>HALシネマのメルマガの配信を希望する</p>
-								<form action="#" method="post">
-									<input type="radio" name="mailmagazine" id="mailY" checked=""><label for="mailY">希望する</label>
-									<input type="radio" name="mailmagazine" id="mailN"><label for="mailN">希望しない</label>
-								</form>
+
+								<input type="radio" name="mailmagazine" id="mailY" checked=""><label for="mailY">希望する</label>
+								<input type="radio" name="mailmagazine" id="mailN"><label for="mailN">希望しない</label>
 
 							</fieldset>
 							<!-- ▲メルマガ登録 -->

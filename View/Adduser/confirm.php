@@ -1,3 +1,31 @@
+<?php
+
+
+
+$user_name = $_POST['user_name'];
+$user_id = $_POST['user_id'];
+$mail_address = $_POST['mail_address'];
+$password = $_POST['password'];
+$password_conf = $_POST['password_conf'];
+$tel = $_POST['tel'];
+$sex = $_POST['sex'];
+$year = $_POST['year'];
+$month = $_POST['month'];
+$day = $_POST['day'];
+$pref_id = $_POST['pref_id'];
+
+$last_name = $_POST['last_name'];
+$first_name = $_POST['first_name'];
+$last_name_kana = $_POST['last_name_kana'];
+$first_name_kana = $_POST['first_name_kana'];
+
+
+
+
+
+?>
+
+
 <!-- ▼表示▼ -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -50,7 +78,7 @@
 		<!-- ▼コンテンツ -->
 		<h1>会員情報確認</h1>
 
-		<form action="../complete.php" method="post">
+		<form action="../sys_login.php" method="post">
 			<!-- ▼会員情報▼ -->
 			<div class="confirm">
 				<h2 class="text_Center">会員情報</h2>
@@ -62,7 +90,7 @@
 								ユーザネーム
 							</th>
 							<td>
-								よしあき
+								<?php echo $user_name; ?>
 							</td>
 						</tr>
 						<tr>
@@ -70,7 +98,7 @@
 								ユーザID
 							</th>
 							<td>
-								yoshi245
+								<?php echo $user_id; ?>
 							</td>
 						</tr>
 						<tr>
@@ -78,7 +106,7 @@
 								メールアドレス
 							</th>
 							<td>
-								yoshida389@yahoo.co.jp
+								<?php echo $mail_address; ?>
 							</td>
 						</tr>
 						<tr>
@@ -86,7 +114,8 @@
 								パスワード
 							</th>
 							<td>
-								*******
+								<?php echo $password; ?>
+								<?php echo $password_conf; ?>
 							</td>
 						</tr>
 						<tr>
@@ -94,12 +123,12 @@
 								お名前
 							</th>
 							<td>
-								吉田智明
+								<?php echo $last_name.$first_name; ?>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								ヨシダトモアキ
+								<?php echo $last_name_kana.$first_name_kana; ?>
 							</td>
 						</tr>
 						<tr>
@@ -107,7 +136,7 @@
 								電話番号
 							</th>
 							<td>
-								080-3521-7898
+								<?php echo $tel; ?>
 							</td>
 						</tr>
 						<tr>
@@ -115,7 +144,7 @@
 								性別
 							</th>
 							<td>
-								男
+								<?php echo $sex; ?>
 							</td>
 						</tr>
 						<tr>
@@ -123,7 +152,7 @@
 								生年月日
 							</th>
 							<td>
-								1999年8月11日
+								<?php echo $year.$month.$day; ?>
 							</td>
 						</tr>
 						<tr>
@@ -131,7 +160,7 @@
 								都道府県
 							</th>
 							<td>
-								山口県
+								<?php echo $pref_id; ?>
 							</td>
 						</tr>
 					</tbody>
