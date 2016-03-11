@@ -1,3 +1,44 @@
+<?php
+	session_start();
+  $dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
+  $dbUser = "root";
+  // windowsの人はrootではなく空("")にしてください。
+  $dbPass = "root";
+
+  $pdo = new PDO ($dsn, $dbUser, $dbPass);
+  $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+  //設定②SQLインジェクション対策
+  $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+  try{
+    $sql = "select * from hal_movie";
+    $stmh = $pdo -> prepare($sql);
+    $stmh -> execute();
+    $my_content_date = Array();
+    $my_content_name = Array();
+    while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
+    	print_r($row);
+    echo "<br>";
+    	$my_content_date[] = $row['start_date'];
+    	$my_content_name[] = $row['movie_title'];
+    }
+    print_r($my_content_date);
+    echo "<br>";
+    $sql2 = "select * from hal_order";
+    $stmh2 = $pdo -> prepare($sql2);
+    $stmh2 -> execute();
+    while($row2 = $stmh2 -> fetch(PDO::FETCH_ASSOC)){
+    	print_r($row2);
+    	echo "<br>";
+    }
+  }
+  catch(PDOException $e){
+    echo "エラーだぉ";
+    echo "<br>【エラーメッセージ】<br>";
+    echo $e -> getMessage();
+    echo "<br >【エラーコード】<br>";
+    echo $e -> getCode();
+  }
+?>
 <!-- ▼表示▼ -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -44,16 +85,16 @@
 						<h2>予約履歴</h2>
 						<div class="my_content">
 							<dl>
-								<dd>2015/12/10</dd>
-								<dd>ジュラシックワールド</dd>
+								<dd class="my_content_date"><?php echo $my_content_date[0] ?></dd>
+								<dd class="my_content_name"><?php echo $my_content_name[0] ?></dd>
 							</dl>
 							<dl>
-								<dd>2015/12/09</dd>
-								<dd>ジュラシックワールド</dd>
+								<dd class="my_content_date"><?php echo $my_content_date[1] ?></dd>
+								<dd class="my_content_name"><?php echo $my_content_name[1] ?></dd>
 							</dl>
 							<dl>
-								<dd>2015/12/08</dd>
-								<dd>ジュラシックワールド</dd>
+								<dd class="my_content_date"><?php echo $my_content_date[2] ?></dd>
+								<dd class="my_content_name"><?php echo $my_content_name[2] ?></dd>
 							</dl>
 						</div>
 						<div class="more">

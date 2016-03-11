@@ -9,6 +9,7 @@
   $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
   //設定②SQLインジェクション対策
   $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+  $id = $_GET['id'];
   
 ?>
 <!DOCTYPE html>
@@ -25,7 +26,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./../../css/bootstrap.min.css">
     <link rel="stylesheet" href="./../../css/style.css">
-    <script ></script>
+		<style>
+		.delete_conf_btn button{
+			height: 45px;
+			margin-bottom: 30px;
+		}
+		</style>
 
 </head>
 <body>
@@ -46,28 +52,32 @@ require_once("./../parts/side.php");
                     <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>ID</th>
-                                <th>名前</th>
-                                <th>アカウント変更</th>
-                                <th>削除</th>
+                                <th colspan="6" style="text-align: center;">ユーザ情報</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php 
 try{
-    $sql = "select * from hal_tanaka";
+    $sql = "select * from hal_tanaka where id = ".$id;
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
-    while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
-        echo '<tr><a href="#">
-                <td>'.$row['id'].'</td>
-                <td>'.$row['user_name'].'</td>
-                <td>'.$row['name'].'</td>
-                <td><a href="'.$row['id'].'" class="btn btn-warning btn-sm">変更</a></td>
-                <td><a href="user_delete.php?id='.$row['id'].'" class="btn btn-default btn-sm">削除</a></td>
-              </a></tr>';
-    }
+    $row = $stmh -> fetch(PDO::FETCH_ASSOC);
+    echo '<tr>
+            <td>id</td>
+            <td>'.$row['id'].'</td>
+          </tr>
+          <tr>
+            <td>名前</td>
+            <td>'.$row['name'].'</td>
+          </tr>
+          <tr>
+            <td>メールアドレス</td>
+            <td>'.$row['mail_address'].'</td>
+          </tr>
+          <tr>
+            <td>お住まい</td>
+            <td>'.$row['prefectures'].'</td>
+          </tr>';
   }
   catch(PDOException $e){
     echo "エラーだぉ";
@@ -79,6 +89,16 @@ try{
                             ?>
                         </tbody>
                     </table>
+
+                    <h2 style="text-align: center;">このユーザを削除しますか？</h2>
+                    <div class="col-md-6 delete_conf_btn">
+                    	<button class="btn btn-primary col-md-12">いいえ</button>
+                    </div>
+                    <div class="col-md-6 delete_conf_btn">
+	                    <form action="sys_user_delete.php?id=<?php echo $id ?>" method="post">
+	                    	<button class="btn btn-primary col-md-12">はい</button>
+	                    </form>
+                    </div>
                 </div><!-- /.search_list -->
             </section>
         </article>
