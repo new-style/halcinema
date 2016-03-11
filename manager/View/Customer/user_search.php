@@ -1,4 +1,4 @@
-<?php 
+<?php
   session_start();
   $dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
   $dbUser = "root";
@@ -9,7 +9,7 @@
   $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
   //設定②SQLインジェクション対策
   $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
-  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +54,7 @@ require_once("./../parts/side.php");
                             </tr>
                         </thead>
                         <tbody>
-                            <?php 
+                            <?php
 try{
     $sql = "select * from hal_tanaka";
     $stmh = $pdo -> prepare($sql);

@@ -10,7 +10,7 @@
   //設定②SQLインジェクション対策
   $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
   $id = $_GET['id'];
-  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +56,7 @@ require_once("./../parts/side.php");
                             </tr>
                         </thead>
                         <tbody>
-                            <?php 
+                            <?php
 try{
     $sql = "select * from hal_tanaka where id = ".$id;
     $stmh = $pdo -> prepare($sql);
