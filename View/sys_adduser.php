@@ -51,4 +51,6 @@ $stmt = $pdo -> prepare($sql);
 // SQL実行
 $stmt -> execute();
 
+header("Location: complete.php");
+
 ?>

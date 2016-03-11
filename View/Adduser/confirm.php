@@ -78,7 +78,7 @@ $first_name_kana = $_POST['first_name_kana'];
 		<!-- ▼コンテンツ -->
 		<h1>会員情報確認</h1>
 
-		<form action="../sys_login.php" method="post">
+		<form action="../sys_adduser.php" method="post">
 			<!-- ▼会員情報▼ -->
 			<div class="confirm">
 				<h2 class="text_Center">会員情報</h2>
