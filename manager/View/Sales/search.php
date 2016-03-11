@@ -55,54 +55,35 @@ require_once("./../parts/side.php");
 
                 <div class="col-md-12 search_list">
                     <div class="pdf_put col-md-2 col-md-offset-10">
-                      <a href="#" class="btn btn-warning">PDF出力</a>
+                      <a href="http://127.0.0.1/halcinema/manager/View/Sales/sale_pdf.php" class="btn btn-warning">PDF出力</a>
                     </div>
                     <table class="table table-striped table-bordered">
                         <caption>2015　年　1　月</caption>
                         <thead>
                             <tr>
-                                <th></th>
-                                <th></th>
-                                <th colspan="2">ネット予約</th>
-                                <th colspan="2">店舗販売</th>
-                                <th colspan="2">全体</th>
-                            </tr>
-                            <tr>
                                 <th>日付</th>
                                 <th>曜日</th>
-                                <th>顧客数</th>
-                                <th>売上</th>
-                                <th>顧客数</th>
-                                <th>売上</th>
-                                <th>顧客数</th>
-                                <th>売上</th>
+                                <th>総売上</th>
                             </tr>
                         </thead>
                         <tbody>
 <?php
-    for( $day = 1; $day <= 30; $day++ ){
+    $num = 0;
+    for( $date = 1; $date <= 30; $date++ ){
 ?>
                             <tr>
-                                <td><?php echo $day; ?></td>
+                                <td><?php echo $date; ?></td>
                                 <td>月</td>
-                                <td>20</td>
-                                <td>20000</td>
-                                <td>10</td>
-                                <td>10000</td>
-                                <td>30</td>
-                                <td>30000</td>
+                                <td>
+                                  <?php echo $date_num = $date*3000; $num += $date_num; ?>
+                                </td>
                             </tr>
 <?php
     }
 ?>
                           <tr>
                             <td colspan="2">合計</td>
-                            <td>10000</td>
-                            <td>2000000</td>
-                            <td>10000</td>
-                            <td>1000000</td>
-                            <td>300</td>
-                            <td>300000000</td>
+                            <td><?php echo $num; ?></td>
                           </tr>
                         </tbody>
                     </table>

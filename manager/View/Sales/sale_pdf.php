@@ -2,6 +2,18 @@
     //処理
     require_once( 'fpdf/mbfpdf.php' );
 
+    //DBからデータ受け取り
+    $year = 2016;
+    $month = 1;
+    $date = array(1,2,3,4,5,6,7,8,9,10);
+    $date_num = array(
+        10000,20000,10000,20000,20000,
+        10000,20000,10000,20000,20000
+    );
+
+    //文字コード変換
+    //mb_convert_encoding($, 'SJIS-win', 'UTF-8')
+
 
     //PDF
     //縦向き
@@ -35,10 +47,10 @@
     $pdf -> setFont(KOZMIN,"",12);
 
     $pdf -> setXY(10,30);
-    $pdf -> write(12,"2016 ");
-    $pdf -> write(12,"年　");
-    $pdf -> write(12,"3");
-    $pdf -> write(12,"月");
+    $pdf -> write(12,$year);
+    $pdf -> write(12,"　年　");
+    $pdf -> write(12,$month);
+    $pdf -> write(12,"　月");
 
     //表描画
 
@@ -52,16 +64,16 @@
     //座標の設定
     $pdf -> setXY(10,50);
 
-    $pdf -> cell(40,10,"日付",1,0,"C",1);
-    $pdf -> cell(40,10,"曜日",1,0,"C",1);
+    $pdf -> cell(40,10,"月",1,0,"C",1);
+    $pdf -> cell(40,10,"日",1,0,"C",1);
     $pdf -> cell(110,10,"総売上",1,1,"C",1);
 
     //データ
     //文字色の設定
     $pdf -> setTextColor(0,0,0);
 
+    $pdf -> cell(40,10,"3",1,0,"C");
     $pdf -> cell(40,10,"1",1,0,"C");
-    $pdf -> cell(40,10,"月",1,0,"C");
     $pdf -> cell(110,10,"100000",1,1,"R");
 
     //総合計
