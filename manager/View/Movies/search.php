@@ -42,13 +42,16 @@ require_once("./../parts/side.php");
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><a href="#">
+                            <tr>
                                 <td width="50px">1</td>
                                 <td width="70px">00001</td>
                                 <td>オデッセイ</td>
                                 <td width="250px"><img src="http://127.0.0.1/halcinema/img/mi05.jpg"></td>
-                                <td width="200px"><a href="http://127.0.0.1/halcinema/manager/View/Movies/change.php" class="btn btn-warning btn-sm">変更</a></td>
-                            </a></tr>
+                                <td width="200px">
+                                  <a href="http://127.0.0.1/halcinema/manager/View/Movies/change.php" class="btn btn-warning btn-sm">変更</a>
+                                  <a href="http://127.0.0.1/halcinema/manager/View/Movies/remove.php" class="btn btn-danger btn-sm">削除</a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div><!-- /.search_list -->

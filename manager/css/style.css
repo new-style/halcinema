@@ -42,6 +42,7 @@
   padding-left: 10px;
 }
 
+
 /* login,index以外のテーブル */
 .search_list a{
   display: block;
@@ -49,7 +50,19 @@
 .search_list img{
   width: 230px;
 }
+.search_list .btn-danger{
+  margin-top: 10px;
+}
 
+.detail{
+  margin-bottom: 20px;
+}
+.detail img{
+  max-height: 300px;
+}
+.detail button{
+  margin: 10px 20px;
+}
 /* PDF出力ボタン */
 .pdf_put{
   margin-top: 20px;
