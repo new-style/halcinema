@@ -187,8 +187,8 @@
 						<h2>ユーザ登録情報</h2>
 						<div class="my_content">
 							<ul>
-								<li><a href="#">ユーザ情報変更</a></li>
-								<li><a href="#">支払方法変更</a></li>
+								<li><a href="../Member/setting.php">ユーザ情報変更</a></li>
+								<li><a href="../Member/setting.php">支払方法変更</a></li>
 							</ul>
 						</div>
 					</section>
