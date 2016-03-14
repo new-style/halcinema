@@ -81,7 +81,6 @@
     $pdf -> cell(110,10,"100000",1,1,"R");
 
 
-    ob_end_clean();
 
     //o—Í
     $pdf -> output('');

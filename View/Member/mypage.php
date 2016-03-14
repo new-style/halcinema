@@ -39,7 +39,7 @@
     echo $e -> getCode();
   }
 
-  echo $_SESSION["name"];
+  // echo $_SESSION["name"];
 ?>
 <!-- ▼表示▼ -->
 <!DOCTYPE html>

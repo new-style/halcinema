@@ -10,13 +10,16 @@
   //設定②SQLインジェクション対策
   $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
   $flg = false;
-  $ticketId = $_GET['ticket'];
-  $_SESSION['ticket'] = $ticketId;
+  $ticketId = '';
+  if(isset($_GET['ticket'])){
+    $ticketId = $_GET['ticket'];
+    $_SESSION['ticket'] = $ticketId;
+  }
   try{
     $sql = "select * from hal_movie";
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
-
+    echo '<br>'.$ticketId;
     while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
       if($row['movie_id'] == $ticketId){
         $flg = true;
@@ -30,7 +33,7 @@
       }
     }
 
-    $sql = "select * from hal_tanaka where  name='山田太郎'";
+    $sql = "select * from hal_tanaka where  name='山田'";
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
     $row = $stmh -> fetch(PDO::FETCH_ASSOC);

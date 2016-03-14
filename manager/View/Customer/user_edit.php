@@ -1,4 +1,4 @@
-<?php
+<?php 
   session_start();
   $dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
   $dbUser = "root";
@@ -9,7 +9,8 @@
   $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
   //設定②SQLインジェクション対策
   $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
-
+  $id = $_GET['id'];
+  echo $id;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,28 +47,41 @@ require_once("./../parts/side.php");
                     <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>ID</th>
-                                <th>名前</th>
-                                <th>アカウント変更</th>
-                                <th>削除</th>
+                                <th colspan="3" style="text-align: center;">ユーザ情報変更</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
+                            <?php 
 try{
-    $sql = "select * from hal_tanaka";
+    $sql = "select * from hal_tanaka where id=".$id."";
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
-    while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
-        echo '<tr><a href="#">
-                <td>'.$row['id'].'</td>
-                <td>'.$row['user_name'].'</td>
-                <td>'.$row['name'].'</td>
-                <td><a href="user_edit.php?id='.$row['id'].'" class="btn btn-warning btn-sm">変更</a></td>
-                <td><a href="user_delete.php?id='.$row['id'].'" class="btn btn-default btn-sm">削除</a></td>
-              </a></tr>';
-    }
+    $row = $stmh -> fetch(PDO::FETCH_ASSOC);
+    echo '<tr>
+            <td>お名前</td>
+            <td><form action="sys_user_edit.php?name=name&id='.$id.'" method="post"><input type="text" name="edit" value="'.$row['name'].'"></td>
+            <td><button class="btn btn-default">変更</button></form></td>
+          </tr>
+          <tr>
+            <td>現在のパスワード入力</td>
+            <td><form action="sys_user_edit.php?name=password&id='.$id.'" method="post"><input type="text" name="old_pass"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>新しいパスワード</td>
+            <td><input type="text" name="edit"></td>
+            <td><button class="btn btn-default">変更</button></form></td>
+          </tr>
+          <tr>
+            <td>メールアドレス</td>
+            <td><form action="sys_user_edit.php?name=mail_address&id='.$id.'" method="post"><input type="text" name="edit" value="'.$row['mail_address'].'"></td>
+            <td><button class="btn btn-default">変更</button></form></td>
+          </tr>
+          <tr>
+            <td>お住まい</td>
+            <td><form action="sys_user_edit.php?name=prefectures&id='.$id.'" method="post"><input type="text" name="edit" value="'.$row['prefectures'].'"></td>
+            <td><button class="btn btn-default">変更</button></form></td>
+          </tr>';
   }
   catch(PDOException $e){
     echo "エラーだぉ";
