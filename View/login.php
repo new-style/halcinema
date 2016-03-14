@@ -52,7 +52,7 @@ if( isset( $_GET["error"] ) ){	//【Point】クエリ文字列（URLに付随す
 						<form action="sys_login.php" method="post" class="float_C">
 							<label for="user_id">ユーザーID</label><input type="text" name="user_id" value="" id="user_id" pattern="^[0-9A-Za-zｱ-ﾝ]+$" required>
 							<label for="passwd">パスワード</label><input type="password" name="password" value="" id="passwd" pattern="^[0-9A-Za-z]+$" required>
-							<?php echo $errorMessage?>
+							<?php echo $errorMessage; ?>
 							<input type="checkbox" name="cookie" value="1" id="cookie"><label for="cookie" id="cook">ログイン情報を保持する</label>
 							<button type="submit">ログイン</button>
 						</form>
