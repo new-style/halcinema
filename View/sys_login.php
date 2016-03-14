@@ -42,7 +42,7 @@ while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 		exit();
 	}
 	else{
-		header("Location: index.php?error=1");
+		header("Location: login.php?error=1");
 	}
 }
 
