@@ -18,6 +18,8 @@ $first_name = $_POST['first_name'];
 $last_name_kana = $_POST['last_name_kana'];
 $first_name_kana = $_POST['first_name_kana'];
 
+$mailmagazine = $_POST['mailmagazine'];
+
 $name = $last_name.$first_name;
 $name_kana = $last_name_kana.$first_name_kana;
 
@@ -43,7 +45,7 @@ $pdo->setAttribute(
 $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
 
 //プレースホルダを用いたセキュアなSQL
-$sql = "INSERT INTO hal_tanaka VALUES('$user_id', '$user_name', '$password', '$name', '$name_kana', '$sex', '$birth', '$pref_id','null', '$tel', '$mail_address', 'null', 'null', 'null')";
+$sql = "INSERT INTO hal_tanaka VALUES('$user_id', '$user_name', '$password', '$name', '$name_kana', '$sex', '$birth', '$pref_id','null', '$tel', '$mail_address', '$mailmagazine', 'null', 'null')";
 
 //ステートメントハンドラの取得
 $stmt = $pdo -> prepare($sql);

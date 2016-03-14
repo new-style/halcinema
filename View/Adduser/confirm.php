@@ -19,6 +19,7 @@ $first_name = $_POST['first_name'];
 $last_name_kana = $_POST['last_name_kana'];
 $first_name_kana = $_POST['first_name_kana'];
 
+$mailmagazine = $_POST['mailmagazine'];
 
 
 
@@ -249,7 +250,7 @@ $first_name_kana = $_POST['first_name_kana'];
 				<input type="hidden" value="<?php echo $first_name; ?>" name="first_name">
 				<input type="hidden" value="<?php echo $last_name_kana; ?>" name="last_name_kana">
 				<input type="hidden" value="<?php echo $first_name_kana; ?>" name="first_name_kana">
-
+				<input type="hidden" value="<?php echo $mailmagazine; ?>" name="mailmagazine">
 
 
 					<button type="submit" class="btn btn_Regular F_000">戻る</button>

@@ -86,7 +86,7 @@
 								<dl>
 									<dt><span>*</span>ユーザネーム</dt>
 									<dd>
-										<input type="text" name="user_name" pattern="^[0-9A-Za-z]+$">
+										<input type="text" name="user_name" pattern="^[0-9A-Za-z]+$" required>
 										<small>*半角英数</small>
 									</dd>
 								</dl>
@@ -94,7 +94,7 @@
 								<dl>
 									<dt><span>*</span>ユーザID</dt>
 									<dd>
-										<input type="text" name="user_id" pattern="^[0-9A-Za-z]+$">
+										<input type="text" name="user_id" pattern="^[0-9A-Za-z]+$" required>
 										<small>*半角入力6字~12字</small>
 									</dd>
 								</dl>
@@ -102,7 +102,7 @@
 								<dl>
 									<dt><span>*</span>メールアドレス</dt>
 									<dd>
-										<input type="text" name="mail_address">
+										<input type="text" name="mail_address" required>
 										<small>*半角英数</small>
 									</dd>
 								</dl>
@@ -110,7 +110,7 @@
 								<dl>
 									<dt><span>*</span>パスワード</dt>
 									<dd>
-										<input class="pass" type="password" name="password" value="">
+										<input class="pass" type="password" name="password" value="" required>
 										<small>*半角英数6字~20字</small>
 									</dd>
 								</dl>
@@ -118,7 +118,7 @@
 								<dl>
 									<dt><span>*</span>パスワード確認</dt>
 									<dd class="passError">
-										<input class="passConf" type="password" name="password_conf" value="">
+										<input class="passConf" type="password" name="password_conf" value="" required>
 										<small>*半角英数6字~20字</small>
 										<span></span>
 									</dd>
@@ -127,10 +127,10 @@
 								<dl>
 									<dt><span>*</span>お名前</dt>
 									<dd id="nameAdd" class="float_C">
-										<span>性</span><input type="text" name="last_name">
-										<span>名</span><input type="text" name="first_name" ><br>
-										<span>セイ</span><input type="text" name="last_name_kana">
-										<span>メイ</span><input type="text" name="first_name_kana">
+										<span>性</span><input type="text" name="last_name" required>
+										<span>名</span><input type="text" name="first_name" required><br>
+										<span>セイ</span><input type="text" name="last_name_kana" required>
+										<span>メイ</span><input type="text" name="first_name_kana" required>
 									</dd>
 
 								</dl>
@@ -138,7 +138,7 @@
 								<dl>
 									<dt><span>*</span>電話番号</dt>
 									<dd>
-										<input type="text" name="tel" value="">
+										<input type="tel" name="tel" value="" pattern="^[0-9]+$" required>
 										<small>*半角ハイフン無し　例)0901234567</small>
 									</dd>
 								</dl>
@@ -146,15 +146,15 @@
 								<dl>
 									<dt><span>*</span>性別</dt>
 									<dd id="seibetu">
-										<input type="radio" name="sex" value="男性" id="male"><label for="male">男性</label>
-										<input type="radio" name="sex" value="女性" id="female"><label for="female">女性</label>
+										<input type="radio" name="sex" value="男性" id="male" required><label for="male">男性</label>
+										<input type="radio" name="sex" value="女性" id="female" required><label for="female">女性</label>
 									</dd>
 								</dl>
 
 								<dl>
 									<dt><span>*</span>生年月日</dt>
 									<dd>
-										<select class="year" name="year">
+										<select class="year" name="year" required>
 											<option value="">----</ontion>
 				<?php
 					for( $sy = 1990; $sy <= 2020; $sy++ ){
@@ -164,7 +164,7 @@
 										</select>
 										<label for="year">年</label>
 
-										<select class="month" name="month">
+										<select class="month" name="month" required>
 											<option value="">--</option>
 				<?php
 					for( $sm = 1; $sm <= 12; $sm++ ){
@@ -173,7 +173,7 @@
 				?>
 										</select>
 										<label for="month">月</label>
-										<select class="day" name="day">
+										<select class="day" name="day" required>
 											<option value="">--</option>
 				<?php
 					for( $sd = 1; $sd <= 31; $sd++ ){
@@ -188,7 +188,7 @@
 								<dl>
 									<dt><span>*</span>都道府県</dt>
 									<dd>
-										<select name="pref_id" class="pref_id">
+										<select name="pref_id" class="pref_id" required>
 											<option value="北海道">北海道</option>
 											<option value="青森県">青森県</option>
 											<option value="岩手県">岩手県</option>
@@ -351,8 +351,8 @@
 
 								<p>HALシネマのメルマガの配信を希望する</p>
 
-								<input type="radio" name="mailmagazine" id="mailY" checked=""><label for="mailY">希望する</label>
-								<input type="radio" name="mailmagazine" id="mailN"><label for="mailN">希望しない</label>
+								<input type="radio" name="mailmagazine" id="mailY" checked value="1"><label for="mailY">希望する</label>
+								<input type="radio" name="mailmagazine" id="mailN" value="0"><label for="mailN">希望しない</label>
 
 							</fieldset>
 							<!-- ▲メルマガ登録 -->

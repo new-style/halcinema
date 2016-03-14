@@ -1,3 +1,30 @@
+<?php
+
+//エラー情報取得
+$errorMessage = "";
+if( isset( $_GET["error"] ) ){	//【Point】クエリ文字列（URLに付随するパラメータ）にerrorがあるかをチェック。
+	//エラーNoの取得
+	$errorNo = $_GET["error"];
+
+	switch( $errorNo ){
+		case 1:
+			$errorMessage = "<p style='color:red'>入力が間違っています。</p>";
+			break;
+		//【Point!】
+		// 以下のように、エラーNoを使い分けることによって、
+		// 複数のエラーメッセージを切り替えることが可能！
+		case 2:
+			$errorMessage = "<p style='color:red'>IDは必須入力です。</p>";
+			break;
+		case 3:
+			$errorMessage = "<p style='color:red'>Passwordは必須入力です。</p>";
+			break;
+	}
+}
+
+?>
+
+
 <!-- ▼表示▼ -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -31,10 +58,10 @@
 				<article>
 					<section class="loginWrap">
 						<img src="../img/logo02.png">
-						<form action="Member/mypage.php" method="post" class="float_C">
-							<label for="user_id">ユーザーID</label><input type="text" name="user_id" value="" id="user_id">
-							<label for="passwd">パスワード</label><input type="password" name="password" value="" id="passwd">
-							<input type="checkbox" name="name" value="" id="cookie"><label for="cookie" id="cook">ログイン情報を保持する</label>
+						<form action="sys_login.php" method="post" class="float_C">
+							<label for="user_id">ユーザーID</label><input type="text" name="user_id" value="" id="user_id" pattern="^[0-9A-Za-zｱ-ﾝ]+$" required>
+							<label for="passwd">パスワード</label><input type="password" name="password" value="" id="passwd" pattern="^[0-9A-Za-z]+$" required>
+							<input type="checkbox" name="cookie" value="1" id="cookie"><label for="cookie" id="cook">ログイン情報を保持する</label>
 							<button type="submit">ログイン</button>
 						</form>
 							<p class="passFogot">
