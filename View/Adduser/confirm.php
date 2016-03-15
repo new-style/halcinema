@@ -9,10 +9,18 @@ $password = $_POST['password'];
 $password_conf = $_POST['password_conf'];
 $tel = $_POST['tel'];
 $sex = $_POST['sex'];
+
 $year = $_POST['year'];
 $month = $_POST['month'];
+$month = sprintf('%02d',$month);
+
 $day = $_POST['day'];
+$day = sprintf('%02d',$day);
+
 $pref_id = $_POST['pref_id'];
+
+
+
 
 $last_name = $_POST['last_name'];
 $first_name = $_POST['first_name'];

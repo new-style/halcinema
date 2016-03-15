@@ -1,4 +1,4 @@
-<?php 
+<?php
   session_start();
   $dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
   $dbUser = "root";
@@ -51,7 +51,7 @@ require_once("./../parts/side.php");
                             </tr>
                         </thead>
                         <tbody>
-                            <?php 
+                            <?php
 try{
     $sql = "select * from hal_tanaka where id=".$id."";
     $stmh = $pdo -> prepare($sql);

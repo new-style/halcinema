@@ -94,7 +94,7 @@
 								<dl>
 									<dt><span>*</span>ユーザID</dt>
 									<dd>
-										<input type="text" name="user_id" pattern="^[0-9A-Za-z]+$" required>
+										<input type="text" name="user_id" pattern="^[0-9A-Za-z]+$" minlength="6" maxlength="12" required>
 										<small>*半角入力6字~12字</small>
 									</dd>
 								</dl>
@@ -102,7 +102,7 @@
 								<dl>
 									<dt><span>*</span>メールアドレス</dt>
 									<dd>
-										<input type="text" name="mail_address" required>
+										<input type="text" name="mail_address" pattern=".+@.+\..+.[0-9A-Za-z]" required>
 										<small>*半角英数</small>
 									</dd>
 								</dl>
@@ -110,7 +110,7 @@
 								<dl>
 									<dt><span>*</span>パスワード</dt>
 									<dd>
-										<input class="pass" type="password" name="password" value="" required>
+										<input class="pass" type="password" name="password" minlength="6" maxlength="20" value="" required>
 										<small>*半角英数6字~20字</small>
 									</dd>
 								</dl>
@@ -118,7 +118,7 @@
 								<dl>
 									<dt><span>*</span>パスワード確認</dt>
 									<dd class="passError">
-										<input class="passConf" type="password" name="password_conf" value="" required>
+										<input class="passConf" type="password" name="password_conf" minlength="6" maxlength="20" value="" required>
 										<small>*半角英数6字~20字</small>
 										<span></span>
 									</dd>
@@ -138,7 +138,7 @@
 								<dl>
 									<dt><span>*</span>電話番号</dt>
 									<dd>
-										<input type="tel" name="tel" value="" pattern="^[0-9]+$" required>
+										<input type="tel" name="tel" value="" maxlength="11" pattern="^[0-9]+$" required>
 										<small>*半角ハイフン無し　例)0901234567</small>
 									</dd>
 								</dl>
@@ -173,6 +173,7 @@
 				?>
 										</select>
 										<label for="month">月</label>
+
 										<select class="day" name="day" required>
 											<option value="">--</option>
 				<?php

@@ -41,7 +41,7 @@
 
 						<section class="wait">
 							<h2>退会</h2>
-							<form action="fuckyou_remove.php" method="post">
+							<form action="fuckyou_user.php" method="post">
 							<p>
 								パスワードを入力してください。
 							</p>

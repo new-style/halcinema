@@ -41,6 +41,7 @@ $stmt -> execute();
 while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
 	if($row['user_id'] == $user_id && $row['password'] == $password ){
 		session_start();
+		$_SESSION["id"] = $row['id'];
 		$_SESSION["name"] = $row['name'];
 		header("Location: ./Member/mypage.php");
 		exit();

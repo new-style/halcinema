@@ -9,14 +9,6 @@
   $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
   //設定②SQLインジェクション対策
   $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
-  $id = $_SESSION["id"];
-
-	$sql = "select * from hal_tanaka where id=".$id;
-	// $sql = "update hal_tanaka set ".$name." = '".$edit."' where id=".$id;
-	$stmh = $pdo -> prepare($sql);
-	$stmh -> execute();
-	$row = $stmh -> fetch(PDO::FETCH_ASSOC);
-
 
 ?>
 
@@ -51,7 +43,6 @@
 
 				<section class="l-stepMain">
 					<div class="inn-wrapper">
-
 						<h2 class="set-H2">会員登録内容変更</h2>
 						<form action="complete.php" method="post" class="userForm">
 							<table>
@@ -61,14 +52,19 @@
 									</td>
 								</tr>
 								<tr>
+									<td class="l-tdWidth1">
+										ユーザネーム
+									</td>
+									<td class="l-tdWidth2">
+										<input type="text" name="userName" placeholder="えはら">
+									</td>
+								</tr>
+								<tr>
 									<td>
-										ユーザーID
+										ユーザID
 									</td>
 									<td>
-										<input type="text" name="id" value="<?php echo $row['user_id']?>"><span class="inputMsg">※半角英数</span>
-									</td>
-									<td>
-										<button>変更</button>
+										<input type="text" name="id" placeholder="koichi123"><span class="inputMsg">※半角英数</span>
 									</td>
 								</tr>
 								<tr>
@@ -76,10 +72,7 @@
 										メールアドレス
 									</td>
 									<td>
-										<input type="text" name="address" value="<?php echo $row['mail_address']?>">
-									</td>
-									<td>
-										<button>変更</button>
+										<input type="text" name="address" placeholder="address">
 									</td>
 								</tr>
 								<tr>
@@ -91,30 +84,20 @@
 										<input type="password" name="newPassword" placeholder="新しいパスワード">
 										<input type="password" name="NnewPassword" placeholder="新しいパスワード(再入力)">
 									</td>
-									<td>
-										<button>変更</button>
-									</td>
 								</tr>
 								<tr>
-									<td>
+									<td rowspan="2">
 										お名前
 									</td>
 									<td class="username">
-										<input type="text" name="familyName" value="<?php echo $row['name']?>">
-									</td>
-									<td>
-										<button>変更</button>
+										姓<input type="text" name="familyName" placeholder="江原">
+										名<input type="text" name="firstName" placeholder="孝一">
 									</td>
 								</tr>
 								<tr>
-									<td>
-										フリガナ
-									</td>
 									<td class="username">
-										<input type="text" name="familyNameKana" value="<?php echo $row['kana_name']?>">
-									</td>
-									<td>
-										<button>変更</button>
+										<span>ｾｲ</span><input type="text" name="familyNameKana" placeholder="エハラ">
+										<span>ﾒｲ</span><input type="text" name="firstNameKana" placeholder="コウイチ">
 									</td>
 								</tr>
 								<tr>
@@ -122,10 +105,7 @@
 										電話番号
 									</td>
 									<td>
-										<input type="text" name="tel" value="<?php echo $row['tel']?>">
-									</td>
-									<td>
-										<button>変更</button>
+										<input type="text" name="tel" placeholder="09019799681">
 									</td>
 								</tr>
 								<tr>
@@ -133,15 +113,7 @@
 										性別
 									</td>
 									<td>
-										<!-- 値入れる -->
-										<?php
-											if(0 == $row['sex']){
-												echo "男";
-											}
-											else{
-												echo "女";
-											}
-										?>
+										男
 									</td>
 								</tr>
 								<tr>
@@ -149,8 +121,7 @@
 										生年月日
 									</td>
 									<td>
-										<!-- 値入れる-->
-										<?php echo $row['birth']?>
+										1994年06月20日
 									</td>
 								</tr>
 								<tr>
@@ -210,14 +181,9 @@
 											<option value="47">沖縄県</option>
 										</select>
 									</td>
-									<td>
-										<button>変更</button>
-									</td>
 								</tr>
 							</table>
-
-
-							<!-- <h2 class="set-H2"></h2>
+							<h2 class="set-H2"></h2>
 							<table>
 								<tr>
 									<td colspan="2">
@@ -277,19 +243,21 @@
 										<input type="text" name="secureCode">
 									</td>
 								</tr>
-							</table> -->
+							</table>
+
+							<div class="l-submitBox">
+								<p>
+									入力内容に間違いがなければ「変更する」ボタンをクリックしてください
+								</p>
+							<input type="submit" value="変更する">
+							</div>
 
 						</form>
 					</div>
-
+					
 				</section>
 			</article>
 		</main>
-<!-- ▼フッター -->
-<?php
-	require_once "../parts/footer.html";
-?>
-
 
 	</body>
 </html>
