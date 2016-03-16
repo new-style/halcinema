@@ -1,3 +1,28 @@
+<?php 
+  session_start();
+  $dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
+  $dbUser = "root";
+  // windowsの人はrootではなく空("")にしてください。
+  $dbPass = "root";
+
+  $pdo = new PDO ($dsn, $dbUser, $dbPass);
+  $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+  //設定②SQLインジェクション対策
+  $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+  $id = $_GET['id'];
+  try{
+    $sql = "select * from hal_movie where movie_id=".$id."";
+    $stmh = $pdo -> prepare($sql);
+    $stmh -> execute();
+    $row = $stmh -> fetch(PDO::FETCH_ASSOC);
+  }catch(PDOException $e){
+    echo "エラーだぉ";
+    echo "<br>【エラーメッセージ】<br>";
+    echo $e -> getMessage();
+    echo "<br >【エラーコード】<br>";
+    echo $e -> getCode();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,31 +55,67 @@ require_once("./../parts/side.php");
                 <h1>映画情報変更</h1>
 
                 <div class="detail">
-                  <form class="" action="" method="post">
                     <table class="table table-bordered">
                         <tbody>
-                              <tr>
-                                <th>No</th>
-                                <td>1</td>
-                              </tr>
-                              <tr>
-                                <th>ID</th>
-                                <td>00001</td>
-                              </tr>
-                              <tr>
-                                <th>タイトル</th>
-                                <td><input type="text" value="オデッセイ" class="form-control"></td>
-                              </tr>
-                              <tr>
-                                <th>画像</th>
-                                <td><img src="http://127.0.0.1/halcinema/img/mi05.jpg"></td>
-                              </tr>
+                        <?php
+                          try{
+                            $sql = "select * from hal_movie where movie_id=".$id."";
+                            $stmh = $pdo -> prepare($sql);
+                            $stmh -> execute();
+                            while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
+                              echo '<tr>
+                                      <th>タイトル</th>
+                                      <td>
+                                        <form action="sys_movie_edit.php?id='.$id.'&name=movie_title" method="POST">
+                                        <input type="text" name="movie_edit" value="'.$row['movie_title'].'">
+                                      </td>
+                                      <td width="100px"><button type="submit" class="btn btn-warning btn-lg">変更</button></form></td>
+                                    </tr>
+                                    <tr>
+                                      <th>キャスト</th>
+                                      <td>
+                                        <form action="sys_movie_edit.php?id='.$id.'&name=cast" method="POST">
+                                        <input type="text" name="movie_edit" value="'.$row['cast'].'">
+                                      </td>
+                                      <td><button type="submit" class="btn btn-warning btn-lg">変更</button></form></td>
+                                    </tr>
+                                    <tr>
+                                      <th>監督</th>
+                                      <td>
+                                        <form action="sys_movie_edit.php?id='.$id.'&name=kantoku" method="POST">
+                                        <input type="text" name="movie_edit" value="'.$row['kantoku'].'">
+                                      </td>
+                                      <td><button type="submit" class="btn btn-warning btn-lg">変更</button></form></td>
+                                    </tr>
+                                    <tr>
+                                      <th>スタッフ</th>
+                                      <td>
+                                        <form action="sys_movie_edit.php?id='.$id.'&name=staff" method="POST">
+                                        <input type="text" name="movie_edit" value="'.$row['staff'].'">
+                                      </td>
+                                      <td><button type="submit" class="btn btn-warning btn-lg">変更</button></form></td>
+                                    </tr>
+                                    <tr>
+                                      <th>画像</th>
+                                      <td>
+                                        <img src="../../img/'.$row['movie_img'].'">
+                                        <form action="sys_movie_edit.php?id='.$id.'&name=movie_img" method="POST" enctype="multipart/form-data">
+                                        <input type="file" name="upload_file">
+                                      </td>
+                                      <td><button type="submit" class="btn btn-warning btn-lg">変更</button></form></td>
+                                    </tr>';
+                            }
+                          }catch(PDOException $e){
+                            echo "エラーだぉ";
+                            echo "<br>【エラーメッセージ】<br>";
+                            echo $e -> getMessage();
+                            echo "<br >【エラーコード】<br>";
+                            echo $e -> getCode();
+                          }
+                        ?>
                         </tbody>
                     </table>
-                    <button type="submit" class="btn btn-info btn-lg">戻る</button>
-                    <button type="submit" class="btn btn-warning btn-lg">変更</button>
 
-                  </form>
                 </div><!-- /.detail -->
             </section>
         </article>

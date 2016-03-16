@@ -1,3 +1,37 @@
+<?php
+    $dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
+    $dbUser = "root";
+    // windowsの人はrootではなく空("")にしてください。
+    $dbPass = "root";
+
+
+    //PDOによるDB接続
+    $pdo = new PDO ($dsn, $dbUser, $dbPass);
+
+    //PDOの動作設定
+    //設定①エラーメッセージは黙殺しないで例外を吐かせる！
+    //エラーモードをエクセプションモードにしなさい！
+    $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    //設定②SQLインジェクション対策
+    $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+try{
+    $sql = "select * from hal_order";
+    $stmh = $pdo -> prepare($sql);
+    $stmh -> execute();
+
+    while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
+
+    }
+}
+catch(PDOException $e){
+    echo "エラーだぉ";
+    echo "<br>【エラーメッセージ】<br>";
+    echo $e -> getMessage();
+    echo "<br   >【エラーコード】<br>";
+    echo $e -> getCode();
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,14 +102,21 @@ require_once("./../parts/side.php");
                         </thead>
                         <tbody>
 <?php
-    $num = 0;
+    $sum = 0;
+    $priceArr = Array();
     for( $date = 1; $date <= 30; $date++ ){
+        $sql = "select * from hal_order";
+        $stmh = $pdo -> prepare($sql);
+        $stmh -> execute();
+        $row = $stmh -> fetch(PDO::FETCH_ASSOC);
+        $sum += $row['payment'];
+        $priceArr[] = $row['payment'];
 ?>
                             <tr>
                                 <td><?php echo $date; ?></td>
                                 <td>月</td>
                                 <td>
-                                  <?php echo $date_num = $date*3000; $num += $date_num; ?>
+                                  <?php echo $row['payment']; ?>
                                 </td>
                             </tr>
 <?php
@@ -83,7 +124,7 @@ require_once("./../parts/side.php");
 ?>
                           <tr>
                             <td colspan="2">合計</td>
-                            <td><?php echo $num; ?></td>
+                            <td><?php echo $sum; ?></td>
                           </tr>
                         </tbody>
                     </table>
