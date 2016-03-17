@@ -45,3 +45,4 @@
 
 	//DB切断
 	$pdo = null;
+header("Location: ../View/complete.php");

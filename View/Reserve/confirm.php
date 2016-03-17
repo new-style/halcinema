@@ -104,7 +104,7 @@
 			<h1>Step3</h1>
 			<p>購入内容のご確認</p>
 		</div>
-		<form action="../complete.php" method="post">
+		<form action="../../system/reserve.php" method="post">
 			<fieldset>
 				<legend class="text_Center">購入確認</legend>
 				<div>
