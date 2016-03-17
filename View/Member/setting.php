@@ -65,8 +65,8 @@
 										ユーザーID
 									</td>
 									<td>
-										<form action="sys_setting.php" method="post" class="userForm">
-										<input type="text" name="user_id" value="<?php echo $row['user_id']?>"><span class="inputMsg">※半角英数</span>
+										<form action="sys_setting.php?id=<?php echo $row['id']?>&name=user_id" method="post" class="userForm">
+										<input type="text" name="user_edit" value="<?php echo $row['user_id']?>"><span class="inputMsg">※半角英数</span>
 									</td>
 									<td>
 										<button type="submit">変更</button>
@@ -78,8 +78,8 @@
 										メールアドレス
 									</td>
 									<td>
-										<form action="sys_setting.php" method="post" class="userForm">
-										<input type="text" name="mail_address" value="<?php echo $row['mail_address']?>">
+										<form action="sys_setting.php?id=<?php echo $row['id']?>&name=mail_address" method="post" class="userForm">
+										<input type="text" name="user_edit" value="<?php echo $row['mail_address']?>">
 									</td>
 									<td>
 										<button type="submit">変更</button>
@@ -91,10 +91,10 @@
 										パスワード
 									</td>
 									<td>
-										<form action="sys_setting.php" method="post" class="userForm">
-										<input type="password" name="password" placeholder="古いパスワード">
+										<form action="sys_setting.php?id=<?php echo $row['id']?>&name=password" method="post" class="userForm">
+										<input type="password" name="oldPassword" placeholder="古いパスワード">
 										<input type="password" name="newPassword" placeholder="新しいパスワード">
-										<input type="password" name="NnewPassword" placeholder="新しいパスワード(再入力)">
+										<input type="password" name="newPassword" placeholder="新しいパスワード(再入力)">
 									</td>
 									<td>
 										<button type="submit">変更</button>
@@ -106,8 +106,8 @@
 										お名前
 									</td>
 									<td class="username">
-										<form action="sys_setting.php" method="post" class="userForm">
-										<input type="text" name="name" value="<?php echo $row['name']?>">
+										<form action="sys_setting.php?id=<?php echo $row['id']?>&name=name" method="post" class="userForm">
+										<input type="text" name="user_edit" value="<?php echo $row['name']?>">
 									</td>
 									<td>
 										<button type="submit">変更</button>
@@ -119,8 +119,8 @@
 										フリガナ
 									</td>
 									<td class="username">
-										<form action="sys_setting.php" method="post" class="userForm">
-										<input type="text" name="nameKana" value="<?php echo $row['kana_name']?>">
+										<form action="sys_setting.php?id=<?php echo $row['id']?>&name=kana_name" method="post" class="userForm">
+										<input type="text" name="user_edit" value="<?php echo $row['kana_name']?>">
 									</td>
 									<td>
 										<button type="submit">変更</button>
@@ -132,8 +132,8 @@
 										電話番号
 									</td>
 									<td>
-										<form action="sys_setting.php" method="post" class="userForm">
-										<input type="text" name="tel" value="<?php echo $row['tel']?>">
+										<form action="sys_setting.php?id=<?php echo $row['id']?>&name=tel" method="post" class="userForm">
+										<input type="text" name="user_edit" value="<?php echo $row['tel']?>">
 									</td>
 									<td>
 										<button type="submit">変更</button>

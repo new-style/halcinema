@@ -9,63 +9,44 @@
   $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
   //設定②SQLインジェクション対策
   $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
-
-  $user_id = "";
-	if( isset( $_POST["user_id"] ) ){
-	$user_id = $_POST['user_id'];
+  $id = $_GET['id'];
+  $name = $_GET['name'];
+  if(isset($_POST["user_edit"])){
+    $user_edit = $_POST["user_edit"];
+  }
+  if(isset($_POST["oldPassword"])){
+    $old_pass = $_POST["oldPassword"];
+    $user_edit = $_POST["newPassword"];
+    $sql = "select * from hal_tanaka where id=".$id;
+    $stmh = $pdo -> prepare($sql);
+    $stmh -> execute();
+    $row = $stmh -> fetch(PDO::FETCH_ASSOC);
+    echo $row['password'];
+    echo "<br>";
+    echo $old_pass;
+    echo "<br>";
+    if($row['password'] == $old_pass){
+      $sql = "update hal_tanaka set ".$name." = '".$user_edit."' where id=".$id;
+      $stmh = $pdo -> prepare($sql);
+      $stmh -> execute();
+    }else{
+      header("Location: setting.php");
+      exit();
+    }
   }
 
-  $mail_address = "";
-	if( isset( $_POST["mail_address"] ) ){
-	$mail_address = $_POST['mail_address'];
+  echo $user_edit;
+
+  try{
+    $sql = "update hal_tanaka set ".$name." = '".$user_edit."' where id=".$id;
+    $stmh = $pdo -> prepare($sql);
+    $stmh -> execute();
+  }catch(PDOException $e){
+    echo "エラーだぉ";
+    echo "<br>【エラーメッセージ】<br>";
+    echo $e -> getMessage();
+    echo "<br >【エラーコード】<br>";
+    echo $e -> getCode();
   }
-
-  $password = "";
-	if( isset( $_POST["password"] ) ){
-	$password = $_POST['password'];
-  }
-
-  $newPassword = "";
-	if( isset( $_POST["newPassword"] ) ){
-	$newPassword = $_POST['newPassword'];
-  }
-
-  $NnewPassword = "";
-	if( isset( $_POST["NnewPassword"] ) ){
-	$NnewPassword = $_POST['NnewPassword'];
-  }
-
-  $name = "";
-	if( isset( $_POST["name"] ) ){
-	$name = $_POST['name'];
-  }
-
-  $nameKana = "";
-	if( isset( $_POST["nameKana"] ) ){
-	$nameKana = $_POST['nameKana'];
-  }
-
-  $tel = "";
-	if( isset( $_POST["tel"] ) ){
-	$tel = $_POST['tel'];
-  }
-
-  $Prefectures = "";
-	if( isset( $_POST["Prefectures"] ) ){
-	$Prefectures = $_POST['Prefectures'];
-  }
-
-
-  echo $user_id;
-  echo $mail_address;
-  echo $password;
-  echo $newPassword;
-  echo $NnewPassword;
-  echo $name;
-  echo $nameKana;
-  echo $tel;
-  echo $Prefectures;
-
-
 
 ?>
