@@ -23,14 +23,14 @@
 	  $edit = $_POST['movie_edit'];
 	  echo $edit;
   }
-  // try{
-  //   $sql = "update hal_movie set ".$name." = '".$edit."' where movie_id=".$id;
-  //   $stmh = $pdo -> prepare($sql);
-  //   $stmh -> execute();
-  // }catch(PDOException $e){
-  //   echo "エラーだぉ";
-  //   echo "<br>【エラーメッセージ】<br>";
-  //   echo $e -> getMessage();
-  //   echo "<br >【エラーコード】<br>";
-  //   echo $e -> getCode();
-  // }
+  try{
+    $sql = "update hal_movie set ".$name." = '".$edit."' where movie_id=".$id;
+    $stmh = $pdo -> prepare($sql);
+    $stmh -> execute();
+  }catch(PDOException $e){
+    echo "エラーだぉ";
+    echo "<br>【エラーメッセージ】<br>";
+    echo $e -> getMessage();
+    echo "<br >【エラーコード】<br>";
+    echo $e -> getCode();
+  }
