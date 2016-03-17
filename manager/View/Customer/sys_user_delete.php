@@ -22,3 +22,4 @@
     echo "<br >【エラーコード】<br>";
     echo $e -> getCode();
   }
+  header("Location: ../comp/delete_comp.php");

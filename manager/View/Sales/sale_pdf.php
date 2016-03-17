@@ -1,16 +1,17 @@
 <?php
+session_start();
     //処理
     require_once( 'fpdf/mbfpdf.php' );
 
     //DBからデータ受け取り
     $year = 2016;
-    $month = 1;
+    $month = 3;
     $date = array(1,2,3,4,5,6,7,8,9,10);
     $date_num = array(
         10000,20000,10000,20000,20000,
         10000,20000,10000,20000,20000
     );
-
+   
     //文字コード変換
     //mb_convert_encoding($, 'SJIS-win', 'UTF-8')
 
@@ -54,6 +55,7 @@
 
     //表描画
 
+
     //タイトル
     //色の追加/設定
     $pdf -> setFillColor(100,100,100);
@@ -70,18 +72,22 @@
 
     //データ
     //文字色の設定
+    $sum = 0;
     $pdf -> setTextColor(0,0,0);
-
+for($i = 1;$i<31;$i++){
+    $a = $_SESSION['priceArr'][$i];
+    $sum += $a;
     $pdf -> cell(40,10,"3",1,0,"C");
-    $pdf -> cell(40,10,"1",1,0,"C");
-    $pdf -> cell(110,10,"100000",1,1,"R");
+    $pdf -> cell(40,10,(string)$i,1,0,"C");
+    $pdf -> cell(110,10,(string)$a,1,1,"R");
+}
 
     //総合計
     $pdf -> cell(80,10,"合計",1,0,"C");
-    $pdf -> cell(110,10,"100000",1,1,"R");
+    $pdf -> cell(110,10,(string)$sum,1,1,"R");
 
 
 
     //出力
-    $pdf -> output('');
+    $pdf -> output();
 ?>

@@ -15,6 +15,7 @@
           $sql = "delete from hal_movie where movie_id = ".$id;
           $stmh = $pdo -> prepare($sql);
           $stmh -> execute();
+          header("Location: remove.php");
       }catch(PDOException $e){
           echo "エラーだぉ";
           echo "<br>【エラーメッセージ】<br>";
@@ -22,3 +23,4 @@
           echo "<br >【エラーコード】<br>";
           echo $e -> getCode();
       }
+      header("Location: ../comp/delete_comp.php");

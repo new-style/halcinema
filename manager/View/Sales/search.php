@@ -1,4 +1,5 @@
 <?php
+session_start();
     $dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
     $dbUser = "root";
     // windowsの人はrootではなく空("")にしてください。
@@ -19,9 +20,6 @@ try{
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
 
-    while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
-
-    }
 }
 catch(PDOException $e){
     echo "エラーだぉ";
@@ -46,7 +44,6 @@ catch(PDOException $e){
     <link rel="stylesheet" href="./../../css/font-awesome.min.css">
     <link rel="stylesheet" href="./../../css/bootstrap.min.css">
     <link rel="stylesheet" href="./../../css/style.css">
-    <script ></script>
 
 </head>
 <body>
@@ -67,7 +64,13 @@ require_once("./../parts/side.php");
                         <legend>検索</legend>
                         <div class="form-group">
                             <select name="year" id="year" class="form-control">
-                                <option>2015</option>
+<?php
+    for( $i = 2015;$i <=2016 ;$i++){
+?>
+                                <option><?php echo $i; ?></option>
+<?php
+}
+?>
                             </select>
                             <label for="year">年</label>
                         </div><!-- /.form-group -->
@@ -111,6 +114,7 @@ require_once("./../parts/side.php");
         $row = $stmh -> fetch(PDO::FETCH_ASSOC);
         $sum += $row['payment'];
         $priceArr[] = $row['payment'];
+        $priceArr[] = $row['payment'];
 ?>
                             <tr>
                                 <td><?php echo $date; ?></td>
@@ -121,6 +125,7 @@ require_once("./../parts/side.php");
                             </tr>
 <?php
     }
+    $_SESSION['priceArr'] = $priceArr;
 ?>
                           <tr>
                             <td colspan="2">合計</td>

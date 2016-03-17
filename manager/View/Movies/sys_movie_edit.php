@@ -1,4 +1,4 @@
-<?php 
+<?php
   session_start();
   $dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
   $dbUser = "root";
@@ -11,22 +11,19 @@
   $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
   $id = $_GET['id'];
   $name = $_GET['name'];
-  $edit = $_POST['edit'];
-  if(isset($_POST['old_pass'])){
-    $old_pass = $_POST['old_pass'];
-    $sql = "select * from hal_tanaka where id=".$id;
-    $stmh = $pdo -> prepare($sql);
-    $stmh -> execute();
-    $row = $stmh -> fetch(PDO::FETCH_ASSOC);
-    if($old_pass != $row['password']){
-      header('Location: user_edit.php?id='.$id.'&error=1');
-      exit();
-    }
+  if(isset($_FILES['upload_file'])){
+	  $file = $_FILES['upload_file'];
+	  $tmp_name = $file['tmp_name'];
+		$edit = $file['name'];
+		move_uploaded_file($tmp_name,'../../img/'.$edit);
+  }else{
+	  $edit = $_POST['movie_edit'];
   }
   try{
-    $sql = "update hal_tanaka set ".$name." = '".$edit."' where id=".$id;
+    $sql = "update hal_movie set ".$name." = '".$edit."' where movie_id=".$id;
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
+    header("Location: change.php");
   }catch(PDOException $e){
     echo "エラーだぉ";
     echo "<br>【エラーメッセージ】<br>";
@@ -34,4 +31,4 @@
     echo "<br >【エラーコード】<br>";
     echo $e -> getCode();
   }
-  header("Location: ../comp/edit_comp.php");
+      header("Location: ../comp/edit_comp.php");

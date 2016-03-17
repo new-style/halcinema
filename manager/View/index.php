@@ -26,13 +26,6 @@ require_once("./parts/header.php");
 <?php
 require_once("./parts/side.php");
 ?>
-            <section class="col-md-10 top_nav">
-                <ul>
-                    <li><a href="http://127.0.0.1/halcinema/manager/View/Sales/search.php">売上管理</a></li>
-                    <li><a href="http://127.0.0.1/halcinema/manager/View/Customer/user_search.php">会員管理</a></li>
-                    <li><a href="http://127.0.0.1/halcinema/manager/View/Movies/search.php">映画管理一覧</a></li>
-                </ul>
-            </section>
         </article>
 <?php
 require_once("./parts/footer.php");
