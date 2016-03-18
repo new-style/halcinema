@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //エラー情報取得
 $errorMessage = "";
 if( isset( $_GET["error"] ) ){	//【Point】クエリ文字列（URLに付随するパラメータ）にerrorがあるかをチェック。
@@ -40,7 +40,7 @@ if( isset( $_GET["error"] ) ){	//【Point】クエリ文字列（URLに付随す
 		<div class="l-wrapper">
 			<!-- ▼ヘッダー -->
 <?php
-	require_once "./parts/header.html";
+	require_once "./parts/header.php";
 ?>
 
 			<main class="l-content">

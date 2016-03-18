@@ -26,8 +26,23 @@ h1,h2,h3,p,ul,li,div,dl,dt,dd{
 }
 
 /* チケット */
-
+.tickets_contents{
+	width: 400px;
+	margin-bottom: 50px;
+	margin-left: 50px;
+	float: left;
+}
+.tickets_info{
+	width: 250px;
+	padding-top: 6px;
+}
+.tickets_info dl{
+	padding-left: 10px;
+	line-height: 35px;
+}
 .tickets_info dt{
+	width: 100px;
+	height: 20px;
 	float: left;
 }
 

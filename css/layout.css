@@ -312,6 +312,14 @@ body{
   /*margin: 0auto;*/
   background-color: #652323;
 }
+.l-footer>div{
+  width: 960px;
+  margin: 0 auto;
+}
+.l-footer ul{
+  margin: 0;
+  padding: 0;
+}
 .l-footer a:link , .l-footer a:visited{
   color: #ecdbcc;
 }

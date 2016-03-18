@@ -16,20 +16,20 @@
     $my_content_date = Array();
     $my_content_name = Array();
     while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
-    	print_r($row);
-    echo "<br>";
+    // 	print_r($row);
+    // echo "<br>";
     	$my_content_date[] = $row['start_date'];
     	$my_content_name[] = $row['movie_title'];
     }
-    print_r($my_content_date);
-    echo "<br>";
+    // print_r($my_content_date);
+    // echo "<br>";
     $sql2 = "select * from hal_order";
     $stmh2 = $pdo -> prepare($sql2);
     $stmh2 -> execute();
-    while($row2 = $stmh2 -> fetch(PDO::FETCH_ASSOC)){
-    	print_r($row2);
-    	echo "<br>";
-    }
+    // while($row2 = $stmh2 -> fetch(PDO::FETCH_ASSOC)){
+    // 	print_r($row2);
+    // 	echo "<br>";
+    // }
   }
   catch(PDOException $e){
     echo "エラーだぉ";
@@ -65,7 +65,7 @@
 		<div class="l-wrapper">
 			<!-- ▼ヘッダー -->
 <?php
-	require_once "./../parts/header.html";
+	require_once "./../parts/header.php";
 ?>
 
 			<main class="l-content">
@@ -100,7 +100,7 @@
 							</dl>
 						</div>
 						<div class="more">
-							+more
+							<a href="reserve_history.php" style="color: #fff;">+more</a>
 						</div>
 					</section>
 					<!-- ▲予約履歴▲ -->
@@ -111,20 +111,20 @@
 						<h2>購入履歴</h2>
 						<div class="my_content">
 							<dl>
-								<dd>2015/12/25</dd>
-								<dd>ジュラシックワールド</dd>
+								<dd class="my_content_date"><?php echo $my_content_date[0] ?></dd>
+								<dd class="my_content_name"><?php echo $my_content_name[0] ?></dd>
 							</dl>
 							<dl>
-								<dd>2015/12/15</dd>
-								<dd>S-最後の警官-</dd>
+								<dd class="my_content_date"><?php echo $my_content_date[1] ?></dd>
+								<dd class="my_content_name"><?php echo $my_content_name[1] ?></dd>
 							</dl>
 							<dl>
-								<dd>2015/12/05</dd>
-								<dd>カリフォルニアダダダダ</dd>
+								<dd class="my_content_date"><?php echo $my_content_date[2] ?></dd>
+								<dd class="my_content_name"><?php echo $my_content_name[2] ?></dd>
 							</dl>
 						</div>
 						<div class="more">
-							+more
+							<a href="#" style="color: #fff;">+more</a>
 						</div>
 					</section>
 					<!-- ▲購入履歴▲ -->
@@ -144,14 +144,6 @@
 					<section id="fav">
 						<h2>お気に入りリスト</h2>
 						<div class="my_content">
-							<dl>
-								<dd><img src="./../../img/lovelive.jpg" alt="" /></dd>
-								<dd>カリフォルニアダダダダ</dd>
-							</dl>
-							<dl>
-								<dd><img src="./../../img/lovelive.jpg" alt="" /></dd>
-								<dd>カリフォルニアダダダダ</dd>
-							</dl>
 							<dl>
 								<dd><img src="./../../img/lovelive.jpg" alt="" /></dd>
 								<dd>カリフォルニアダダダダ</dd>
@@ -189,6 +181,7 @@
 							<ul>
 								<li><a href="../Member/setting.php">ユーザ情報変更</a></li>
 								<li><a href="../Member/setting.php">支払方法変更</a></li>
+								<li><a href="../logout.php">ログアウト</a></li>
 							</ul>
 						</div>
 					</section>

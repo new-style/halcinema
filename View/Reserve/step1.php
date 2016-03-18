@@ -19,7 +19,7 @@
     $sql = "select * from hal_movie";
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
-    echo '<br>'.$ticketId;
+    // echo '<br>'.$ticketId;
     while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
       if($row['movie_id'] == $ticketId){
         $flg = true;
@@ -33,14 +33,15 @@
       }
     }
 
-    $sql = "select * from hal_tanaka where  name='山田'";
+    $sql = "select * from hal_tanaka where user_id='yamadaTarou'";
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
     $row = $stmh -> fetch(PDO::FETCH_ASSOC);
     $_SESSION['userId'] = $row['id'];
     $_SESSION['userName'] = $row['name'];
+    $_SESSION['userName'] = $row['user_id'];
     $_SESSION['userMail'] = $row['mail_address'];
-    print_r($row);
+    // print_r($row);
   }
   catch(PDOException $e){
     echo "エラーだぉ";
@@ -77,7 +78,7 @@
     <div class="l-wrapper">
       <!-- ▼ヘッダー -->
 <?php
-  require_once "../parts/header.html";
+  require_once "../parts/header.php";
 ?>
 			<main class="l-content">
 

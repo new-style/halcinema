@@ -47,7 +47,7 @@ $stmt -> execute();
     <div class="l-wrapper">
       <!-- ▼ヘッダー -->
 <?php
-  require_once "./parts/header.html";
+  require_once "./parts/header.php";
 ?>
 
         <article class="row">

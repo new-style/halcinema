@@ -42,7 +42,7 @@
 		<main>
 			<article class="l-wrapper">
 <?php
-	require_once "./../parts/header.html";
+	require_once "./../parts/header.php";
 ?>
 
 				<section class="l-stepHead">

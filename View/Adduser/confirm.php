@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 
 $user_name = $_POST['user_name'];
@@ -61,7 +61,7 @@ $mailmagazine = $_POST['mailmagazine'];
 		<div class="l-wrapper">
 			<!-- ▼ヘッダー -->
 <?php
-	require_once "../parts/header.html";
+	require_once "../parts/header.php";
 ?>
 
 

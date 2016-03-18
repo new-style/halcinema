@@ -21,10 +21,6 @@
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
     $row = $stmh -> fetch(PDO::FETCH_ASSOC);
-    echo $row['password'];
-    echo "<br>";
-    echo $old_pass;
-    echo "<br>";
     if($row['password'] == $old_pass){
       $sql = "update hal_tanaka set ".$name." = '".$user_edit."' where id=".$id;
       $stmh = $pdo -> prepare($sql);
@@ -35,12 +31,12 @@
     }
   }
 
-  echo $user_edit;
-
   try{
     $sql = "update hal_tanaka set ".$name." = '".$user_edit."' where id=".$id;
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
+    header("Location: edit_comp.php");
+    exit();
   }catch(PDOException $e){
     echo "エラーだぉ";
     echo "<br>【エラーメッセージ】<br>";

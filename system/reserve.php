@@ -21,12 +21,12 @@
 	//postデータ受け取り
 
 	// exit();
-
+  $ticketSum = $_SESSION['ippan'] + $_SESSION['daigaku'] + $_SESSION['syougaku'] + $_SESSION['child'];
 	$a = $_SESSION['ticket'];
 
 	//プレースホルダーを用いたセキュアなSQL
 	//名前付きプレースホルダー
-	$sql = "insert into hal_order values('null','$a','2','1','2016-03-01','2','1800')";
+	$sql = "insert into hal_order values('null','$a','2','1','2016-03-01','2','$ticketSum')";
 	// $sql = "insert into hal_order values('null','2','2','1','2016-03-01','2','1800')";
 
 	//普通のやつ

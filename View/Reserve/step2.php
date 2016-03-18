@@ -13,10 +13,10 @@ session_start();
 	$passwd = $_POST['password'];
 
 	$price = Array(1800,1500,1000,500);
-	$ippan = $_POST['human_General'];
-	$daigaku = $_POST['human_Large'];
-	$syougaku = $_POST['human_Little'];
-	$child = $_POST['human_min'];
+	$ippan = $price[0] * $_POST['human_General'];
+	$daigaku = $price[1] * $_POST['human_Large'];
+	$syougaku = $price[2] * $_POST['human_Little'];
+	$child = $price[3] * $_POST['human_min'];
 	// 配列で受け取れる
 	$sheetNo = $_POST['sheetNo'];
 
@@ -110,7 +110,7 @@ catch(PDOException $e){
 		<div class="l-wrapper">
 			<!-- ▼ヘッダー -->
 <?php
-	require_once "../parts/header.html";
+	require_once "../parts/header.php";
 ?>
 
 <main class="l-content">

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!-- ▼表示▼ -->
 <!DOCTYPE html>
 <html lang="ja">

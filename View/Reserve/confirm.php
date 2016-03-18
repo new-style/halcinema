@@ -8,55 +8,56 @@
 	$creditMonth = $_POST['credit_month'];
 	$creditYear = $_POST['credit_year'];
 	$creditScode = $_POST['credit_scode'];
-	echo $phoneCarrier;
+	// echo $phoneCarrier;
 	$_SESSION['phoneCarrier'] = $phoneCarrier;
-	echo '<br>';
-	echo $conveni;
+	// echo '<br>';
+	// echo $conveni;
 	$_SESSION['conveni'] = $conveni;
-	echo '<br>';
-	echo $creditCompany;
+	// echo '<br>';
+	// echo $creditCompany;
 	$_SESSION['creditCompany'] = $creditCompany;
-	echo '<br>';
-	echo $creditNo;
+	// echo '<br>';
+	// echo $creditNo;
 	$_SESSION['creditNo'] = $creditNo;
-	echo '<br>';
-	echo $creditName;
+	// echo '<br>';
+	// echo $creditName;
 	$_SESSION['creditName'] = $creditName;
-	echo '<br>';
-	echo $creditMonth;
+	// echo '<br>';
+	// echo $creditMonth;
 	$_SESSION['creditMonth'] = $creditMonth;
-	echo '<br>';
-	echo $creditYear;
+	// echo '<br>';
+	// echo $creditYear;
 	$_SESSION['creditYear'] = $creditYear;
-	echo '<br>';
-	echo $creditScode;
+	// echo '<br>';
+	// echo $creditScode;
 	$_SESSION['creditScode'] = $creditScode;
-	echo '<br>';
-	echo $_SESSION['id'];
-	echo '<br>';
-	echo $_SESSION['passwd'];
-	echo '<br>';
-	echo $_SESSION['ippan'];
-	echo '<br>';
-	echo $_SESSION['daigaku'];
-	echo '<br>';
-	echo $_SESSION['syougaku'];
-	echo '<br>';
-	echo $_SESSION['child'];
-	echo '<br>';
-	print_r($_SESSION['sheetNo']);
-	echo '<br>';
-  echo $_SESSION['movie_title'];
-	echo '<br>';
-  echo $_SESSION['cast'];
-	echo '<br>';
-  echo $_SESSION['kantoku'];
-	echo '<br>';
-  echo $_SESSION['scenario'];
-	echo '<br>';
-  echo $_SESSION['staff'];
-	echo '<br>';
-  echo $_SESSION['movie_img'];
+	// echo '<br>';
+	// echo $_SESSION['id'];
+	// echo '<br>';
+	// echo $_SESSION['passwd'];
+	// echo '<br>';
+	// echo $_SESSION['ippan'];
+	// echo '<br>';
+	// echo $_SESSION['daigaku'];
+	// echo '<br>';
+	// echo $_SESSION['syougaku'];
+	// echo '<br>';
+	// echo $_SESSION['child'];
+	// echo '<br>';
+	// print_r($_SESSION['sheetNo']);
+	// echo '<br>';
+  // echo $_SESSION['movie_title'];
+	// echo '<br>';
+  // echo $_SESSION['cast'];
+	// echo '<br>';
+  // echo $_SESSION['kantoku'];
+	// echo '<br>';
+  // echo $_SESSION['scenario'];
+	// echo '<br>';
+  // echo $_SESSION['staff'];
+	// echo '<br>';
+  // echo $_SESSION['movie_img'];
+
 ?>
 
 <!-- ▼表示▼ -->
@@ -85,7 +86,7 @@
 		<div class="l-wrapper">
 			<!-- ▼ヘッダー -->
 <?php
-	require_once "../parts/header.html";
+	require_once "../parts/header.php";
 ?>
 
 <main class="l-content">
@@ -120,9 +121,6 @@
 				<legend class="text_Center">シート確認<span>緑に店頭しているシートは3歳以下のお子様がいらっしゃいます。</span></legend>
 			</fieldset> -->
 			<!-- ボタン -->
-			<div class="">
-				<a href="step1.php">枚数・シートを変更する</a>
-			</div>
 
 			<fieldset>
 				<legend class="text_Center">お客様情報確認</legend>
@@ -152,10 +150,6 @@
 				?>
 			</fieldset>
 			<!-- ボタン -->
-			<div class="">
-				<a href="step2.php">お客様情報・支払情報を変更する</a>
-				<!-- <button type="submit">お客様情報・支払情報を変更する</button> -->
-			</div>
 
 
 			<!-- ボタン -->

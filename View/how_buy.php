@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!-- ▼表示▼ -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -23,7 +24,7 @@
 		<div class="l-wrapper">
 			<!-- ▼ヘッダー -->
 <?php
-	require_once "./parts/header.html";
+	require_once "./parts/header.php";
 ?>
 
 			<main class="l-content">
