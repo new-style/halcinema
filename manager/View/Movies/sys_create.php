@@ -26,4 +26,3 @@
       $stmh = $pdo -> prepare($sql);
       $stmh -> execute();
       header("Location: ../comp/create_comp.php");
- 

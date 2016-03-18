@@ -1,4 +1,4 @@
-<?php 
+<?php
   session_start();
   $dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
   $dbUser = "root";
