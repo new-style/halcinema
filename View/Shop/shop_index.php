@@ -28,12 +28,6 @@
 
 			<main class="l-content float_C">
 
-				<!-- ▼パンくず -->
-				<ul class="l-breadcrumb">
-					<li><a href="#">HOME</a></li>
-				</ul>
-				<!-- ▼パンくず -->
-
 				<!-- ▼左コンテンツ -->
 				<article class="l-cLeft float_C">
 					<!-- ▼メインビジュアル -->
