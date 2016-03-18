@@ -17,8 +17,9 @@
 	$pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
 
 	$price = Array(1800,1500,1000,500);
-
+	$date = date('Y-m-d');
 	//postデータ受け取り
+
 
 	// exit();
   $ticketSum = $_SESSION['ippan'] + $_SESSION['daigaku'] + $_SESSION['syougaku'] + $_SESSION['child'];
@@ -26,7 +27,7 @@
 
 	//プレースホルダーを用いたセキュアなSQL
 	//名前付きプレースホルダー
-	$sql = "insert into hal_order values('null','$a','2','1','2016-03-01','2','$ticketSum')";
+	$sql = "insert into hal_order values('null','$a','2','1','$date','2','$ticketSum')";
 	// $sql = "insert into hal_order values('null','2','2','1','2016-03-01','2','1800')";
 
 	//普通のやつ

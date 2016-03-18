@@ -1,34 +1,5 @@
 <?php
 session_start();
-    $dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
-    $dbUser = "root";
-    // windowsの人はrootではなく空("")にしてください。
-    $dbPass = "root";
-
-
-    //PDOによるDB接続
-    $pdo = new PDO ($dsn, $dbUser, $dbPass);
-
-    //PDOの動作設定
-    //設定①エラーメッセージは黙殺しないで例外を吐かせる！
-    //エラーモードをエクセプションモードにしなさい！
-    $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    //設定②SQLインジェクション対策
-    $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
-try{
-    $sql = "select * from hal_order";
-    $stmh = $pdo -> prepare($sql);
-    $stmh -> execute();
-
-}
-catch(PDOException $e){
-    echo "エラーだぉ";
-    echo "<br>【エラーメッセージ】<br>";
-    echo $e -> getMessage();
-    echo "<br   >【エラーコード】<br>";
-    echo $e -> getCode();
-
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +15,32 @@ catch(PDOException $e){
     <link rel="stylesheet" href="./../../css/font-awesome.min.css">
     <link rel="stylesheet" href="./../../css/bootstrap.min.css">
     <link rel="stylesheet" href="./../../css/style.css">
+    <script src="../../js/jquery-1.11.0.min.js"></script>
+    <script>
+        $(function(){
+            $('select#month').change(function(){
+                var month = $(this).val();
+                $('.salesTable').empty();
+                $.ajax({
+                    type: "POST",
+                    url: "sys_sales.php",
+                    data: {month: month},
+                    success: view,
+                    error: er
+                });
+            });
+            function view(data){
+                alert(data);
+                data = data.split(',');
+                for(var i = 0;i<data.length;i++){
+                    $('.salesTable').append('<tr><td>'+(i+1)+'</td><td>月</td><td>'+data[i]+'</td></tr>');
+                }
+            }
+            function er(){
+
+            }
+        });
+    </script>
 
 </head>
 <body>
@@ -65,7 +62,7 @@ require_once("./../parts/side.php");
                         <div class="form-group">
                             <select name="year" id="year" class="form-control">
 <?php
-    for( $i = 2015;$i <=2016 ;$i++){
+    for( $i = 2016;$i <=2016 ;$i++){
 ?>
                                 <option><?php echo $i; ?></option>
 <?php
@@ -79,7 +76,7 @@ require_once("./../parts/side.php");
 <?php
     for( $i = 1; $i <= 12; $i++ ){
 ?>
-                                <option value=""><?php echo $i ?></option>
+                                <option value="<?php echo sprintf('%02d',$i); ?>"><?php echo $i ?></option>
 <?php
     }
 ?>
@@ -103,34 +100,19 @@ require_once("./../parts/side.php");
                                 <th>総売上</th>
                             </tr>
                         </thead>
-                        <tbody>
-<?php
-    $sum = 0;
-    $priceArr = Array();
-    for( $date = 1; $date <= 30; $date++ ){
-        $sql = "select * from hal_order";
-        $stmh = $pdo -> prepare($sql);
-        $stmh -> execute();
-        $row = $stmh -> fetch(PDO::FETCH_ASSOC);
-        $sum += $row['payment'];
-        $priceArr[] = $row['payment'];
-        $priceArr[] = $row['payment'];
-?>
+                        <tbody class="salesTable">
+<!-- 
                             <tr>
-                                <td><?php echo $date; ?></td>
+                                <td>3</td>
                                 <td>月</td>
                                 <td>
-                                  <?php echo $row['payment']; ?>
+                                  000
                                 </td>
                             </tr>
-<?php
-    }
-    $_SESSION['priceArr'] = $priceArr;
-?>
                           <tr>
                             <td colspan="2">合計</td>
-                            <td><?php echo $sum; ?></td>
-                          </tr>
+                            <td>0</td>
+                          </tr> -->
                         </tbody>
                     </table>
                 </div>

@@ -31,33 +31,8 @@
 	// echo '<br>';
 	// echo $creditScode;
 	$_SESSION['creditScode'] = $creditScode;
-	// echo '<br>';
-	// echo $_SESSION['id'];
-	// echo '<br>';
-	// echo $_SESSION['passwd'];
-	// echo '<br>';
-	// echo $_SESSION['ippan'];
-	// echo '<br>';
-	// echo $_SESSION['daigaku'];
-	// echo '<br>';
-	// echo $_SESSION['syougaku'];
-	// echo '<br>';
-	// echo $_SESSION['child'];
-	// echo '<br>';
-	// print_r($_SESSION['sheetNo']);
-	// echo '<br>';
-  // echo $_SESSION['movie_title'];
-	// echo '<br>';
-  // echo $_SESSION['cast'];
-	// echo '<br>';
-  // echo $_SESSION['kantoku'];
-	// echo '<br>';
-  // echo $_SESSION['scenario'];
-	// echo '<br>';
-  // echo $_SESSION['staff'];
-	// echo '<br>';
-  // echo $_SESSION['movie_img'];
 
+	echo date('Y-m-d');
 ?>
 
 <!-- ▼表示▼ -->
