@@ -15,9 +15,6 @@
 	$stmh -> execute();
 	$row = $stmh -> fetch(PDO::FETCH_ASSOC);
 
-	$movie_title = $row['movie_title'];
-	$movie_img = $row['movie_img'];
-
 ?>
 <!-- ▼表示▼ -->
 <!DOCTYPE html>
@@ -108,13 +105,6 @@
 
 						<?php
 							while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
-						        // echo '<tr><a href="#">
-						        //         <td>'.$row['id'].'</td>
-						        //         <td>'.$row['user_name'].'</td>
-						        //         <td>'.$row['name'].'</td>
-						        //         <td><a href="user_edit.php?id='.$row['id'].'" class="btn btn-warning btn-sm">変更</a></td>
-						        //         <td><a href="user_delete.php?id='.$row['id'].'" class="btn btn-default btn-sm">削除</a></td>
-						        //       </a></tr>';
 						?>
 						<!-- ▼スケジュール -->
 						<section class="float_C">

@@ -1,4 +1,21 @@
-<?php session_start(); ?>
+<?php session_start();
+
+	$dsn= "mysql:host=localhost;dbname=halcinema;charset=utf8";
+	$dbUser = "root";
+	// windowsの人はrootではなく空("")にしてください。
+	$dbPass = "root";
+
+	$pdo = new PDO ($dsn, $dbUser, $dbPass);
+	$pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+	//設定②SQLインジェクション対策
+	$pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+
+	$sql = "select * from hal_movie";
+	$stmh = $pdo -> prepare($sql);
+	$stmh -> execute();
+	$row = $stmh -> fetch(PDO::FETCH_ASSOC);
+
+?>
 <!-- ▼表示▼ -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -38,23 +55,22 @@
 					<h1>公開中作品一覧</h1>
 
 <?php
-	for( $loop = 0; $loop < 9; $loop++ ){
+	while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
 ?>
 
 						<section class="border_Solid">
-							<a href="../movies_info.php" class="link_None"><h3>ラブライブ！</h3>
+							<a href="../movies_info.php" class="link_None"><h3><?php echo $row['movie_title']; ?></h3>
 							<div class="float_C info">
 								<div class="float_L">
-									<img src="../../img/lovelive.jpg" alt="作品タイトル" /></a>
+									<img src="http://127.0.0.1/halcinema/manager/img/<?php echo $row['movie_img']; ?>" alt="<?php echo $row['movie_img']; ?>" /></a>
 								</div>
 								<p class="float_L">
 									あらすじ<br/>
 									世界的な恐竜のテーマパーク、ジュラシック・ワールド。
 恐竜の飼育員オーウェン（クリス・プラット）が警告したにもかかわらず、
 パークの責任者であるクレア（ブライス・ダラス・ハワード）は遺伝子操作によって新種・・・<br/>
-									スタッフ<br/>
-									監督： コリン・トレヴォロウ、製作総指揮： スティーヴン・スピルバーグ、
-原案： マイケル・クライトン、音楽： マイケル・ジアッキノ<br/>
+									<br/>
+									監督： <?php echo $row['kantoku']; ?>、シナリオ：<?php echo $row['scenario']; ?>、キャスト：<?php echo $row['cast']; ?>、スタッフ：<?php echo $row['staff']; ?>
 								</p>
 							</div>
 						</section>
