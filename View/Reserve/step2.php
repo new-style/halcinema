@@ -60,6 +60,7 @@ try{
 	while($row = $stmh -> fetch(PDO::FETCH_ASSOC)){
 		if($row['mail_address'] == $id && $row['password'] == $passwd){
 			$flg = true;
+			$_SESSION['name'] = $row['name'];
 			break;
 		}
 	}
