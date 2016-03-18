@@ -22,7 +22,7 @@
   $movie_img = $_FILES['upload_file']['name'];
   move_uploaded_file($tmp_name,'../../img/'.$movie_img);
 
-			$sql = "insert into hal_movie values('8','$movie_title','$cast','$kantoku','$scenario','$staff','$restricted','$start_date','$finish_date','$movie_img','')";
+			$sql = "insert into hal_movie values('null','$movie_title','$cast','$kantoku','$scenario','$staff','$restricted','$start_date','$finish_date','$movie_img','')";
       $stmh = $pdo -> prepare($sql);
       $stmh -> execute();
       header("Location: ../comp/create_comp.php");

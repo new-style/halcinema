@@ -10,8 +10,8 @@
   //設定②SQLインジェクション対策
   $pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
   $id = $_SESSION["id"];
-
-	$sql = "select * from hal_tanaka where id=".$id;
+  // echo $id;
+	$sql = "select * from hal_tanaka where id = ".$id;
 	// $sql = "update hal_tanaka set ".$name." = '".$edit."' where id=".$id;
 	$stmh = $pdo -> prepare($sql);
 	$stmh -> execute();

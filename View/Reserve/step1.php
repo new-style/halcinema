@@ -33,7 +33,7 @@
       }
     }
 
-    $sql = "select * from hal_tanaka where user_id='yamadaTarou'";
+    $sql = "select * from hal_tanaka where user_id='".$_SESSION['id']."'";
     $stmh = $pdo -> prepare($sql);
     $stmh -> execute();
     $row = $stmh -> fetch(PDO::FETCH_ASSOC);

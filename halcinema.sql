@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `hal_movie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `hal_movie` (
-  `movie_id` int(100) NOT NULL,
+  `movie_id` int(100) NOT NULL AUTO_INCREMENT,
   `movie_title` varchar(255) NOT NULL,
   `cast` varchar(255) NOT NULL,
   `kantoku` varchar(255) NOT NULL,
@@ -33,8 +33,10 @@ CREATE TABLE `hal_movie` (
   `start_date` date NOT NULL,
   `finish_date` date NOT NULL,
   `movie_img` varchar(255) NOT NULL,
-  `total_evaluate` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `total_evaluate` int(100) NOT NULL,
+  PRIMARY KEY (`movie_id`),
+  KEY `movie_id` (`movie_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +45,7 @@ CREATE TABLE `hal_movie` (
 
 LOCK TABLES `hal_movie` WRITE;
 /*!40000 ALTER TABLE `hal_movie` DISABLE KEYS */;
-INSERT INTO `hal_movie` VALUES (1,'田中の野望','田中','田中','田中','田中',15,'2016-03-01','2016-03-31','sample.png',3);
+INSERT INTO `hal_movie` VALUES (1,'田中の暴走','田中','田中','田中','田中',15,'2016-03-01','2016-03-31','2016-03-17-01-13-31-62185000.jpg',3),(2,'ラブライブ','ほのか','ことり','うみ','アライズ',10,'2016-03-01','2016-03-31','lovelive.png',3),(3,'ハーモニー','霧慧トァン:CV(沢城みゆき)','なかむらたかし','山本幸治','いっぱい',15,'2016-03-11','2016-03-30','poster2.jpg',5),(5,'サンプル','2人','2人','1人','10人',0,'0000-00-00','0000-00-00','c5a3d5531fab1e60a69c1fd6e6224fd5.jpeg',0),(6,'Gori!Gori!Kingdom!!','男','女','女','女',18,'0000-00-00','0000-00-00','301854.jpg',0),(7,'ああ','男','女','女','女',18,'0000-00-00','0000-00-00','りんご_女性001.jpg',0),(8,'おなかすいた','やまだ','監督','しなりお','いっぱい',25,'0000-00-00','0000-00-00','山田悠希-100x100 2.jpg',0),(100,'太郎','田中','すごい人','微妙な人','いっぱい',15,'2016-03-01','2016-03-23','dispImage.jpg',4),(101,'はりーぽった','だにえる','一人','一人','いっぱい',15,'0000-00-00','0000-00-00','スクリーンショット 2016-02-20 17.27.49.png',0);
 /*!40000 ALTER TABLE `hal_movie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,7 +57,7 @@ DROP TABLE IF EXISTS `hal_order`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `hal_order` (
-  `order_id` int(255) NOT NULL,
+  `order_id` int(255) NOT NULL AUTO_INCREMENT,
   `reserve_movie_id` int(255) NOT NULL,
   `order_product_id` int(255) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -63,7 +65,7 @@ CREATE TABLE `hal_order` (
   `order_num` int(255) NOT NULL,
   `payment` int(255) NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +74,7 @@ CREATE TABLE `hal_order` (
 
 LOCK TABLES `hal_order` WRITE;
 /*!40000 ALTER TABLE `hal_order` DISABLE KEYS */;
-INSERT INTO `hal_order` VALUES (1,1,1,1,'2016-03-01',1,1800);
+INSERT INTO `hal_order` VALUES (1,1,1,1,'2016-03-01',1,1800),(2,2,2,1,'2016-03-01',2,1800),(3,2,2,1,'2016-03-01',2,1800),(4,2,2,1,'2016-03-01',2,1800),(5,2,2,1,'2016-03-01',2,1800),(6,1,2,1,'2016-03-01',2,1800),(7,1,2,1,'2016-03-01',2,1800),(8,1,2,1,'2016-03-01',2,1800),(9,1,2,1,'2016-03-01',2,1800),(10,1,2,1,'2016-03-01',2,1800),(11,2,2,1,'2016-03-01',2,1800),(12,1,2,1,'2016-03-01',2,1800),(13,1,2,1,'2016-03-01',2,1800),(14,1,2,1,'2016-03-01',2,1800),(15,1,2,1,'2016-03-01',2,4100),(16,0,2,1,'2016-03-01',2,1000),(17,0,2,1,'2016-03-01',2,1000),(18,1,2,1,'2016-03-01',2,1000),(19,1,2,1,'2016-03-01',2,4600),(20,1,2,1,'2016-03-01',2,3000),(21,1,2,1,'2016-03-01',2,3600),(22,0,2,1,'2016-03-01',2,3000),(23,0,2,1,'2016-03-01',2,0),(24,1,2,1,'2016-03-01',2,1000),(25,1,2,1,'2016-03-01',2,1000),(26,1,2,1,'2016-03-01',2,3000);
 /*!40000 ALTER TABLE `hal_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,7 +86,7 @@ DROP TABLE IF EXISTS `hal_tanaka`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `hal_tanaka` (
-  `user_id` int(12) NOT NULL,
+  `user_id` varchar(12) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `password` varchar(20) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -99,7 +101,7 @@ CREATE TABLE `hal_tanaka` (
   `points` int(255) NOT NULL,
   `id` int(255) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -108,7 +110,7 @@ CREATE TABLE `hal_tanaka` (
 
 LOCK TABLES `hal_tanaka` WRITE;
 /*!40000 ALTER TABLE `hal_tanaka` DISABLE KEYS */;
-INSERT INTO `hal_tanaka` VALUES (0,'tanaka123','tanaka999','tanakatoshihito','ﾀｶﾅﾄｼﾋﾄ',0,20160308,'東京都','国分寺シティ',0,'aaa@gmail.com',0,0,1),(0,'yamada','123456789','山田太郎','ヤマダタロウ',0,19940101,'東京都','新宿区',2147483647,'yamada@gmail.com',0,0,2);
+INSERT INTO `hal_tanaka` VALUES ('0','tanaka123','taoru1234',' ハンドタオル','ﾀｶﾅﾄｼﾋﾄ',0,20160308,'洗濯機','国分寺シティ',0,'taoru123@gmail.com',0,0,1),('OgurO','oguro','123456789','小黒栞菜','オグロカンナ',0,199435,'10','null',1928373645,'oguro@gmail.com',0,0,5),('yamadaTarou','yamada','yamada','山田太郎','ヤマダバスタオル',0,1990806,'千葉県','12345',901234567,'yamada@gmail.com',1,0,6);
 /*!40000 ALTER TABLE `hal_tanaka` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -501,4 +503,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-03-10 19:41:17
+-- Dump completed on 2016-03-18 15:50:05
