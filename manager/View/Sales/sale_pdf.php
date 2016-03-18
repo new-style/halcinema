@@ -5,12 +5,15 @@ session_start();
 
     //DBからデータ受け取り
     $year = 2016;
-    $month = 3;
+    $month = $_POST['month'];
     $date = array(1,2,3,4,5,6,7,8,9,10);
     $date_num = array(
         10000,20000,10000,20000,20000,
         10000,20000,10000,20000,20000
     );
+
+    $data = $_POST['data'];
+    $data = explode(',', $data);
    
     //文字コード変換
     //mb_convert_encoding($, 'SJIS-win', 'UTF-8')
@@ -74,10 +77,10 @@ session_start();
     //文字色の設定
     $sum = 0;
     $pdf -> setTextColor(0,0,0);
-for($i = 1;$i<31;$i++){
-    $a = $_SESSION['priceArr'][$i];
+for($i = 1;$i<=31;$i++){
+    $a = $data[$i-1];
     $sum += $a;
-    $pdf -> cell(40,10,"3",1,0,"C");
+    $pdf -> cell(40,10,(string)$month,1,0,"C");
     $pdf -> cell(40,10,(string)$i,1,0,"C");
     $pdf -> cell(110,10,(string)$a,1,1,"R");
 }

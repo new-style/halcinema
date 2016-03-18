@@ -18,8 +18,11 @@ session_start();
     <script src="../../js/jquery-1.11.0.min.js"></script>
     <script>
         $(function(){
+            var month = 0;
+            var week = ['月','火','水','木','金','土','日'];
             $('select#month').change(function(){
-                var month = $(this).val();
+                month = $(this).val();
+                $('.month').html(month);
                 $('.salesTable').empty();
                 $.ajax({
                     type: "POST",
@@ -29,11 +32,16 @@ session_start();
                     error: er
                 });
             });
+            var cnt = 0;
             function view(data){
-                alert(data);
                 data = data.split(',');
+                $('.pdfPage').prepend('<input type="hidden" value="'+data+'" name="data"><input type="hidden" value="'+month+'" name="month">');
                 for(var i = 0;i<data.length;i++){
-                    $('.salesTable').append('<tr><td>'+(i+1)+'</td><td>月</td><td>'+data[i]+'</td></tr>');
+                    $('.salesTable').append('<tr><td>'+(i+1)+'</td><td>'+week[cnt]+'</td><td>'+data[i]+'</td></tr>');
+                    cnt++;
+                    if(cnt == 6){
+                        cnt = 0;
+                    }
                 }
             }
             function er(){
@@ -89,10 +97,11 @@ require_once("./../parts/side.php");
 
                 <div class="col-md-12 search_list">
                     <div class="pdf_put col-md-2 col-md-offset-10">
-                      <a href="http://127.0.0.1/halcinema/manager/View/Sales/sale_pdf.php" class="btn btn-warning">PDF出力</a>
+                        <form action="http://127.0.0.1/halcinema/manager/View/Sales/sale_pdf.php" method="post" class="pdfPage">
+                      <button class="btn btn-warning">PDF出力</button></form>
                     </div>
                     <table class="table table-striped table-bordered">
-                        <caption>2015　年　1　月</caption>
+                        <caption>2016　年　<span class="month"></span>　月</caption>
                         <thead>
                             <tr>
                                 <th>日付</th>
@@ -101,18 +110,6 @@ require_once("./../parts/side.php");
                             </tr>
                         </thead>
                         <tbody class="salesTable">
-<!-- 
-                            <tr>
-                                <td>3</td>
-                                <td>月</td>
-                                <td>
-                                  000
-                                </td>
-                            </tr>
-                          <tr>
-                            <td colspan="2">合計</td>
-                            <td>0</td>
-                          </tr> -->
                         </tbody>
                     </table>
                 </div>
